@@ -23,18 +23,20 @@ export default function HeroSection() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
         <Reveal>
-          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-brand-text sm:text-6xl">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-brand-text sm:text-6xl">
             Escolha seu modelo. Evolua de verdade.
-          </h1>
+            </h1>
 
-          <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
-            Dois formatos para você ter clareza, estratégia e acompanhamento: o Híbrido (flexível e escalável) ou o Individual
-            (totalmente personalizado, ao vivo, semanal).
-          </p>
+            <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
+              Dois formatos para você ter clareza, estratégia e acompanhamento: o Híbrido (flexível e escalável) ou o
+              Individual (totalmente personalizado, ao vivo, semanal).
+            </p>
+          </div>
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 text-center sm:flex-row sm:items-center">
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
