@@ -13,20 +13,20 @@ export default function HeroSection() {
         <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-0 z-0 flex items-end justify-center overflow-hidden">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-start px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
+        <div className="pointer-events-none relative z-0 flex w-full justify-center">
           <motion.img
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
             src="/imagens/foto-perfil-lucas-brum.png?v=4"
             alt=""
-            className="w-[520px] max-w-[92vw] opacity-40 grayscale [mask-image:linear-gradient(to_top,transparent_0%,black_26%,black_78%,transparent_100%)]"
+            className="w-[520px] max-w-[92vw] opacity-50 grayscale [mask-image:linear-gradient(to_top,transparent_0%,black_18%,black_86%,transparent_100%)]"
             loading="eager"
           />
         </div>
 
-        <div className="relative z-10">
+        <div className="relative z-10 -mt-[110px] w-full max-w-3xl rounded-[32px] bg-black/55 px-6 py-8 text-center shadow-[0_30px_90px_rgba(0,0,0,0.70)] ring-1 ring-white/5 backdrop-blur-md sm:-mt-[140px] sm:px-10 sm:py-10">
           <Reveal>
             <div className="flex flex-col items-center text-center">
               <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-brand-text sm:text-6xl">
