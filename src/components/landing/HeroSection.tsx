@@ -31,7 +31,7 @@ export default function HeroSection() {
 
           <Reveal>
             <div className="flex flex-col items-center text-center">
-              <h1 className="mt-[300px] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:mt-[320px] sm:text-6xl">
+              <h1 className="mt-[230px] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:mt-[250px] sm:text-6xl">
                 De Brasileiro para Brasileiro nos EUA.
               </h1>
 
