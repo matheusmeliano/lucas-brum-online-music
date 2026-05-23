@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
-import { Link } from "react-router-dom";
-import { useI18n } from "@/i18n/useI18n";
 
 export default function FinalCtaSection() {
-  const { dict } = useI18n();
-
   return (
-    <section id="cta" className="relative">
+    <section id="contato" className="relative">
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pb-28 sm:pt-14">
         <Reveal>
           <div className="relative overflow-hidden rounded-[36px] border border-white/16 bg-white/5 px-6 py-10 backdrop-blur-sm sm:px-10">
@@ -20,38 +16,40 @@ export default function FinalCtaSection() {
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/6 px-3 py-1 text-xs text-brand-muted">
-                  <ShieldCheck className="h-4 w-4 text-brand-accent" />
-                  {dict.finalCta.badge}
+                <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/6 px-3 py-1 text-xs text-white/65">
+                  <Mail className="h-4 w-4 text-brand-accent" />
+                  Contato & Booking
                 </div>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                  {dict.finalCta.title}
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
+                  Vamos criar algo inesquecível.
                 </h2>
-                <p className="mt-3 max-w-2xl text-sm text-brand-muted sm:text-base">
-                  {dict.finalCta.subtitle}
+                <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
+                  Conte o contexto, o palco e a sensação que você quer. Eu respondo com proposta clara e direção artística.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3">
                 <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
-                  <Link
-                    to="/obrigado"
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-glow px-6 py-4 text-sm font-semibold text-white transition focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-glow px-6 py-4 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                   >
-                  {dict.finalCta.primary}
-                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-                  </Link>
+                    Enviar mensagem
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                  </a>
                 </motion.div>
 
                 <a
-                  href="#modelos"
+                  href="#topo"
                   className="inline-flex items-center justify-center rounded-2xl border border-brand-border bg-white/5 px-6 py-4 text-sm font-medium text-white/90 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
                 >
-                  {dict.finalCta.secondary}
+                  Voltar ao topo
                 </a>
 
-                <div className="text-center text-xs text-brand-muted">
-                  {dict.finalCta.micro}
+                <div className="text-center text-xs text-white/55">
+                  Resposta humana, rápida e direta.
                 </div>
               </div>
             </div>

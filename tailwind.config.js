@@ -10,14 +10,14 @@ export default {
     extend: {
       colors: {
         brand: {
-          deep: "#140733",
-          vivid: "#200c50",
-          ink: "#0B0614",
-          text: "#F5F3FF",
-          muted: "#C4B5FD",
-          border: "rgba(196,181,253,0.18)",
-          glow: "#7C3AED",
-          accent: "#EC4899",
+          deep: "#050505",
+          vivid: "#0E0E12",
+          ink: "#EDE9E1",
+          text: "#F6F2EA",
+          muted: "rgba(246,242,234,0.72)",
+          border: "rgba(246,242,234,0.12)",
+          glow: "#C2A46A",
+          accent: "#FFB347",
         },
       },
       boxShadow: {

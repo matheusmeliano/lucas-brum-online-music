@@ -1,104 +1,90 @@
 import { motion } from "framer-motion";
-import { CalendarDays, GraduationCap, Zap } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
 import { cn } from "@/lib/utils";
-import { useI18n } from "@/i18n/useI18n";
 
-type ModelCardProps = {
+type ProjectCardProps = {
   title: string;
-  tagline: string;
-  bullets: string[];
+  desc: string;
+  meta: string;
   featured?: boolean;
 };
 
-function ModelCard({ title, tagline, bullets, featured }: ModelCardProps) {
+function ProjectCard({ title, desc, meta, featured }: ProjectCardProps) {
   return (
     <motion.div
-      whileHover={{ y: -4, scale: 1.008 }}
+      whileHover={{ y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "relative overflow-hidden rounded-3xl border bg-brand-deep/[0.035] p-6",
-        featured ? "border-[#009b3a]/35 bg-[#009b3a]/[0.06]" : "border-brand-border"
+        "group relative overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
+        featured ? "bg-[linear-gradient(135deg,rgba(194,164,106,0.14),rgba(255,255,255,0.03))]" : ""
       )}
     >
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-accent/12 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
+      </div>
+
       <div className="relative">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <h3 className="text-xl font-semibold tracking-tight text-brand-ink">{title}</h3>
-            <p className="mt-2 text-sm text-brand-ink/70">{tagline}</p>
+        <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">{meta}</div>
+        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-brand-text">{title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-white/70">{desc}</p>
+
+        <div className="mt-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 text-xs text-white/75 transition group-hover:bg-white/6">
+            Preview musical
+            <span className="text-brand-accent">→</span>
           </div>
         </div>
-
-        <div className="mt-6 space-y-3">
-          {bullets.map((b) => (
-            <div key={b} className="flex items-start gap-3">
-              <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#009b3a]" />
-              <div className="text-sm text-brand-ink/80">{b}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-7" />
       </div>
     </motion.div>
   );
 }
 
 export default function ModelsSection() {
-  const { dict } = useI18n();
-
   return (
-    <section id="modelos" className="relative bg-white">
+    <section id="projetos" className="relative">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-brand-ink sm:text-3xl">
-                {dict.models.title}
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm text-brand-ink/70 sm:text-base">
-                {dict.models.subtitle}
-              </p>
-            </div>
-          </div>
+          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Projetos em destaque</h2>
+          <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
+            Formações, obras e universos sonoros tratados como cinema: composição, textura e espaço.
+          </p>
         </Reveal>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <Reveal delay={0.06}>
-            <ModelCard
-              title={dict.models.individual.title}
-              tagline={dict.models.individual.tagline}
-              bullets={dict.models.individual.bullets}
+            <ProjectCard
+              meta="FORMATO • QUINTETO"
+              title="Quinteto"
+              desc="Repertório autoral de jazz contemporâneo, com improviso controlado e narrativa musical em camadas."
               featured
             />
           </Reveal>
 
           <Reveal delay={0.1}>
-            <ModelCard
-              title={dict.models.hybrid.title}
-              tagline={dict.models.hybrid.tagline}
-              bullets={dict.models.hybrid.bullets}
+            <ProjectCard
+              meta="FORMATO • BIG BAND"
+              title="Big Band"
+              desc="Arranjos sofisticados, dinâmica dramática e energia de palco com estética europeia de clube."
+            />
+          </Reveal>
+
+          <Reveal delay={0.14}>
+            <ProjectCard
+              meta="FORMATO • DUO"
+              title="Duo"
+              desc="Intimidade e silêncio como linguagem. Espaço para timbre, respiração e harmonia moderna."
+            />
+          </Reveal>
+
+          <Reveal delay={0.18}>
+            <ProjectCard
+              meta="OBRA • AUTORAL"
+              title="Projetos autorais"
+              desc="Composições originais e produção musical com assinatura estética: minimalismo, tensão e brilho âmbar."
             />
           </Reveal>
         </div>
-
-        <Reveal delay={0.12}>
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            {[
-              { icon: <CalendarDays className="h-4 w-4 text-brand-ink/60" />, t: dict.models.micro[0] },
-              { icon: <GraduationCap className="h-4 w-4 text-brand-ink/60" />, t: dict.models.micro[1] },
-              { icon: <Zap className="h-4 w-4 text-brand-ink/60" />, t: dict.models.micro[2] },
-            ].map((item) => (
-              <div
-                key={item.t}
-                className="flex items-center gap-3 rounded-3xl border border-brand-border bg-brand-deep/[0.035] px-4 py-3"
-              >
-                {item.icon}
-                <div className="text-sm text-brand-ink/80">{item.t}</div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

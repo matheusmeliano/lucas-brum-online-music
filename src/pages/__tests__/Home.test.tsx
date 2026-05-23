@@ -15,15 +15,14 @@ describe("Home", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /de brasileiro para brasileiro nos eua\./i,
+        name: /alma brasileira\. sofisticação europeia\./i,
       })
     ).toBeInTheDocument();
 
-    expect(screen.getByRole("heading", { name: /identifique o modelo ideal de aula para você\./i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /^modelo individual$/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /^modelo híbrido$/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /benefícios/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /prova e autoridade/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /o próximo nível depende da sua decisão\./i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /projetos em destaque/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /discografia/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /experiência ao vivo/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /serviços/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /vamos criar algo inesquecível\./i })).toBeInTheDocument();
   });
 });
