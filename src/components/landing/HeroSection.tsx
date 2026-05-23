@@ -28,7 +28,8 @@ export default function HeroSection() {
         </div>
 
         <div className="relative z-10 isolate">
-          <div className="pointer-events-none absolute inset-x-0 top-[120px] bottom-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)] sm:top-[140px]" />
+          <div className="pointer-events-none absolute inset-x-0 top-[112px] bottom-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.78)_28%,rgba(0,0,0,0.98)_52%,rgba(0,0,0,1)_68%,rgba(0,0,0,1)_100%)] sm:top-[132px]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-56 bg-black sm:h-64" />
 
           <Reveal className="relative z-20">
             <div className="flex flex-col items-center text-center">
