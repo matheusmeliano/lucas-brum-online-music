@@ -27,7 +27,7 @@ export default function HeroSection() {
         </div>
 
         <div className="relative z-10">
-          <div className="pointer-events-none absolute inset-x-0 top-[140px] h-[520px] bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.72)_40%,rgba(0,0,0,0.92)_100%)] sm:top-[160px]" />
+          <div className="pointer-events-none absolute inset-x-0 top-[120px] bottom-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)] sm:top-[140px]" />
 
           <Reveal>
             <div className="flex flex-col items-center text-center">
