@@ -77,13 +77,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href="#contato"
-              className="hidden items-center justify-center rounded-full border border-white/14 bg-white/6 px-4 py-2 text-[13px] font-semibold text-white/85 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
-            >
-              Entrar
-            </a>
-
             <motion.a
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
