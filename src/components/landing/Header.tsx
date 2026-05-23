@@ -44,10 +44,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
         <div
           className={cn(
-            "flex items-center justify-center gap-3 rounded-full border px-4 py-3 backdrop-blur-xl transition md:justify-between md:gap-4",
-            scrolled
-              ? "border-transparent bg-white/6 shadow-[0_18px_70px_rgba(0,0,0,0.45)]"
-              : "border-transparent bg-white/4 shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
+            "flex items-center justify-center gap-3 rounded-full border border-brand-border bg-brand-deep px-4 py-3 transition md:justify-between md:gap-4"
           )}
         >
           <a href="#topo" onClick={handleBrandClick} className="inline-flex items-center gap-3">
@@ -106,7 +103,7 @@ export default function Header() {
         aria-modal="true"
       >
         <div className="mx-auto max-w-6xl px-4 pb-4 pt-3">
-          <div className="rounded-[28px] border border-transparent bg-white/6 p-3 shadow-[0_24px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+          <div className="rounded-[28px] border border-brand-border bg-brand-deep p-3">
             {navItems.map((item) => (
               <a
                 key={item.href}
