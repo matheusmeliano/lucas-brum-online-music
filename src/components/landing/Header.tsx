@@ -46,12 +46,12 @@ export default function Header() {
           className={cn(
             "flex items-center justify-between gap-4 rounded-full border px-4 py-3 backdrop-blur-xl transition",
             scrolled
-              ? "border-black/8 bg-white/92 shadow-[0_18px_70px_rgba(0,0,0,0.35)]"
-              : "border-black/6 bg-white/88 shadow-[0_18px_70px_rgba(0,0,0,0.28)]"
+              ? "border-transparent bg-brand-deep/72 shadow-[0_18px_70px_rgba(0,0,0,0.45)]"
+              : "border-transparent bg-brand-deep/55 shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
           )}
         >
           <a href="#topo" onClick={handleBrandClick} className="inline-flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-black/5">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/6">
               <img
                 src="/imagens/logo-online-music-usa.png"
                 alt="Lucas Brum Online Music USA"
@@ -59,17 +59,17 @@ export default function Header() {
                 loading="eager"
               />
             </span>
-            <div className="hidden text-[13px] font-semibold tracking-tight text-black/85 sm:block">
+            <div className="hidden text-[13px] font-semibold tracking-tight text-white sm:block">
               Lucas Brum Online Music USA
             </div>
           </a>
 
-          <nav className="hidden items-center gap-7 text-[13px] text-black/55 md:flex">
+          <nav className="hidden items-center gap-7 text-[13px] text-white/70 md:flex">
             {navItems.slice(0, 4).map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="transition-colors hover:text-black/80 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                className="transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
               >
                 {item.label}
               </a>
@@ -79,7 +79,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <a
               href="#contato"
-              className="hidden items-center justify-center rounded-full border border-black/10 bg-white px-4 py-2 text-[13px] font-semibold text-black/70 transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
+              className="hidden items-center justify-center rounded-full border border-white/14 bg-white/6 px-4 py-2 text-[13px] font-semibold text-white/85 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
             >
               Entrar
             </a>
@@ -99,7 +99,7 @@ export default function Header() {
               aria-label={open ? "Fechar menu" : "Abrir menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/75 transition hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-white/6 text-white/85 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -113,13 +113,13 @@ export default function Header() {
         aria-modal="true"
       >
         <div className="mx-auto max-w-6xl px-4 pb-4 pt-3">
-          <div className="rounded-[28px] border border-black/10 bg-white/92 p-3 shadow-[0_24px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+          <div className="rounded-[28px] border border-transparent bg-brand-deep/72 p-3 shadow-[0_24px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-2xl px-4 py-3 text-sm font-medium text-black/70 transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                className="block rounded-2xl px-4 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
               >
                 {item.label}
               </a>
