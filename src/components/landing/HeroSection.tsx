@@ -27,15 +27,15 @@ export default function HeroSection() {
         </div>
 
         <div className="relative z-10">
-          <div className="pointer-events-none absolute left-1/2 top-[190px] h-[320px] w-[min(980px,96vw)] -translate-x-1/2 rounded-[48px] bg-[radial-gradient(closest-side,rgba(0,0,0,0.74),transparent_70%)] blur-2xl sm:top-[210px]" />
+          <div className="pointer-events-none absolute inset-x-0 top-[140px] h-[520px] bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.72)_40%,rgba(0,0,0,0.92)_100%)] sm:top-[160px]" />
 
           <Reveal>
             <div className="flex flex-col items-center text-center">
-              <h1 className="mt-[300px] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-brand-text sm:mt-[320px] sm:text-6xl">
+              <h1 className="mt-[300px] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:mt-[320px] sm:text-6xl">
                 De Brasileiro para Brasileiro nos EUA.
               </h1>
 
-              <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
+              <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 drop-shadow-[0_10px_24px_rgba(0,0,0,0.85)] sm:text-lg">
                 Dois formatos para você ter clareza, estratégia e acompanhamento: o Híbrido (flexível e escalável) ou o
                 Individual (totalmente personalizado, ao vivo, semanal).
               </p>
