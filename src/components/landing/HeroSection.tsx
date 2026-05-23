@@ -8,8 +8,8 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_40%,rgba(255,179,71,0.14),transparent_55%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(5,5,5,0.95),rgba(5,5,5,0.55),rgba(5,5,5,0.95))]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,5,5,0.60),rgba(5,5,5,0.12),rgba(0,0,0,1))]" />
-        <div className="absolute inset-x-0 bottom-0 h-44 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_92%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.70),rgba(0,0,0,0.32),rgba(0,0,0,1))]" />
+        <div className="absolute inset-x-0 bottom-0 h-72 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.20)_0%,rgba(0,0,0,1)_70%)]" />
         <div className="absolute left-[12%] top-[20%] h-44 w-44 rounded-full bg-brand-accent/10 blur-3xl animate-float-slow" />
         <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
       </div>
