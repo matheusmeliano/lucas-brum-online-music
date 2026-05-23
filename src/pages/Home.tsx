@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { Play, Sparkles } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import BackgroundGlow from "@/components/landing/BackgroundGlow";
@@ -10,81 +10,6 @@ import HeroSection from "@/components/landing/HeroSection";
 import ModelsSection from "@/components/landing/ModelsSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import Reveal from "@/components/landing/Reveal";
-
-function PremiumCursor() {
-  const [enabled, setEnabled] = useState(false);
-  const [hovering, setHovering] = useState(false);
-  const x = useMotionValue(-100);
-  const y = useMotionValue(-100);
-  const ringX = useSpring(x, { stiffness: 540, damping: 42, mass: 0.7 });
-  const ringY = useSpring(y, { stiffness: 540, damping: 42, mass: 0.7 });
-
-  useEffect(() => {
-    const mq = window.matchMedia("(pointer: fine)");
-    const update = () => setEnabled(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    if (!enabled) return;
-    document.body.classList.add("premium-cursor-enabled");
-    return () => {
-      document.body.classList.remove("premium-cursor-enabled");
-    };
-  }, [enabled]);
-
-  useEffect(() => {
-    if (!enabled) return;
-    const onMove = (e: PointerEvent) => {
-      x.set(e.clientX);
-      y.set(e.clientY);
-    };
-    const onOver = (e: Event) => {
-      const el = e.target as HTMLElement | null;
-      if (!el) return;
-      const interactive = el.closest("a,button,[role='button']") != null;
-      setHovering(interactive);
-    };
-
-    window.addEventListener("pointermove", onMove, { passive: true });
-    window.addEventListener("pointerover", onOver, { passive: true });
-    window.addEventListener("pointerout", onOver, { passive: true });
-    return () => {
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerover", onOver);
-      window.removeEventListener("pointerout", onOver);
-    };
-  }, [enabled, x, y]);
-
-  if (!enabled) return null;
-
-  return (
-    <>
-      <motion.div
-        className="premium-cursor-dot"
-        style={{
-          translateX: x,
-          translateY: y,
-          x: "-50%",
-          y: "-50%",
-        }}
-      />
-      <motion.div
-        className="premium-cursor-ring"
-        style={{
-          translateX: ringX,
-          translateY: ringY,
-          x: "-50%",
-          y: "-50%",
-          scale: hovering ? 1.6 : 1,
-          opacity: hovering ? 0.95 : 0.8,
-        }}
-      />
-    </>
-  );
-}
 
 function AboutSection() {
   return (
@@ -245,7 +170,6 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <PremiumCursor />
       <BackgroundGlow />
       <Header />
       {loading ? (

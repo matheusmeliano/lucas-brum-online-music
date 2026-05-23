@@ -33,44 +33,10 @@
     transform: translateZ(0);
   }
 
-  @media (pointer: fine) {
-    body.premium-cursor-enabled,
-    body.premium-cursor-enabled * {
-      cursor: none !important;
-    }
-  }
-
   *,
   *::before,
   *::after {
     box-shadow: none !important;
-  }
-}
-
-@layer utilities {
-  .premium-cursor-ring {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 18px;
-    height: 18px;
-    border-radius: 9999px;
-    pointer-events: none;
-    z-index: 60;
-    border: 1px solid rgba(194, 164, 106, 0.55);
-    backdrop-filter: blur(8px);
-  }
-
-  .premium-cursor-dot {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 6px;
-    height: 6px;
-    border-radius: 9999px;
-    pointer-events: none;
-    z-index: 60;
-    background: rgba(255, 179, 71, 0.9);
   }
 }
 
