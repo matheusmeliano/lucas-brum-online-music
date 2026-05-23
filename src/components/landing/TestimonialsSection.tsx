@@ -5,24 +5,24 @@ import Reveal from "@/components/landing/Reveal";
 const testimonials = [
   {
     quote:
-      "Uma estética de palco que parece filme: silêncio, tensão, brilho e final arrebatador.",
-    source: "Público",
+      "Finalmente entendi o que estudar. O plano ficou claro e a evolução apareceu rápido.",
+    source: "Aluno",
   },
   {
     quote:
-      "Arranjos com sofisticação moderna — cada nota tem intenção e espaço para respirar.",
-    source: "Músicos",
+      "O feedback ao vivo corrigiu detalhes que eu repetia há anos. Mudou meu som.",
+    source: "Aluno",
   },
   {
     quote:
-      "Uma atmosfera noturna que transforma o ambiente. Elegante, direto e profundamente musical.",
-    source: "Curadoria",
+      "No híbrido consegui manter constância na rotina e ainda ter avaliação mensal.",
+    source: "Aluno",
   },
 ] as const;
 
 export default function TestimonialsSection() {
   return (
-    <section id="ao-vivo" className="relative">
+    <section id="depoimentos" className="relative">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_20%_20%,rgba(255,179,71,0.08),transparent_60%),radial-gradient(900px_circle_at_90%_60%,rgba(194,164,106,0.10),transparent_60%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,5,5,0.2),rgba(5,5,5,0.8))]" />
@@ -32,13 +32,13 @@ export default function TestimonialsSection() {
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Experiência ao vivo</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Depoimentos</h2>
               <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
-                Performances com iluminação dramática, dinâmica cinematográfica e presença que ocupa o espaço.
+                Resultados vêm de clareza, consistência e feedback. O foco é evolução real.
               </p>
             </div>
             <div className="rounded-3xl border border-brand-border bg-white/4 p-6 text-sm text-white/70 backdrop-blur-md">
-              Residências, festivais, clubes e eventos privados. Um formato enxuto ou completo, sempre com acabamento premium.
+              Aulas diretas, sem enrolação: você sai de cada etapa sabendo exatamente o próximo passo.
             </div>
           </div>
         </Reveal>

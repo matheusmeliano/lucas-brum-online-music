@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Instagram, Youtube, AudioLines } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
 
 export default function HeroSection() {
@@ -24,16 +24,16 @@ export default function HeroSection() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
         <Reveal>
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 text-[11px] font-semibold tracking-wide text-white/80 backdrop-blur-md">
-            Jazz contemporâneo • Composição • Produção
+            Aulas de violão • Evolução real • Direção
           </div>
 
           <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-brand-text sm:text-6xl">
-            Alma brasileira. Sofisticação europeia.
+            Escolha seu modelo. Evolua de verdade.
           </h1>
 
           <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
-            Guitarrista, compositor e produtor musical de jazz contemporâneo com carreira internacional. Uma experiência sonora
-            noturna, elegante e viva.
+            Dois formatos para você ter clareza, estratégia e acompanhamento: o Híbrido (flexível e escalável) ou o Individual
+            (totalmente personalizado, ao vivo, semanal).
           </p>
         </Reveal>
 
@@ -42,10 +42,10 @@ export default function HeroSection() {
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
-              href="#discografia"
+              href="#modelos"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
-              Ouça agora
+              Ver modelos
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </motion.a>
 
@@ -53,48 +53,7 @@ export default function HeroSection() {
               href="#contato"
               className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
-              Reservar uma performance
-            </a>
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.12}>
-          <div className="mt-10 flex flex-wrap items-center gap-2 text-xs text-white/60">
-            <a
-              href="https://open.spotify.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 backdrop-blur-md transition hover:bg-white/7 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-            >
-              <AudioLines className="h-4 w-4 text-brand-accent" />
-              Spotify
-            </a>
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 backdrop-blur-md transition hover:bg-white/7 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-            >
-              <Youtube className="h-4 w-4 text-brand-accent" />
-              YouTube
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 backdrop-blur-md transition hover:bg-white/7 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-            >
-              <Instagram className="h-4 w-4 text-brand-accent" />
-              Instagram
-            </a>
-            <a
-              href="https://soundcloud.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 backdrop-blur-md transition hover:bg-white/7 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-            >
-              <AudioLines className="h-4 w-4 text-brand-accent" />
-              SoundCloud
+              Começar agora
             </a>
           </div>
         </Reveal>

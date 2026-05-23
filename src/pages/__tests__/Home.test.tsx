@@ -15,14 +15,15 @@ describe("Home", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /alma brasileira\. sofisticação europeia\./i,
+        name: /escolha seu modelo\. evolua de verdade\./i,
       })
     ).toBeInTheDocument();
 
-    expect(screen.getByRole("heading", { name: /projetos em destaque/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /discografia/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /experiência ao vivo/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /serviços/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /vamos criar algo inesquecível\./i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /direção \+ consistência\./i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /modelos de aula/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /estrutura/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /depoimentos/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /benefícios/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /pronto para evoluir com direção\?/i })).toBeInTheDocument();
   });
 });

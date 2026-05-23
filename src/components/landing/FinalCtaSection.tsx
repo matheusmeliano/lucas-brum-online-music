@@ -18,13 +18,13 @@ export default function FinalCtaSection() {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/6 px-3 py-1 text-xs text-white/65">
                   <Mail className="h-4 w-4 text-brand-accent" />
-                  Contato & Booking
+                  Começar agora
                 </div>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
-                  Vamos criar algo inesquecível.
+                  Pronto para evoluir com direção?
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
-                  Conte o contexto, o palco e a sensação que você quer. Eu respondo com proposta clara e direção artística.
+                  Me diga seu objetivo e qual modelo você quer (Híbrido ou Individual). Eu te respondo com os próximos passos.
                 </p>
               </div>
 
@@ -36,7 +36,7 @@ export default function FinalCtaSection() {
                     rel="noreferrer"
                     className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-glow px-6 py-4 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                   >
-                    Enviar mensagem
+                    Falar comigo agora
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                   </a>
                 </motion.div>

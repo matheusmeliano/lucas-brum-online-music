@@ -4,11 +4,11 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Discografia", href: "#discografia" },
-  { label: "Ao vivo", href: "#ao-vivo" },
-  { label: "Serviços", href: "#servicos" },
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Modelos", href: "#modelos" },
+  { label: "Estrutura", href: "#estrutura" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Benefícios", href: "#beneficios" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -80,10 +80,10 @@ export default function Header() {
             <motion.a
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
-              href="#discografia"
+              href="#modelos"
               className="hidden items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(17,24,39,0.95),rgba(79,70,229,0.95))] px-4 py-2 text-[13px] font-semibold text-white shadow-[0_14px_34px_rgba(79,70,229,0.25)] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
             >
-              Fazer o teste
+              Começar
               <ArrowRight className="h-4 w-4" />
             </motion.a>
 
@@ -118,11 +118,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#discografia"
+              href="#modelos"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(135deg,rgba(17,24,39,0.95),rgba(79,70,229,0.95))] px-4 py-3 text-sm font-semibold text-white transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
-              Fazer o teste
+              Começar
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>

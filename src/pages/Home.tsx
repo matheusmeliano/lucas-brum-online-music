@@ -13,7 +13,7 @@ import Reveal from "@/components/landing/Reveal";
 
 function AboutSection() {
   return (
-    <section id="sobre" className="relative">
+    <section id="como-funciona" className="relative">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -23,24 +23,24 @@ function AboutSection() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05),rgba(255,255,255,0.02))]" />
               </div>
               <div className="relative">
-                <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">BIOGRAFIA</div>
+                <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">COMO FUNCIONA</div>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
-                  Storytelling visual, sem blocos de texto.
+                  Direção + consistência.
                 </h2>
                 <div className="mt-4 space-y-3 text-sm leading-relaxed text-white/70">
-                  <p>Guitarrista, compositor e produtor musical brasileiro de jazz contemporâneo com presença internacional.</p>
                   <p>
-                    A linguagem mistura minimalismo moderno, timbres orgânicos, silêncio calculado e brilho âmbar — como um
-                    documentário musical que você atravessa.
+                    Você recebe um caminho claro para evoluir: conteúdo objetivo, prática guiada e feedback para corrigir o que
+                    realmente trava sua evolução.
                   </p>
+                  <p>Escolha o formato que combina com sua rotina: híbrido (flexível) ou individual (ao vivo, semanal).</p>
                 </div>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {[
-                    "Carreira internacional",
-                    "Jazz contemporâneo",
-                    "Composição autoral",
-                    "Produção musical",
+                    "Objetivos definidos",
+                    "Acompanhamento",
+                    "Evolução semanal",
+                    "Clareza no estudo",
                   ].map((t) => (
                     <div
                       key={t}
@@ -58,9 +58,9 @@ function AboutSection() {
               <div className="relative rounded-[31px] bg-brand-deep/60 p-6 backdrop-blur-md">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">DESTAQUES</div>
+                    <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">O QUE VOCÊ GANHA</div>
                     <div className="mt-3 text-sm text-white/70">
-                      Festival, estúdio, palco ou sala íntima — a mesma intenção: profundidade e elegância.
+                      Um processo simples e funcional para você sentir progresso de verdade, sem enrolação.
                     </div>
                   </div>
                   <div className="hidden h-12 w-12 items-center justify-center rounded-2xl border border-brand-border bg-white/4 text-white/70 sm:flex">
@@ -70,9 +70,9 @@ function AboutSection() {
 
                 <div className="mt-6 space-y-4">
                   {[
-                    { k: "Ritmo cinematográfico", v: "Transições suaves, entradas editoriais e composição visual limpa." },
-                    { k: "Atmósfera noturna", v: "Pretos profundos, grafite e brilho dourado controlado." },
-                    { k: "Autenticidade", v: "Música viva, sem excesso — presença e intenção." },
+                    { k: "Feedback que destrava", v: "Avaliação do que está errado e o que fazer na prática." },
+                    { k: "Plano claro", v: "Sem perder tempo: o que estudar, como e quando." },
+                    { k: "Acompanhamento", v: "Você não fica sozinho: direção constante no processo." },
                   ].map((it) => (
                     <div key={it.k} className="rounded-3xl border border-brand-border bg-white/4 px-5 py-4">
                       <div className="text-sm font-semibold text-white">{it.k}</div>
@@ -98,21 +98,21 @@ type Release = {
 function DiscographySection() {
   const releases: Release[] = useMemo(
     () => [
-      { title: "Noite em Movimento", year: "2026", note: "Singles e sessões ao vivo com estética noturna e timbres orgânicos." },
-      { title: "Carta para o Silêncio", year: "2025", note: "Composições autorais: minimalismo moderno e tensão elegante." },
-      { title: "Clube Europeu", year: "2024", note: "Arranjos contemporâneos com brilho âmbar e dinâmica cinematográfica." },
-      { title: "Brasil em Preto", year: "2023", note: "Alma brasileira com sofisticação europeia — harmonia e espaço." },
+      { title: "Aula introdutória", year: "Começo", note: "Alinhamento de objetivo, diagnóstico e direção do que focar." },
+      { title: "4 aulas gravadas", year: "Semanas 1–4", note: "Uma por semana, com prática guiada e exercícios aplicáveis." },
+      { title: "Aula ao vivo mensal", year: "Mensal", note: "Avaliação/feedback para corrigir rota e acelerar evolução." },
+      { title: "Acompanhamento contínuo", year: "Constante", note: "Você sempre sabe o próximo passo: clareza e consistência." },
     ],
     []
   );
 
   return (
-    <section id="discografia" className="relative">
+    <section id="estrutura" className="relative">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Discografia</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Estrutura</h2>
           <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
-            Um visual premium no estilo streaming: capas grandes, brilho controlado e microinterações.
+            Um processo simples: conteúdo direto, prática com direção e feedback para ajustar rápido.
           </p>
         </Reveal>
 

@@ -1,45 +1,45 @@
 import { motion } from "framer-motion";
-import { Feather, GraduationCap, Mic2, Music, PenTool, Sparkles } from "lucide-react";
+import { CheckCircle2, Compass, MessageSquareText, Sparkles, Timer, UserRound } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
 
 const items = [
   {
-    title: "Music engraving",
-    desc: "Partituras limpas, legíveis e prontas para estúdio, palco e publicação.",
-    icon: PenTool,
+    title: "Plano claro",
+    desc: "Você sabe exatamente o que estudar e em qual ordem, sem perder tempo.",
+    icon: Compass,
   },
   {
-    title: "Composição",
-    desc: "Peças autorais e encomendas com assinatura harmônica e narrativa cinematográfica.",
-    icon: Music,
+    title: "Consistência",
+    desc: "Formato semanal (gravado ou ao vivo) para manter ritmo e evolução contínua.",
+    icon: Timer,
   },
   {
-    title: "Aulas",
-    desc: "Mentoria artística e técnica com direção estética e desenvolvimento musical real.",
-    icon: GraduationCap,
+    title: "Feedback que destrava",
+    desc: "Correção do que realmente trava: postura, técnica, timbre, ritmo e musicalidade.",
+    icon: MessageSquareText,
   },
   {
-    title: "Arranjos",
-    desc: "Texturas e voicings contemporâneos para trio, quinteto ou big band.",
-    icon: Feather,
+    title: "Personalização",
+    desc: "No Individual, o ensino é 100% ajustado ao seu nível e objetivo.",
+    icon: UserRound,
   },
   {
-    title: "Performances",
-    desc: "Shows, residências e eventos com atmosfera noturna e musicalidade viva.",
-    icon: Mic2,
+    title: "Evolução real",
+    desc: "Metas e acompanhamento para sentir progresso de verdade, semana após semana.",
+    icon: CheckCircle2,
   },
 ] as const;
 
 export default function BenefitsSection() {
   return (
-    <section id="servicos" className="relative">
+    <section id="beneficios" className="relative">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            Serviços
+            Benefícios
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
-            Soluções musicais com acabamento premium, pensadas para soar e parecerem grandes.
+            Dois modelos diferentes, com o mesmo objetivo: direção e resultado.
           </p>
         </Reveal>
 
@@ -72,7 +72,7 @@ export default function BenefitsSection() {
         <Reveal delay={0.12}>
           <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 text-xs text-white/65 backdrop-blur-md">
             <Sparkles className="h-4 w-4 text-brand-accent" />
-            Cada entrega é tratada como obra: detalhe, silêncio, contraste e intenção.
+            Escolha o modelo e comece com clareza.
           </div>
         </Reveal>
       </div>

@@ -8,22 +8,22 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold text-white">Lucas Brum</div>
             <div className="mt-2 max-w-md text-sm text-white/65">
-              Jazz contemporâneo, composição e produção musical com estética cinematográfica e acabamento premium.
+              Aulas de violão com direção, estratégia e acompanhamento. Modelo Híbrido ou Individual.
             </div>
           </div>
 
           <div className="grid gap-3 text-sm">
             <a
-              href="#sobre"
+              href="#como-funciona"
               className="text-white/80 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
-              Sobre
+              Como funciona
             </a>
             <a
-              href="#projetos"
+              href="#modelos"
               className="text-white/80 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
-              Projetos
+              Modelos
             </a>
             <a
               href="#contato"
@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-brand-border pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Lucas Brum</div>
-          <div className="text-white/50">Experiência editorial, noturna e minimalista.</div>
+          <div className="text-white/50">Evolução real com clareza e consistência.</div>
         </div>
       </div>
     </footer>
