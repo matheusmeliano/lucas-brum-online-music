@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -40,75 +40,69 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-colors duration-300",
-        scrolled ? "border-brand-border bg-brand-deep/85" : "border-transparent bg-brand-deep/55"
-      )}
-    >
-      <div className="mx-auto max-w-6xl px-4 py-4 sm:py-5">
-        <div className="flex flex-col items-center gap-3 text-center md:flex-row md:items-center md:justify-between md:text-left">
-          <div className="flex w-full flex-col items-center md:w-auto md:flex-row md:items-center">
-            <a
-              href="#topo"
-              onClick={handleBrandClick}
-              className="group inline-flex w-full items-center justify-center gap-2 md:w-auto md:justify-start"
-            >
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
+        <div
+          className={cn(
+            "flex items-center justify-between gap-4 rounded-full border px-4 py-3 backdrop-blur-xl transition",
+            scrolled
+              ? "border-black/8 bg-white/92 shadow-[0_18px_70px_rgba(0,0,0,0.35)]"
+              : "border-black/6 bg-white/88 shadow-[0_18px_70px_rgba(0,0,0,0.28)]"
+          )}
+        >
+          <a href="#topo" onClick={handleBrandClick} className="inline-flex items-center gap-3">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-black/5">
               <img
                 src="/imagens/logo-online-music-usa.png"
                 alt="Lucas Brum Online Music USA"
-                className="h-11 w-11 rounded-2xl bg-white/0 p-0 object-contain"
+                className="h-7 w-7 object-contain"
                 loading="eager"
               />
-              <div className="leading-tight">
-                <div
-                  className={cn(
-                    "max-w-[220px] truncate text-[13px] font-semibold tracking-tight text-brand-text transition-colors duration-150 sm:max-w-[280px] md:max-w-none md:whitespace-nowrap md:overflow-visible md:text-sm"
-                  )}
-                >
-                  Lucas Brum Online Music USA
-                </div>
-              </div>
-            </a>
-
-            <div className="mt-2 flex w-full items-center justify-center gap-2 md:mt-0 md:ml-2 md:w-auto md:justify-start">
-              <button
-                type="button"
-                aria-label={open ? "Fechar menu" : "Abrir menu"}
-                aria-expanded={open}
-                onClick={() => setOpen((v) => !v)}
-                className={cn(
-                  "inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 text-white/90 transition-colors duration-150 hover:bg-white/8 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden"
-                )}
-              >
-                {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </button>
+            </span>
+            <div className="hidden text-[13px] font-semibold tracking-tight text-black/85 sm:block">
+              Lucas Brum Online Music USA
             </div>
-          </div>
+          </a>
 
-          <div className="hidden items-center gap-6 md:flex">
-            <nav className="flex items-center gap-6 text-sm">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "text-white/70 transition-colors duration-150 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                  )}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
+          <nav className="hidden items-center gap-7 text-[13px] text-black/55 md:flex">
+            {navItems.slice(0, 4).map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="transition-colors hover:text-black/80 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <a
+              href="#contato"
+              className="hidden items-center justify-center rounded-full border border-black/10 bg-white px-4 py-2 text-[13px] font-semibold text-black/70 transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
+            >
+              Entrar
+            </a>
 
             <motion.a
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
               href="#discografia"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-brand-glow px-4 py-2 text-[13px] font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+              className="hidden items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(17,24,39,0.95),rgba(79,70,229,0.95))] px-4 py-2 text-[13px] font-semibold text-white shadow-[0_14px_34px_rgba(79,70,229,0.25)] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
             >
-              Ouça agora
+              Fazer o teste
+              <ArrowRight className="h-4 w-4" />
             </motion.a>
+
+            <button
+              type="button"
+              aria-label={open ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/75 transition hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
         </div>
       </div>
@@ -118,16 +112,14 @@ export default function Header() {
         role="dialog"
         aria-modal="true"
       >
-        <div className="border-t border-brand-border bg-brand-deep/92 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4">
+        <div className="mx-auto max-w-6xl px-4 pb-4 pt-3">
+          <div className="rounded-[28px] border border-black/10 bg-white/92 p-3 shadow-[0_24px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={cn(
-                  "rounded-2xl border border-brand-border bg-white/4 px-4 py-3 text-sm text-white/90 transition hover:bg-white/7 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                )}
+                className="block rounded-2xl px-4 py-3 text-sm font-medium text-black/70 transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
               >
                 {item.label}
               </a>
@@ -135,9 +127,10 @@ export default function Header() {
             <a
               href="#discografia"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-2xl bg-brand-glow px-4 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+              className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(135deg,rgba(17,24,39,0.95),rgba(79,70,229,0.95))] px-4 py-3 text-sm font-semibold text-white transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
-              Ouça agora
+              Fazer o teste
+              <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
