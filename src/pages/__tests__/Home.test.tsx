@@ -15,7 +15,7 @@ describe("Home", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /escolha seu modelo\. evolua de verdade\./i,
+        name: /de brasileiro para brasileiro nos eua\./i,
       })
     ).toBeInTheDocument();
 
