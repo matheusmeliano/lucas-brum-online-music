@@ -8,13 +8,14 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_40%,rgba(255,179,71,0.14),transparent_55%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(5,5,5,0.95),rgba(5,5,5,0.55),rgba(5,5,5,0.95))]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,5,5,0.65),rgba(5,5,5,0.15),rgba(5,5,5,0.92))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,5,5,0.60),rgba(5,5,5,0.12),rgba(0,0,0,1))]" />
+        <div className="absolute inset-x-0 bottom-0 h-44 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_92%)]" />
         <div className="absolute left-[12%] top-[20%] h-44 w-44 rounded-full bg-brand-accent/10 blur-3xl animate-float-slow" />
         <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-x-0 top-[88px] z-0 flex justify-center overflow-hidden sm:top-[112px] relative">
+        <div className="pointer-events-none absolute inset-x-0 top-[88px] z-0 flex justify-center overflow-hidden sm:top-[112px]">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,7 +25,6 @@ export default function HeroSection() {
             className="w-[520px] max-w-[92vw] opacity-40 grayscale [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
             loading="eager"
           />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.78)_55%,rgba(0,0,0,0.96)_100%)] sm:h-40" />
         </div>
 
         <div className="relative z-10 isolate">
