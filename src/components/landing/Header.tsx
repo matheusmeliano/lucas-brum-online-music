@@ -44,7 +44,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
         <div
           className={cn(
-            "flex items-center justify-between gap-4 rounded-full border px-4 py-3 backdrop-blur-xl transition",
+            "flex items-center justify-center gap-3 rounded-full border px-4 py-3 backdrop-blur-xl transition md:justify-between md:gap-4",
             scrolled
               ? "border-transparent bg-brand-deep/72 shadow-[0_18px_70px_rgba(0,0,0,0.45)]"
               : "border-transparent bg-brand-deep/55 shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
@@ -59,7 +59,7 @@ export default function Header() {
                 loading="eager"
               />
             </span>
-            <div className="hidden text-[13px] font-semibold tracking-tight text-white sm:block">
+            <div className="hidden text-[13px] font-semibold tracking-tight text-white md:block">
               Lucas Brum Online Music USA
             </div>
           </a>
@@ -76,7 +76,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 md:gap-2">
             <motion.a
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
