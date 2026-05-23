@@ -22,7 +22,7 @@ export default function LanguagePrompt({ onOpen, suspended, anchorRef }: Languag
   }, [locale, dismissed]);
 
   useEffect(() => {
-    const mql = window.matchMedia("(min-width: 768px)");
+    const mql = window.matchMedia("(min-width: 1000px)");
     const update = () => setIsDesktop(mql.matches);
     update();
     mql.addEventListener("change", update);

@@ -81,10 +81,10 @@ export default function Header() {
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
               href="#modelos"
-              className="hidden items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(17,24,39,0.95),rgba(79,70,229,0.95))] px-4 py-2 text-[13px] font-semibold text-white shadow-[0_14px_34px_rgba(79,70,229,0.25)] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
+              className="group hidden items-center justify-center gap-2 rounded-full bg-brand-glow px-4 py-2 text-[13px] font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
             >
               Começar
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </motion.a>
 
             <button
@@ -120,10 +120,10 @@ export default function Header() {
             <a
               href="#modelos"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(135deg,rgba(17,24,39,0.95),rgba(79,70,229,0.95))] px-4 py-3 text-sm font-semibold text-white transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+              className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-glow px-4 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
             >
               Começar
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
           </div>
         </div>
