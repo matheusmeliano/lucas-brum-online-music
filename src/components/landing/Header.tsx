@@ -44,7 +44,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
         <div
           className={cn(
-            "flex items-center justify-center gap-3 rounded-full border border-brand-border bg-brand-deep px-4 py-3 transition md:justify-between md:gap-4"
+            "flex items-center justify-center gap-3 rounded-full border border-brand-border bg-transparent px-4 py-3 transition md:justify-between md:gap-4"
           )}
         >
           <a href="#topo" onClick={handleBrandClick} className="inline-flex items-center gap-3">
