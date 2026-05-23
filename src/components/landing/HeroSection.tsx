@@ -14,7 +14,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-x-0 top-[88px] z-0 flex justify-center overflow-hidden sm:top-[112px]">
+        <div className="pointer-events-none absolute inset-x-0 top-[88px] z-0 flex justify-center overflow-hidden sm:top-[112px] relative">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,6 +24,7 @@ export default function HeroSection() {
             className="w-[520px] max-w-[92vw] opacity-40 grayscale [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
             loading="eager"
           />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.78)_55%,rgba(0,0,0,0.96)_100%)] sm:h-40" />
         </div>
 
         <div className="relative z-10 isolate">
