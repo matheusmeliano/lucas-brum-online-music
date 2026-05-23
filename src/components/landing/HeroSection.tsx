@@ -23,10 +23,6 @@ export default function HeroSection() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
         <Reveal>
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 text-[11px] font-semibold tracking-wide text-white/80 backdrop-blur-md">
-            Aulas de violão • Evolução real • Direção
-          </div>
-
           <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-brand-text sm:text-6xl">
             Escolha seu modelo. Evolua de verdade.
           </h1>
