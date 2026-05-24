@@ -22,7 +22,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="relative">
+    <section id="depoimentos" className="relative scroll-mt-[120px]">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_20%_20%,rgba(255,179,71,0.08),transparent_60%),radial-gradient(900px_circle_at_90%_60%,rgba(194,164,106,0.10),transparent_60%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,5,5,0.2),rgba(5,5,5,0.8))]" />

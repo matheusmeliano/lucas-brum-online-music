@@ -13,7 +13,7 @@ import Reveal from "@/components/landing/Reveal";
 
 function AboutSection() {
   return (
-    <section id="como-funciona" className="relative bg-black">
+    <section id="como-funciona" className="relative bg-black scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -107,7 +107,7 @@ function DiscographySection() {
   );
 
   return (
-    <section id="estrutura" className="relative">
+    <section id="estrutura" className="relative scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Estrutura</h2>

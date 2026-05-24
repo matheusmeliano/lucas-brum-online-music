@@ -4,7 +4,7 @@ import Reveal from "@/components/landing/Reveal";
 
 export default function FinalCtaSection() {
   return (
-    <section id="contato" className="relative">
+    <section id="contato" className="relative scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pb-28 sm:pt-14">
         <Reveal>
           <div className="relative overflow-hidden rounded-[36px] border border-white/16 bg-white/5 px-6 py-10 backdrop-blur-sm sm:px-10">

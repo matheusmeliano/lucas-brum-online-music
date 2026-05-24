@@ -32,7 +32,7 @@ const items = [
 
 export default function BenefitsSection() {
   return (
-    <section id="beneficios" className="relative">
+    <section id="beneficios" className="relative scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
