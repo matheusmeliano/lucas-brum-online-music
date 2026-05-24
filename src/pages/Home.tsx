@@ -17,7 +17,7 @@ function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-black p-6 backdrop-blur-md">
+            <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-black p-6 shadow-[0_0_40px_rgba(194,164,106,0.06)] ring-1 ring-[#c2a46a]/12 backdrop-blur-md">
               <div className="relative">
                 <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">COMO FUNCIONA</div>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
@@ -51,7 +51,7 @@ function AboutSection() {
 
             <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/3 p-[1px]">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,164,106,0.20),rgba(255,255,255,0.02))]" />
-              <div className="relative rounded-[31px] bg-brand-deep/60 p-6 backdrop-blur-md">
+              <div className="relative rounded-[31px] bg-brand-deep/60 p-6 shadow-[0_0_36px_rgba(194,164,106,0.05)] ring-1 ring-[#c2a46a]/10 backdrop-blur-md">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">O QUE VOCÊ GANHA</div>
