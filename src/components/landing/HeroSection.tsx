@@ -4,7 +4,7 @@ import Reveal from "@/components/landing/Reveal";
 
 export default function HeroSection() {
   return (
-    <section id="topo" className="relative">
+    <section id="topo" className="relative -mt-[50px]">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_40%,rgba(255,179,71,0.14),transparent_55%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(5,5,5,0.95),rgba(5,5,5,0.55),rgba(5,5,5,0.95))]" />
