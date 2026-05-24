@@ -46,6 +46,10 @@
     padding-right: 2rem !important;
   }
 
+  .-mt-\[50px\] {
+    margin-top: -100px !important;
+  }
+
   .pt-14 {
     padding-top: 2.5rem !important;
   }
