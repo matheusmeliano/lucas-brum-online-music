@@ -10,6 +10,8 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(5,5,5,0.95),rgba(5,5,5,0.55),rgba(5,5,5,0.95))]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,5,5,0.60),rgba(5,5,5,0.12),rgba(0,0,0,1))]" />
         <div className="absolute inset-x-0 bottom-0 h-44 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_92%)]" />
+        <div className="absolute left-1/2 top-[32%] h-[2px] w-[2px] -translate-x-1/2 rounded-full bg-[#c2a46a]/35 blur-[0.6px] opacity-30 [box-shadow:-420px_-90px_0_rgba(194,164,106,0.20),-260px_140px_0_rgba(194,164,106,0.16),-120px_-30px_0_rgba(194,164,106,0.22),-30px_190px_0_rgba(194,164,106,0.14),90px_-80px_0_rgba(194,164,106,0.18),180px_110px_0_rgba(194,164,106,0.16),280px_-10px_0_rgba(194,164,106,0.20),410px_160px_0_rgba(194,164,106,0.14)]" />
+        <div className="absolute left-1/2 top-[46%] h-[3px] w-[3px] -translate-x-1/2 rounded-full bg-[#c2a46a]/25 blur-[1.6px] opacity-20 [box-shadow:-360px_170px_0_rgba(194,164,106,0.12),-210px_-140px_0_rgba(194,164,106,0.10),-70px_80px_0_rgba(194,164,106,0.12),120px_-120px_0_rgba(194,164,106,0.10),240px_40px_0_rgba(194,164,106,0.12),360px_-10px_0_rgba(194,164,106,0.10)]" />
         <div className="absolute left-[12%] top-[20%] h-44 w-44 rounded-full bg-brand-accent/10 blur-3xl animate-float-slow" />
         <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
       </div>
