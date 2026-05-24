@@ -13,11 +13,11 @@ import Reveal from "@/components/landing/Reveal";
 
 function AboutSection() {
   return (
-    <section id="como-funciona" className="relative">
+    <section id="como-funciona" className="relative bg-black">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-[#000000] p-6 backdrop-blur-md">
+            <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/4 p-6 backdrop-blur-md">
               <div className="pointer-events-none absolute inset-0 opacity-80">
                 <div className="absolute inset-0 bg-[radial-gradient(800px_circle_at_10%_10%,rgba(255,179,71,0.10),transparent_60%)]" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05),rgba(255,255,255,0.02))]" />
