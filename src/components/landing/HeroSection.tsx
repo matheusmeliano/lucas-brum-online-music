@@ -15,7 +15,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-12 pt-[120px] sm:pb-14 sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-x-0 top-[clamp(140px,22vw,214px)] z-0 flex justify-center overflow-hidden md:top-[clamp(104px,14vw,152px)]">
+        <div className="pointer-events-none absolute inset-x-0 top-[clamp(132px,20vw,202px)] z-0 flex justify-center overflow-hidden md:top-[clamp(104px,14vw,152px)]">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
             animate={{ opacity: 1, y: 0 }}
