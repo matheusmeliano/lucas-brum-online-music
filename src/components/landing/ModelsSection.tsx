@@ -40,12 +40,6 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
           ))}
         </div>
 
-        <div className="mt-7">
-          <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 text-xs text-white/75 transition group-hover:bg-white/6">
-            Ver detalhes
-            <span className="text-brand-accent">→</span>
-          </div>
-        </div>
       </div>
     </motion.div>
   );
