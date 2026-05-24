@@ -14,25 +14,25 @@ export default function HeroSection() {
         <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-0 pt-[120px] sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-x-0 top-[88px] z-0 flex justify-center overflow-hidden sm:top-[112px]">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-12 pt-[120px] sm:pb-14 sm:pt-[140px]">
+        <div className="pointer-events-none absolute inset-x-0 top-[clamp(72px,10vw,112px)] z-0 flex justify-center overflow-hidden">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
             src="/imagens/foto-perfil-lucas-brum.png?v=4"
             alt=""
-            className="w-[520px] max-w-[92vw] opacity-40 grayscale [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
+            className="w-[clamp(320px,62vw,520px)] max-w-[92vw] opacity-40 grayscale [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
             loading="eager"
           />
         </div>
 
-        <div className="pointer-events-none absolute left-1/2 top-[120px] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)] sm:top-[140px]" />
+        <div className="pointer-events-none absolute left-1/2 top-[clamp(112px,16vw,140px)] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
 
         <div className="relative z-10 isolate">
           <Reveal className="relative z-20">
             <div className="flex flex-col items-center text-center">
-              <h1 className="mt-[300px] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:mt-[320px] sm:text-6xl">
+              <h1 className="mt-[clamp(240px,40vw,320px)] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:text-6xl">
                 De Brasileiro para Brasileiro nos EUA.
               </h1>
 
