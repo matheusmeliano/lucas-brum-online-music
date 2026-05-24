@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-14 pt-[120px] sm:pb-20 sm:pt-[140px]">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-0 pt-[120px] sm:pt-[140px]">
         <div className="pointer-events-none absolute inset-x-0 top-[88px] z-0 flex justify-center overflow-hidden sm:top-[112px]">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
@@ -27,9 +27,9 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 isolate">
-          <div className="pointer-events-none absolute left-1/2 top-[120px] bottom-0 z-10 w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)] sm:top-[140px]" />
+        <div className="pointer-events-none absolute left-1/2 top-[120px] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)] sm:top-[140px]" />
 
+        <div className="relative z-10 isolate">
           <Reveal className="relative z-20">
             <div className="flex flex-col items-center text-center">
               <h1 className="mt-[300px] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:mt-[320px] sm:text-6xl">
