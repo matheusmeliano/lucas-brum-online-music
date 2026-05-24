@@ -17,10 +17,10 @@ function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[32px] border border-[#c2a46a]/18 bg-black p-6 shadow-[0_0_90px_rgba(194,164,106,0.10)] ring-1 ring-[#c2a46a]/18 backdrop-blur-md">
+            <div className="relative overflow-hidden rounded-[32px] border border-[#c2a46a]/28 bg-black p-6 shadow-[0_0_110px_rgba(194,164,106,0.14)] ring-1 ring-[#c2a46a]/24 backdrop-blur-md">
               <div className="pointer-events-none absolute inset-0 opacity-70">
-                <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_12%_14%,rgba(194,164,106,0.12),transparent_58%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(194,164,106,0.06),transparent_46%,transparent_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_12%_14%,rgba(194,164,106,0.18),transparent_58%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(194,164,106,0.08),transparent_46%,transparent_100%)]" />
               </div>
               <div className="relative">
                 <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">COMO FUNCIONA</div>
@@ -44,7 +44,7 @@ function AboutSection() {
                   ].map((t) => (
                     <div
                       key={t}
-                      className="rounded-2xl border border-brand-border bg-white/4 px-4 py-3 text-xs font-medium text-white/75"
+                      className="rounded-2xl border border-[#c2a46a]/14 bg-black/35 px-4 py-3 text-xs font-medium text-white/75"
                     >
                       {t}
                     </div>
@@ -53,9 +53,9 @@ function AboutSection() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[32px] border border-[#c2a46a]/14 bg-black/20 p-[1px] shadow-[0_0_90px_rgba(194,164,106,0.08)]">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,164,106,0.34),rgba(255,255,255,0.03))]" />
-              <div className="relative rounded-[31px] bg-brand-deep/60 p-6 shadow-[0_0_70px_rgba(194,164,106,0.08)] ring-1 ring-[#c2a46a]/14 backdrop-blur-md">
+            <div className="relative overflow-hidden rounded-[32px] border border-[#c2a46a]/22 bg-black/25 p-[1px] shadow-[0_0_100px_rgba(194,164,106,0.12)]">
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,164,106,0.50),rgba(0,0,0,0))]" />
+              <div className="relative rounded-[31px] bg-brand-deep/60 p-6 shadow-[0_0_90px_rgba(194,164,106,0.10)] ring-1 ring-[#c2a46a]/18 backdrop-blur-md">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">O QUE VOCÊ GANHA</div>
@@ -63,7 +63,7 @@ function AboutSection() {
                       Um processo simples e funcional para você sentir progresso de verdade, sem enrolação.
                     </div>
                   </div>
-                  <div className="hidden h-12 w-12 items-center justify-center rounded-2xl border border-brand-border bg-white/4 text-white/70 sm:flex">
+                  <div className="hidden h-12 w-12 items-center justify-center rounded-2xl border border-[#c2a46a]/18 bg-black/35 text-white/70 sm:flex">
                     <Sparkles className="h-5 w-5 text-brand-accent" />
                   </div>
                 </div>
@@ -74,7 +74,7 @@ function AboutSection() {
                     { k: "Plano claro", v: "Sem perder tempo: o que estudar, como e quando." },
                     { k: "Acompanhamento", v: "Você não fica sozinho: direção constante no processo." },
                   ].map((it) => (
-                    <div key={it.k} className="rounded-3xl border border-brand-border bg-white/4 px-5 py-4">
+                    <div key={it.k} className="rounded-3xl border border-[#c2a46a]/14 bg-black/30 px-5 py-4">
                       <div className="text-sm font-semibold text-white">{it.k}</div>
                       <div className="mt-1 text-sm text-white/65">{it.v}</div>
                     </div>
