@@ -16,13 +16,6 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const handleBrandClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    window.history.replaceState(null, "", "#topo");
-  };
-
   useEffect(() => {
     if (!open) return;
     const onKeyDown = (e: KeyboardEvent) => {
@@ -50,7 +43,7 @@ export default function Header() {
               : "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
           )}
         >
-          <a href="#topo" onClick={handleBrandClick} className="inline-flex items-center gap-3">
+          <a href="https://www.lucasbrumonlinemusic.com/" className="inline-flex items-center gap-3">
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/6">
               <img
                 src="/imagens/logo-online-music-usa.png"
