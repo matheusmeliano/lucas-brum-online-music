@@ -15,27 +15,29 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
       whileHover={{ y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group relative overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
-        featured ? "bg-[linear-gradient(135deg,rgba(194,164,106,0.16),rgba(255,255,255,0.03))]" : ""
+        "group relative overflow-hidden rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_60px_rgba(0,0,0,0.10)]",
+        featured
+          ? "border-[#c2a46a]/28 bg-[linear-gradient(135deg,rgba(194,164,106,0.22),rgba(255,255,255,0.95))] ring-1 ring-[#c2a46a]/22"
+          : ""
       )}
     >
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-accent/12 blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
+        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-glow/16 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/10 blur-3xl" />
       </div>
 
       <div className="relative">
-        <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">
+        <div className="text-[11px] font-semibold tracking-[0.18em] text-brand-deep/60">
           {featured ? "RECOMENDADO" : "OUTRA OPÇÃO"}
         </div>
-        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-brand-text">{title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-white/70">{subtitle}</p>
+        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-brand-deep">{title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-brand-deep/70">{subtitle}</p>
 
         <div className="mt-6 space-y-3">
           {bullets.map((b) => (
             <div key={b} className="flex items-start gap-3">
-              <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-brand-accent/90" />
-              <div className="text-sm text-white/75">{b}</div>
+              <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-brand-glow/90" />
+              <div className="text-sm text-brand-deep/70">{b}</div>
             </div>
           ))}
         </div>
@@ -47,11 +49,11 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
 
 export default function ModelsSection() {
   return (
-    <section id="modelos" className="relative">
+    <section id="modelos" className="relative bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Modelos de aula</h2>
-          <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
+          <h2 className="text-2xl font-semibold tracking-tight text-brand-deep sm:text-3xl">Modelos de aula</h2>
+          <p className="mt-2 max-w-2xl text-sm text-brand-deep/60 sm:text-base">
             Escolha entre flexibilidade com conteúdo gravado ou acompanhamento completo e personalizado ao vivo.
           </p>
         </Reveal>
