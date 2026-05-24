@@ -55,13 +55,15 @@
   }
 
   @media (min-width: 640px) {
-    .sm\:pb-14 {
-      padding-bottom: 7.5rem !important;
-    }
-
     .sm\:pt-20 {
       padding-top: 2.5rem !important;
     }
   }
 
+}
+
+@media (min-width: 640px) {
+  .sm\:pb-14 {
+    padding-bottom: 7.5rem !important;
+  }
 }
