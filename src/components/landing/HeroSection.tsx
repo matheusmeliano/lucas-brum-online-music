@@ -15,19 +15,19 @@ export default function HeroSection() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-12 pt-[120px] sm:pb-14 sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-x-0 top-[clamp(92px,12vw,132px)] z-0 flex justify-center overflow-hidden">
+        <div className="pointer-events-none absolute inset-x-0 top-[clamp(140px,22vw,214px)] z-0 flex justify-center overflow-hidden md:top-[clamp(104px,14vw,152px)]">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
             src="/imagens/foto-perfil-lucas-brum.png?v=4"
             alt=""
-            className="w-[clamp(320px,62vw,520px)] max-w-[92vw] opacity-55 grayscale [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
+            className="w-[clamp(320px,62vw,520px)] max-w-[92vw] opacity-60 grayscale brightness-[1.08] [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
             loading="eager"
           />
         </div>
 
-        <div className="pointer-events-none absolute left-1/2 top-[clamp(172px,24vw,240px)] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.62)_34%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
+        <div className="pointer-events-none absolute left-1/2 top-[clamp(206px,30vw,292px)] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.58)_36%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
 
         <div className="relative z-10 isolate">
           <Reveal className="relative z-20">
