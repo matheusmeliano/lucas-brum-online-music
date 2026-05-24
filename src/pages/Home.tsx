@@ -17,11 +17,7 @@ function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/4 p-6 backdrop-blur-md">
-              <div className="pointer-events-none absolute inset-0 opacity-80">
-                <div className="absolute inset-0 bg-[radial-gradient(800px_circle_at_10%_10%,rgba(255,179,71,0.10),transparent_60%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05),rgba(255,255,255,0.02))]" />
-              </div>
+            <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-black p-6 backdrop-blur-md">
               <div className="relative">
                 <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">COMO FUNCIONA</div>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
