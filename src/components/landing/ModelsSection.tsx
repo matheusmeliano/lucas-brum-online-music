@@ -15,7 +15,7 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
       whileHover={{ y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group relative overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
+        "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
         featured ? "bg-[linear-gradient(135deg,rgba(194,164,106,0.16),rgba(255,255,255,0.03))]" : ""
       )}
     >
