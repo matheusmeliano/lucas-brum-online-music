@@ -25,7 +25,7 @@ export default function FinalCtaSection() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+                <motion.div whileTap={{ scale: 0.98 }}>
                   <a
                     href="https://www.instagram.com/"
                     target="_blank"
