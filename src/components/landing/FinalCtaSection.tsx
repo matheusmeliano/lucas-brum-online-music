@@ -4,15 +4,10 @@ import Reveal from "@/components/landing/Reveal";
 
 export default function FinalCtaSection() {
   return (
-    <section id="contato" className="relative scroll-mt-[120px]">
+    <section id="contato" className="relative scroll-mt-[120px] bg-black">
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pb-28 sm:pt-14">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[36px] border border-white/16 bg-black px-6 py-10 backdrop-blur-sm sm:px-10">
-            <div className="pointer-events-none absolute inset-0">
-              <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
-              <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-accent/10 blur-3xl" />
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-            </div>
+          <div className="relative overflow-hidden rounded-[36px] border border-white/16 bg-black px-6 py-10 sm:px-10">
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
