@@ -16,10 +16,6 @@ export default function FinalCtaSection() {
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/6 px-3 py-1 text-xs text-white/65">
-                  <Mail className="h-4 w-4 text-brand-accent" />
-                  Começar agora
-                </div>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
                   Pronto para evoluir com direção?
                 </h2>
@@ -47,10 +43,6 @@ export default function FinalCtaSection() {
                 >
                   Voltar ao topo
                 </a>
-
-                <div className="text-center text-xs text-white/55">
-                  Resposta humana, rápida e direta.
-                </div>
               </div>
             </div>
           </div>
