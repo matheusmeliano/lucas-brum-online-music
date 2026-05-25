@@ -47,7 +47,6 @@ export default function BenefitsSection() {
           {items.map((b, idx) => (
             <Reveal key={b.title} delay={0.05 + idx * 0.04}>
               <motion.div
-                whileHover={{ y: -3 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative h-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-6 backdrop-blur-md"
               >
