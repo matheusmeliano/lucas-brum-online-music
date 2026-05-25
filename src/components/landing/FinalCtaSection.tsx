@@ -16,7 +16,7 @@ export default function FinalCtaSection() {
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#c2a46a]/18 bg-white/6 px-3 py-1 text-xs text-white/65">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/6 px-3 py-1 text-xs text-white/65">
                   <Mail className="h-4 w-4 text-brand-accent" />
                   Começar agora
                 </div>
@@ -43,7 +43,7 @@ export default function FinalCtaSection() {
 
                 <a
                   href="#topo"
-                  className="inline-flex items-center justify-center rounded-2xl border border-[#c2a46a]/22 bg-white/5 px-6 py-4 text-sm font-medium text-white/90 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                  className="inline-flex items-center justify-center rounded-2xl bg-white/5 px-6 py-4 text-sm font-medium text-white/90 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
                 >
                   Voltar ao topo
                 </a>
