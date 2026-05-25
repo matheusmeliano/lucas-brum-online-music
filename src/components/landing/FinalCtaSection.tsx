@@ -7,7 +7,7 @@ export default function FinalCtaSection() {
     <section id="contato" className="relative scroll-mt-[120px] bg-black">
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pb-28 sm:pt-14">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[36px] border border-[#c2a46a]/18 bg-black px-6 py-10 sm:px-10">
+          <div className="relative overflow-hidden rounded-[36px] border border-transparent bg-black px-6 py-10 ring-1 ring-[#c2a46a]/22 sm:px-10">
             <div className="pointer-events-none absolute inset-0 opacity-80">
               <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_15%_20%,rgba(255,179,71,0.16),transparent_60%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_90%_80%,rgba(194,164,106,0.18),transparent_60%)]" />
@@ -16,7 +16,7 @@ export default function FinalCtaSection() {
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/6 px-3 py-1 text-xs text-white/65">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#c2a46a]/18 bg-white/6 px-3 py-1 text-xs text-white/65">
                   <Mail className="h-4 w-4 text-brand-accent" />
                   Começar agora
                 </div>
@@ -43,7 +43,7 @@ export default function FinalCtaSection() {
 
                 <a
                   href="#topo"
-                  className="inline-flex items-center justify-center rounded-2xl border border-brand-border bg-white/5 px-6 py-4 text-sm font-medium text-white/90 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                  className="inline-flex items-center justify-center rounded-2xl border border-[#c2a46a]/22 bg-white/5 px-6 py-4 text-sm font-medium text-white/90 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
                 >
                   Voltar ao topo
                 </a>
