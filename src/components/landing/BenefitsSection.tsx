@@ -68,13 +68,6 @@ export default function BenefitsSection() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.12}>
-          <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/4 px-4 py-2 text-xs text-white/65 backdrop-blur-md">
-            <Sparkles className="h-4 w-4 text-brand-accent" />
-            Escolha o modelo e comece com clareza.
-          </div>
-        </Reveal>
       </div>
     </section>
   );
