@@ -56,12 +56,34 @@ function BenefitCard({ item }: { item: BenefitItem }) {
 }
 
 export default function BenefitsSection() {
+  const [visibleCount, setVisibleCount] = useState(1);
   const [slideIndex, setSlideIndex] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const [instant, setInstant] = useState(false);
   const intervalRef = useRef<number | null>(null);
 
-  const slides = useMemo(() => [items[items.length - 1], ...items, items[0]], []);
+  const stepPercent = 100 / visibleCount;
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 1000px)");
+
+    const apply = () => {
+      const nextVisibleCount = mql.matches ? 3 : 1;
+      setVisibleCount(nextVisibleCount);
+      setInstant(true);
+      setSlideIndex(nextVisibleCount);
+    };
+
+    apply();
+    mql.addEventListener("change", apply);
+    return () => mql.removeEventListener("change", apply);
+  }, []);
+
+  const slides = useMemo(() => {
+    const head = items.slice(Math.max(0, items.length - visibleCount));
+    const tail = items.slice(0, visibleCount);
+    return [...head, ...items, ...tail];
+  }, [visibleCount]);
 
   const stopAutoplay = () => {
     if (intervalRef.current) {
@@ -115,7 +137,7 @@ export default function BenefitsSection() {
         <div className="relative mt-10">
           <div className="overflow-hidden">
             <motion.div
-              animate={{ x: `-${slideIndex * 100}%` }}
+              animate={{ x: `-${slideIndex * stepPercent}%` }}
               transition={
                 instant
                   ? { duration: 0 }
@@ -123,16 +145,16 @@ export default function BenefitsSection() {
               }
               onAnimationStart={() => setIsAnimating(true)}
               onAnimationComplete={() => {
-                if (slideIndex === 0) {
+                if (slideIndex < visibleCount) {
                   setInstant(true);
-                  setSlideIndex(items.length);
+                  setSlideIndex((current) => current + items.length);
                   setIsAnimating(false);
                   return;
                 }
 
-                if (slideIndex === items.length + 1) {
+                if (slideIndex >= items.length + visibleCount) {
                   setInstant(true);
-                  setSlideIndex(1);
+                  setSlideIndex((current) => current - items.length);
                   setIsAnimating(false);
                   return;
                 }
@@ -142,7 +164,10 @@ export default function BenefitsSection() {
               className="flex"
             >
               {slides.map((item, idx) => (
-                <div key={`${item.title}-${idx}`} className="w-full shrink-0 px-1">
+                <div
+                  key={`${item.title}-${idx}`}
+                  className="shrink-0 basis-full px-1 md:basis-1/3"
+                >
                   <BenefitCard item={item} />
                 </div>
               ))}
