@@ -134,7 +134,11 @@ export default function BenefitsSection() {
           </p>
         </Reveal>
 
-        <div className="relative mt-10">
+        <div
+          className="relative mt-10"
+          onMouseEnter={stopAutoplay}
+          onMouseLeave={startAutoplay}
+        >
           <div className="overflow-hidden">
             <motion.div
               animate={{ x: `-${slideIndex * stepPercent}%` }}
