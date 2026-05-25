@@ -7,7 +7,12 @@ export default function FinalCtaSection() {
     <section id="contato" className="relative scroll-mt-[120px] bg-black">
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pb-28 sm:pt-14">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[36px] border border-white/16 bg-black px-6 py-10 sm:px-10">
+          <div className="relative overflow-hidden rounded-[36px] border border-[#c2a46a]/18 bg-black px-6 py-10 sm:px-10">
+            <div className="pointer-events-none absolute inset-0 opacity-80">
+              <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_15%_20%,rgba(255,179,71,0.16),transparent_60%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_90%_80%,rgba(194,164,106,0.18),transparent_60%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.10),rgba(0,0,0,0.45))]" />
+            </div>
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
