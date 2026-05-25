@@ -112,7 +112,7 @@ export default function BenefitsSection() {
           </p>
         </Reveal>
 
-        <div className="relative mt-10 sm:hidden">
+        <div className="relative mt-10">
           <div className="overflow-hidden">
             <motion.div
               animate={{ x: `-${slideIndex * 100}%` }}
@@ -166,14 +166,6 @@ export default function BenefitsSection() {
           >
             <ChevronRight className="h-5 w-5" />
           </button>
-        </div>
-
-        <div className="mt-10 hidden gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((b, idx) => (
-            <Reveal key={b.title} delay={0.05 + idx * 0.04}>
-              <BenefitCard item={b} />
-            </Reveal>
-          ))}
         </div>
       </div>
     </section>
