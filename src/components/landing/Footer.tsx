@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-brand-border pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} Lucas Brum</div>
+          <div>© {new Date().getFullYear()} Lucas Brum Online Music USA</div>
           <div className="text-white/50">
             Desenvolvido pela{" "}
             <a
