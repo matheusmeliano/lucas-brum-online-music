@@ -1,4 +1,4 @@
-import { Instagram, Mail, Youtube } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -37,13 +37,6 @@ export default function Footer() {
             <div className="text-xs font-medium text-white/65">Links</div>
             <div className="mt-3 flex items-center gap-2">
               <a
-                href="mailto:"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-border bg-white/5 text-white/85 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                aria-label="E-mail"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
-              <a
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer"
@@ -51,15 +44,6 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-border bg-white/5 text-white/85 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
