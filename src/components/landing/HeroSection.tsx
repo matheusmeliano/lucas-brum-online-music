@@ -23,7 +23,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
             src="/imagens/foto-perfil-lucas-brum.png?v=4"
             alt=""
-            className="w-[clamp(320px,62vw,520px)] max-w-[92vw] opacity-60 grayscale brightness-[1.08] [mask-image:linear-gradient(to_bottom,transparent_0%,black_22%,black_82%,transparent_100%)]"
+            className="w-[clamp(320px,62vw,520px)] max-w-[92vw] opacity-60 grayscale brightness-[1.08] [mask-image:linear-gradient(to_bottom,black_0%,black_76%,transparent_100%)]"
             loading="eager"
           />
         </div>
