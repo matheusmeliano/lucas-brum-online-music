@@ -51,7 +51,18 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-brand-border pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Lucas Brum</div>
-          <div className="text-white/50">Evolução real com clareza e consistência.</div>
+          <div className="text-white/50">
+            Desenvolvido pela{" "}
+            <a
+              href="https://heybrothers.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white/70 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-accent"
+            >
+              HEYBROTHERS
+            </a>
+            .
+          </div>
         </div>
       </div>
     </footer>
