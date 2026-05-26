@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="text-xs font-medium text-white/65">Links</div>
             <div className="mt-3 flex items-center justify-center gap-2 sm:justify-start">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/lucasbrumonlinemusic/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-border bg-white/5 text-white/85 transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-accent"
