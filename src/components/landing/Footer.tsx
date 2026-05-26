@@ -30,12 +30,6 @@ export default function Footer() {
             >
               Modelos
             </a>
-            <a
-              href="#contato"
-              className="text-white/80 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-            >
-              Contato
-            </a>
           </div>
 
           <div>
