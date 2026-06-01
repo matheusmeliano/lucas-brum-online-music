@@ -187,7 +187,7 @@ function DiscographySection() {
               </div>
 
               <div className="relative">
-                <div className="mt-2 text-lg font-semibold leading-tight text-white">Aula introdutória</div>
+                <div className="mt-2 text-lg font-semibold leading-tight text-white">Aluna Gezilene</div>
                 <div className="mt-2 text-sm text-white/65">
                   Alinhamento de objetivo, diagnóstico e direção do que focar.
                 </div>
