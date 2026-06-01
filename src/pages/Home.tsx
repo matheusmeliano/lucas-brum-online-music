@@ -12,6 +12,21 @@ import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import Reveal from "@/components/landing/Reveal";
 
 function AboutSection() {
+  const highlights = [
+    { k: "Feedback que destrava", v: "Avaliação do que está errado e o que fazer na prática." },
+    { k: "Plano claro", v: "Sem perder tempo: o que estudar, como e quando." },
+    { k: "Acompanhamento", v: "Você não fica sozinho: direção constante no processo." },
+  ];
+
+  const [active, setActive] = useState(0);
+  const [hovering, setHovering] = useState(false);
+
+  useEffect(() => {
+    if (hovering) return;
+    const id = window.setInterval(() => setActive((v) => (v + 1) % highlights.length), 3400);
+    return () => window.clearInterval(id);
+  }, [hovering, highlights.length]);
+
   return (
     <section id="como-funciona" className="relative bg-black scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
@@ -50,36 +65,104 @@ function AboutSection() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a
+                    href="#modelos"
+                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                  >
+                    Ver modelos agora
+                    <span className="transition group-hover:translate-x-0.5" aria-hidden="true">
+                      →
+                    </span>
+                  </a>
+                  <a
+                    href="#estrutura"
+                    className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                  >
+                    Ouvir feedback real
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[32px] bg-black/25 p-[1px] shadow-[0_0_100px_rgba(194,164,106,0.12)] ring-1 ring-[#c2a46a]/18">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,164,106,0.50),rgba(0,0,0,0))]" />
-              <div className="relative rounded-[31px] bg-brand-deep/60 p-6 shadow-[0_0_90px_rgba(194,164,106,0.10)] ring-1 ring-[#c2a46a]/18 backdrop-blur-md">
-                <div className="flex items-center justify-between gap-4">
+            <div
+              className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/4 p-6 shadow-[0_0_110px_rgba(194,164,106,0.10)] backdrop-blur-md"
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
+            >
+              <div className="pointer-events-none absolute inset-0 opacity-70">
+                <div className="absolute -left-24 -top-24 h-60 w-60 rounded-full bg-brand-glow/14 blur-3xl" />
+                <div className="absolute -right-28 -bottom-28 h-72 w-72 rounded-full bg-brand-accent/12 blur-3xl" />
+              </div>
+
+              <div className="relative">
+                <div className="flex items-center justify-between gap-3">
                   <div>
                     <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">O QUE VOCÊ GANHA</div>
-                    <div className="mt-3 text-sm text-white/70">
-                      Um processo simples e funcional para você sentir progresso de verdade, sem enrolação.
-                    </div>
+                    <div className="mt-2 text-sm text-white/70">Uma amostra do estilo de direção que você recebe.</div>
                   </div>
                   <div className="hidden h-12 w-12 items-center justify-center rounded-2xl bg-black/35 text-white/70 ring-1 ring-[#c2a46a]/16 sm:flex">
                     <Sparkles className="h-5 w-5 text-brand-accent" />
                   </div>
                 </div>
 
-                <div className="mt-6 space-y-4">
-                  {[
-                    { k: "Feedback que destrava", v: "Avaliação do que está errado e o que fazer na prática." },
-                    { k: "Plano claro", v: "Sem perder tempo: o que estudar, como e quando." },
-                    { k: "Acompanhamento", v: "Você não fica sozinho: direção constante no processo." },
-                  ].map((it) => (
-                    <div key={it.k} className="rounded-3xl bg-black/30 px-5 py-4 ring-1 ring-[#c2a46a]/14">
-                      <div className="text-sm font-semibold text-white">{it.k}</div>
-                      <div className="mt-1 text-sm text-white/65">{it.v}</div>
-                    </div>
+                <div className="mt-5 flex items-center gap-2">
+                  {highlights.map((it, idx) => (
+                    <button
+                      key={it.k}
+                      type="button"
+                      onClick={() => setActive(idx)}
+                      className={[
+                        "rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.16em] transition focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
+                        idx === active
+                          ? "bg-white/10 text-white ring-1 ring-[#c2a46a]/24"
+                          : "bg-black/25 text-white/60 hover:bg-white/8 hover:text-white",
+                      ].join(" ")}
+                    >
+                      {String(idx + 1).padStart(2, "0")}
+                    </button>
                   ))}
+
+                  <div className="relative ml-1 h-2 flex-1 overflow-hidden rounded-full bg-white/10">
+                    <motion.div
+                      key={active}
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 3.4, ease: "linear" }}
+                      className="h-full bg-gradient-to-r from-transparent via-brand-glow to-transparent opacity-95"
+                    />
+                  </div>
                 </div>
+
+                <motion.div
+                  key={highlights[active]?.k}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="mt-6 rounded-3xl bg-black/35 p-5 ring-1 ring-[#c2a46a]/18"
+                >
+                  <div className="text-base font-semibold text-white">{highlights[active]?.k}</div>
+                  <div className="mt-2 text-sm text-white/70">{highlights[active]?.v}</div>
+
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {highlights.map((it, idx) => (
+                      <button
+                        key={`${it.k}-${idx}`}
+                        type="button"
+                        onMouseEnter={() => setActive(idx)}
+                        onFocus={() => setActive(idx)}
+                        className={[
+                          "group rounded-2xl bg-black/25 px-4 py-3 text-left transition hover:bg-black/35 focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
+                          idx === active ? "ring-1 ring-[#c2a46a]/22" : "ring-1 ring-transparent",
+                        ].join(" ")}
+                      >
+                        <div className="text-xs font-semibold text-white/85">{it.k}</div>
+                        <div className="mt-1 text-xs text-white/55">{it.v}</div>
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
