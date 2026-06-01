@@ -188,9 +188,7 @@ function DiscographySection() {
 
               <div className="relative">
                 <div className="mt-2 text-lg font-semibold leading-tight text-white">Aluna Gezilene</div>
-                <div className="mt-2 text-sm text-white/65">
-                  Alinhamento de objetivo, diagnóstico e direção do que focar.
-                </div>
+                <div className="mt-2 text-sm text-white/65">Everett, Massachusetts - USA</div>
 
                 <div className="mt-6 flex items-center justify-between gap-4">
                   <button
