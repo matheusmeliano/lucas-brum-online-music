@@ -174,7 +174,6 @@ function DiscographySection() {
                     →
                   </span>
                 </button>
-                <div className="text-xs text-white/55">{isReady ? "Áudio pronto" : "Carregando áudio..."}</div>
               </div>
             </div>
           </Reveal>
