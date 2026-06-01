@@ -150,7 +150,7 @@ function DiscographySection() {
         <Reveal>
           <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Feedback</h2>
           <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
-            Ouça um feedback real e entenda o nível de direção e clareza que você recebe no acompanhamento.
+            Dê play e veja como é o acompanhamento por dentro: correção clara, direção objetiva e próximo passo definido.
           </p>
         </Reveal>
 
@@ -161,7 +161,7 @@ function DiscographySection() {
                 Ouça como é a evolução na prática.
               </h3>
               <p className="mt-3 max-w-xl text-sm text-white/70 sm:text-base">
-                Clique para ouvir um feedback real. Isso te mostra o tipo de direção, correção e clareza que você recebe.
+                Um trecho curto, direto e real para você sentir o nível de clareza e correção que eu entrego.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <button
