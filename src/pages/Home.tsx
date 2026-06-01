@@ -148,9 +148,9 @@ function DiscographySection() {
     <section id="estrutura" className="relative scroll-mt-[120px] bg-black">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Estrutura</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Feedback</h2>
           <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
-            Um processo simples: conteúdo direto, prática com direção e feedback para ajustar rápido.
+            Ouça um feedback real e entenda o nível de direção e clareza que você recebe no acompanhamento.
           </p>
         </Reveal>
 
@@ -187,7 +187,6 @@ function DiscographySection() {
               </div>
 
               <div className="relative">
-                <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">COMEÇO</div>
                 <div className="mt-2 text-lg font-semibold leading-tight text-white">Aula introdutória</div>
                 <div className="mt-2 text-sm text-white/65">
                   Alinhamento de objetivo, diagnóstico e direção do que focar.
