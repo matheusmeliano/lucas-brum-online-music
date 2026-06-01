@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Play, Sparkles } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import BackgroundGlow from "@/components/landing/BackgroundGlow";
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import FinalCtaSection from "@/components/landing/FinalCtaSection";
@@ -96,6 +96,8 @@ type Release = {
 };
 
 function DiscographySection() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   const releases: Release[] = useMemo(
     () => [
       { title: "Aula introdutória", year: "Começo", note: "Alinhamento de objetivo, diagnóstico e direção do que focar." },
@@ -141,6 +143,12 @@ function DiscographySection() {
                     </div>
                     <button
                       type="button"
+                      onClick={() => {
+                        const audio = audioRef.current;
+                        if (!audio) return;
+                        audio.currentTime = 0;
+                        void audio.play();
+                      }}
                       className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-border bg-white/5 text-white/85 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                       aria-label={`Tocar ${r.title}`}
                     >
@@ -148,6 +156,8 @@ function DiscographySection() {
                     </button>
                   </div>
                 </div>
+
+                <audio ref={audioRef} className="hidden" src="/audio/feedback-aluna-3.mp3" preload="none" />
               </motion.div>
             </Reveal>
           ))}
