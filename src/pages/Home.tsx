@@ -157,9 +157,6 @@ function DiscographySection() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal delay={0.05}>
             <div>
-              <div className="inline-flex items-center rounded-full bg-white/5 px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white/70 ring-1 ring-[#c2a46a]/18">
-                FEEDBACK REAL
-              </div>
               <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                 Ouça como é a evolução na prática.
               </h3>
