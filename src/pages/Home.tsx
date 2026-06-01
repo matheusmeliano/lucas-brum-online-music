@@ -99,9 +99,6 @@ function DiscographySection() {
   const releases: Release[] = useMemo(
     () => [
       { title: "Aula introdutória", year: "Começo", note: "Alinhamento de objetivo, diagnóstico e direção do que focar." },
-      { title: "4 aulas gravadas", year: "Semanas 1–4", note: "Uma por semana, com prática guiada e exercícios aplicáveis." },
-      { title: "Aula ao vivo mensal", year: "Mensal", note: "Avaliação/feedback para corrigir rota e acelerar evolução." },
-      { title: "Acompanhamento contínuo", year: "Constante", note: "Você sempre sabe o próximo passo: clareza e consistência." },
     ],
     []
   );
