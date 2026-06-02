@@ -3,11 +3,40 @@ import { Play, X } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
 import { useEffect, useState } from "react";
 
+function getYouTubeId(url: string) {
+  const shorts = url.match(/youtube\.com\/shorts\/([^?/#]+)/i);
+  if (shorts?.[1]) return shorts[1];
+
+  const watch = url.match(/[?&]v=([^&]+)/i);
+  if (watch?.[1]) return watch[1];
+
+  const youtuBe = url.match(/youtu\.be\/([^?/#]+)/i);
+  if (youtuBe?.[1]) return youtuBe[1];
+
+  return null;
+}
+
 const videos = [
-  { src: "/video/aluna-01.mp4", title: "Aluna 01" },
-  { src: "/video/aluna-02.mp4", title: "Aluna 02" },
-  { src: "/video/aluna-03.mp4", title: "Aluna 03" },
-] as const;
+  { url: "https://youtube.com/shorts/QHIZv_FmHVo?feature=share", title: "Aluna 01" },
+  { url: "https://youtube.com/shorts/xdGI7i_Cw7U?feature=share", title: "Aluna 02" },
+  { url: "https://youtube.com/shorts/doiw0CmSQuw?feature=share", title: "Aluna 03" },
+]
+  .map((it) => {
+    const id = getYouTubeId(it.url);
+    return {
+      ...it,
+      id,
+      embedUrl: id ? `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1` : null,
+      thumbUrl: id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : null,
+    };
+  })
+  .filter((it) => it.id && it.embedUrl && it.thumbUrl) as Array<{
+  url: string;
+  title: string;
+  id: string;
+  embedUrl: string;
+  thumbUrl: string;
+}>;
 
 export default function TestimonialsSection() {
   const [activeVideo, setActiveVideo] = useState<(typeof videos)[number] | null>(null);
@@ -53,12 +82,11 @@ export default function TestimonialsSection() {
               >
                 <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-black/40">
                   <div className="aspect-video">
-                    <video
-                      src={it.src}
-                      preload="metadata"
-                      muted
-                      playsInline
-                      className="h-full w-full object-cover opacity-70 transition group-hover:opacity-90"
+                    <img
+                      src={it.thumbUrl}
+                      alt={it.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover opacity-75 transition group-hover:opacity-95"
                     />
                   </div>
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.45),transparent_55%)]" />
@@ -115,12 +143,15 @@ export default function TestimonialsSection() {
                   </button>
                 </div>
                 <div className="p-4">
-                  <video
-                    src={activeVideo.src}
-                    controls
-                    playsInline
-                    className="h-auto max-h-[72vh] w-full rounded-2xl bg-black"
-                  />
+                  <div className="aspect-video w-full overflow-hidden rounded-2xl bg-black">
+                    <iframe
+                      src={activeVideo.embedUrl}
+                      title={activeVideo.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="h-full w-full"
+                    />
+                  </div>
                 </div>
               </motion.div>
             </div>
