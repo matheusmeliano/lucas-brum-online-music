@@ -100,7 +100,9 @@ export default function Header() {
       >
         <div className="mx-auto max-w-6xl px-4 pb-4 pt-3">
           <div className="rounded-[28px] border border-transparent bg-transparent p-3 shadow-[0_24px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl">
-            {navItems.map((item) => (
+            {navItems
+              .filter((item) => item.href !== "#beneficios" && item.href !== "#contato")
+              .map((item) => (
               <a
                 key={item.href}
                 href={item.href}
