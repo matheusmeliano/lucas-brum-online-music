@@ -269,7 +269,7 @@ function FaqSection() {
         </Reveal>
 
         <div className="mt-10 overflow-hidden rounded-[28px] border border-black/10 bg-black/[0.02]">
-          <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 p-4">
             {faqs.map((it, idx) => (
               <div
                 key={it.title}
