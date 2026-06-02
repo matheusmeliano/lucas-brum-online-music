@@ -282,7 +282,7 @@ function FaqSection() {
                   aria-controls={`faq-panel-${idx}`}
                   className="flex w-full items-center justify-between gap-4 text-left"
                 >
-                  <span className="text-sm font-semibold text-black/90">{it.title}</span>
+                  <span className="text-base font-semibold text-black/90">{it.title}</span>
                   <motion.span
                     aria-hidden="true"
                     animate={{ rotate: openIndex === idx ? 180 : 0 }}
@@ -300,7 +300,7 @@ function FaqSection() {
                   transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
-                  <div className="pt-3 text-xs leading-relaxed text-black/60">{it.description}</div>
+                  <div className="pt-3 text-sm leading-relaxed text-black/60">{it.description}</div>
                 </motion.div>
               </div>
             ))}
