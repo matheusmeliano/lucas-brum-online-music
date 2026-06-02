@@ -37,19 +37,19 @@ function BenefitCard({ item }: { item: BenefitItem }) {
   const Icon = item.icon;
 
   return (
-    <div className="group relative h-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-6 backdrop-blur-md">
+    <div className="group relative h-full overflow-hidden rounded-3xl border border-black/10 bg-black/[0.03] p-6">
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-accent/10 blur-3xl" />
-        <div className="absolute -left-20 -bottom-20 h-56 w-56 rounded-full bg-brand-glow/10 blur-3xl" />
+        <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-accent/12 blur-3xl" />
+        <div className="absolute -left-20 -bottom-20 h-56 w-56 rounded-full bg-brand-glow/14 blur-3xl" />
       </div>
       <div className="relative">
         <div className="flex items-center gap-3">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-border bg-white/6">
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03]">
             <Icon className="h-5 w-5 text-brand-accent" />
           </div>
-          <div className="text-sm font-semibold text-white">{item.title}</div>
+          <div className="text-sm font-semibold text-black/90">{item.title}</div>
         </div>
-        <div className="mt-3 text-sm text-white/65">{item.desc}</div>
+        <div className="mt-3 text-sm text-black/60">{item.desc}</div>
       </div>
     </div>
   );
@@ -123,13 +123,13 @@ export default function BenefitsSection() {
   };
 
   return (
-    <section id="beneficios" className="relative scroll-mt-[120px] bg-black">
+    <section id="beneficios" className="relative scroll-mt-[120px] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
             Benefícios
           </h2>
-          <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
+          <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
             Dois modelos diferentes, com o mesmo objetivo: direção e resultado.
           </p>
         </Reveal>
@@ -182,7 +182,7 @@ export default function BenefitsSection() {
             type="button"
             aria-label="Voltar"
             onClick={goPrev}
-            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-brand-border bg-black/60 text-white/80 backdrop-blur-md transition hover:bg-black/75 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40"
+            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black/70 backdrop-blur-md transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -191,7 +191,7 @@ export default function BenefitsSection() {
             type="button"
             aria-label="Avançar"
             onClick={goNext}
-            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-brand-border bg-black/60 text-white/80 backdrop-blur-md transition hover:bg-black/75 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40"
+            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black/70 backdrop-blur-md transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
