@@ -35,22 +35,21 @@ export default function Header() {
       if (!bar) return;
 
       const rect = bar.getBoundingClientRect();
-      const x = window.innerWidth / 2;
-      const y = Math.min(window.innerHeight - 1, rect.bottom + 1);
-      const el = document.elementFromPoint(x, y) as HTMLElement | null;
+      const probeY = window.scrollY + rect.bottom + 1;
+      const themed = document.querySelectorAll<HTMLElement>("[data-theme]");
 
-      let current: HTMLElement | null = el;
-      let theme: string | undefined;
-      while (current) {
-        const value = current.dataset?.theme;
-        if (value) {
-          theme = value;
+      let nextOnLight = false;
+      for (const el of themed) {
+        const elRect = el.getBoundingClientRect();
+        const top = window.scrollY + elRect.top;
+        const bottom = window.scrollY + elRect.bottom;
+        if (probeY >= top && probeY < bottom) {
+          nextOnLight = el.dataset.theme === "light";
           break;
         }
-        current = current.parentElement;
       }
 
-      setOnLight(theme === "light");
+      setOnLight((current) => (current === nextOnLight ? current : nextOnLight));
     };
     update();
     window.addEventListener("scroll", update, { passive: true });
