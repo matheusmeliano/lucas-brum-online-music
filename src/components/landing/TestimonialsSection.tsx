@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {videos.map((it, idx) => (
-            <Reveal key={it.src} delay={0.06 + idx * 0.06}>
+            <Reveal key={it.id} delay={0.06 + idx * 0.06}>
               <motion.button
                 type="button"
                 onClick={() => setActiveVideo(it)}
