@@ -52,7 +52,7 @@ export default function TermosCompromisso() {
           <div className="mt-10">
             <button
               type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={() => (window.location.href = "https://www.lucasbrumonlinemusic.com/")}
               className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black/20"
             >
               Voltar ao topo
