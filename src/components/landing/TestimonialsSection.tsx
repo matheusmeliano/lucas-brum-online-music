@@ -37,9 +37,6 @@ export default function TestimonialsSection() {
                 Resultados vêm de clareza, consistência e feedback. O foco é evolução real.
               </p>
             </div>
-            <div className="rounded-3xl border border-brand-border bg-white/4 p-6 text-sm text-white/70 backdrop-blur-md">
-              Aulas diretas, sem enrolação: você sai de cada etapa sabendo exatamente o próximo passo.
-            </div>
           </div>
         </Reveal>
 
