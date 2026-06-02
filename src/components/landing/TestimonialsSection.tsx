@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Depoimentos</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Vídeos</h2>
               <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
                 Resultados vêm de clareza, consistência e feedback. O foco é evolução real.
               </p>

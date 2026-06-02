@@ -38,7 +38,7 @@ function AboutSection() {
           <div className="grid gap-10">
             <div className="w-full">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
-                Indicado para quem busca:
+                Indicado para quem busca
               </h2>
               <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
                 Clareza no estudo, correção objetiva e evolução consistente semana após semana.
