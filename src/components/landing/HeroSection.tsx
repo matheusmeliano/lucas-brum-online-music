@@ -28,6 +28,51 @@ export default function HeroSection() {
           />
         </div>
 
+        <div className="pointer-events-none absolute inset-0 z-[6] overflow-hidden">
+          <motion.img
+            src="/imagens/simbolo-musica-01.png"
+            alt=""
+            className="absolute left-3 top-[clamp(180px,28vw,320px)] h-10 w-10 opacity-35 [filter:brightness(0)_invert(1)] sm:left-8 sm:h-12 sm:w-12"
+            animate={{ y: [0, -14, 0], rotate: [0, -6, 0] }}
+            transition={{ duration: 7.4, repeat: Infinity, ease: [0.22, 1, 0.36, 1] }}
+          />
+          <motion.img
+            src="/imagens/simbolo-musica-02.png"
+            alt=""
+            className="absolute right-4 top-[clamp(210px,32vw,360px)] h-8 w-8 opacity-30 [filter:brightness(0)_invert(1)] sm:right-10 sm:h-10 sm:w-10"
+            animate={{ y: [0, 12, 0], rotate: [0, 7, 0] }}
+            transition={{ duration: 6.6, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          />
+          <motion.img
+            src="/imagens/simbolo-musica-01.png"
+            alt=""
+            className="absolute left-8 top-[clamp(430px,62vw,560px)] h-7 w-7 opacity-25 [filter:brightness(0)_invert(1)] sm:left-24 sm:h-9 sm:w-9"
+            animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
+            transition={{ duration: 8.2, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
+          />
+          <motion.img
+            src="/imagens/simbolo-musica-02.png"
+            alt=""
+            className="absolute right-10 top-[clamp(460px,66vw,600px)] hidden h-9 w-9 opacity-30 [filter:brightness(0)_invert(1)] sm:block"
+            animate={{ y: [0, 16, 0], rotate: [0, -8, 0] }}
+            transition={{ duration: 7.8, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          />
+          <motion.img
+            src="/imagens/simbolo-musica-01.png"
+            alt=""
+            className="absolute left-1/2 top-[clamp(170px,24vw,260px)] hidden h-8 w-8 -translate-x-[170px] opacity-22 [filter:brightness(0)_invert(1)] md:block"
+            animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
+            transition={{ duration: 9.2, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+          />
+          <motion.img
+            src="/imagens/simbolo-musica-02.png"
+            alt=""
+            className="absolute left-1/2 top-[clamp(520px,76vw,700px)] hidden h-10 w-10 translate-x-[150px] opacity-24 [filter:brightness(0)_invert(1)] md:block"
+            animate={{ y: [0, 10, 0], rotate: [0, -6, 0] }}
+            transition={{ duration: 8.6, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
+          />
+        </div>
+
         <div className="pointer-events-none absolute left-1/2 top-[clamp(206px,30vw,292px)] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.58)_36%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
 
         <div className="relative z-10 isolate">
