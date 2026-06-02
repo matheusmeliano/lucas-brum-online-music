@@ -152,19 +152,31 @@ export default function Header() {
         aria-modal="true"
       >
         <div className="mx-auto max-w-6xl px-4 pb-4 pt-3">
-          <div className="rounded-[28px] border border-transparent bg-transparent p-3 shadow-[0_24px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+          <div
+            className={cn(
+              "rounded-[28px] border p-3 backdrop-blur-xl",
+              onLight
+                ? "border-black/10 bg-white/85 shadow-[0_24px_80px_rgba(0,0,0,0.14)]"
+                : "border-transparent bg-transparent shadow-[0_24px_80px_rgba(0,0,0,0.5)]"
+            )}
+          >
             {navItems
               .filter((item) => item.href !== "#beneficios" && item.href !== "#contato")
               .map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="block rounded-2xl px-4 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-              >
-                {item.label}
-              </a>
-            ))}
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "block rounded-2xl px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
+                    onLight
+                      ? "text-black/80 hover:bg-black/5"
+                      : "text-white/85 hover:bg-white/10"
+                  )}
+                >
+                  {item.label}
+                </a>
+              ))}
             <a
               href="#modelos"
               onClick={() => setOpen(false)}
