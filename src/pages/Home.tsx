@@ -38,11 +38,11 @@ function AboutSection() {
           <div className="grid gap-10">
             <div className="w-full">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
-                O acompanhamento é pra quem quer:
+                Indicado para quem busca:
               </h2>
 
               <div className="mt-6 overflow-hidden rounded-[28px] border border-brand-border bg-white/4 backdrop-blur-md">
-                <div className="grid grid-cols-2 gap-3 p-4">
+                <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
                   {targets.map((it) => (
                     <div
                       key={it.title}
