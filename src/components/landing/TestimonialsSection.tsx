@@ -90,10 +90,10 @@ export default function TestimonialsSection() {
             <button
               type="button"
               aria-label="Fechar vídeo"
-              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              className="absolute inset-0 z-0 bg-black/70 backdrop-blur-sm"
               onClick={() => setActiveVideo(null)}
             />
-            <div className="relative mx-auto flex min-h-dvh max-w-5xl items-center justify-center px-4 py-10">
+            <div className="relative z-10 mx-auto flex min-h-dvh max-w-5xl items-center justify-center px-4 py-10">
               <motion.div
                 role="dialog"
                 aria-modal="true"
@@ -118,7 +118,6 @@ export default function TestimonialsSection() {
                   <video
                     src={activeVideo.src}
                     controls
-                    autoPlay
                     playsInline
                     className="h-auto max-h-[72vh] w-full rounded-2xl bg-black"
                   />
