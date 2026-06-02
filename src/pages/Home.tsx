@@ -251,10 +251,10 @@ export default function Home() {
       <main className="pt-[88px] sm:pt-[96px]">
         <HeroSection />
         <AboutSection />
+        <BenefitsSection />
         <ModelsSection />
         <DiscographySection />
         <TestimonialsSection />
-        <BenefitsSection />
         <FinalCtaSection />
       </main>
       <Footer />
