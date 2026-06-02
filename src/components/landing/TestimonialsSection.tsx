@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
             <div>
               <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Vídeos</h2>
               <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
-                Resultados vêm de clareza, consistência e feedback. O foco é evolução real.
+                Vídeos de alunas contando como foi a experiência no curso e a evolução que tiveram com direção e feedback.
               </p>
             </div>
           </div>
