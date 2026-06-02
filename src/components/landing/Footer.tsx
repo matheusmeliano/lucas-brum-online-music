@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-12 h-px w-full bg-white/10" />
 
-        <div className="mt-6 flex flex-col items-center gap-4 text-center text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+        <div className="mt-6 flex flex-col items-center gap-4 text-center text-[13px] text-white/55 sm:flex-row sm:items-center sm:justify-between sm:text-left sm:text-sm">
           <div>© {new Date().getFullYear()} Lucas Brum Online Music USA</div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-white/60 sm:justify-start">
