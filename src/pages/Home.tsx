@@ -14,20 +14,20 @@ import Reveal from "@/components/landing/Reveal";
 function AboutSection() {
   const targets = [
     {
-      title: "Evoluir com direção",
-      description: "Saber exatamente o que estudar e como praticar para ter progresso real.",
+      title: "Direção no estudo",
+      description: "Sabe exatamente o que estudar e como praticar para ter progresso real.",
     },
     {
-      title: "Destravar o que te prende",
-      description: "Receber correção prática do que está errado e como ajustar.",
+      title: "Correção que destrava",
+      description: "Recebe correção prática do que está errado e como ajustar.",
     },
     {
-      title: "Ter consistência semanal",
-      description: "Rotina simples, foco no essencial e acompanhamento para manter o ritmo.",
+      title: "Consistência semanal",
+      description: "Mantém uma rotina simples, foco no essencial e acompanhamento para seguir no ritmo.",
     },
     {
-      title: "Tocar com segurança",
-      description: "Clareza no próximo passo e confiança para executar no violão.",
+      title: "Segurança ao tocar",
+      description: "Ganha clareza no próximo passo e confiança para executar no violão.",
     },
   ];
 
