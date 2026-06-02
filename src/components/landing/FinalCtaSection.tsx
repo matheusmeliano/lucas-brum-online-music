@@ -17,7 +17,7 @@ export default function FinalCtaSection() {
             </div>
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-              <div>
+              <div className="text-center lg:text-left">
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
                   Pronto para evoluir com direção?
                 </h2>
