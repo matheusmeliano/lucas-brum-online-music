@@ -62,23 +62,6 @@ function AboutSection() {
                 </div>
               </div>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="#modelos"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                >
-                  Ver modelos agora
-                  <span className="transition group-hover:translate-x-0.5" aria-hidden="true">
-                    →
-                  </span>
-                </a>
-                <a
-                  href="#estrutura"
-                  className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                >
-                  Ouvir feedback real
-                </a>
-              </div>
             </div>
           </div>
         </Reveal>
