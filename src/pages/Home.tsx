@@ -36,7 +36,7 @@ function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10">
-            <div className="mx-auto w-full max-w-4xl">
+            <div className="w-full">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
                 O acompanhamento é pra quem quer:
               </h2>
