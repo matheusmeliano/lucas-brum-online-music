@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Pause, Play } from "lucide-react";
+import { Check, ChevronDown, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import BackgroundGlow from "@/components/landing/BackgroundGlow";
 import BenefitsSection from "@/components/landing/BenefitsSection";
@@ -255,6 +255,7 @@ function FaqSection() {
         "Basta escolher um modelo e iniciar. Em seguida você recebe as orientações para enviar seu material e começar o acompanhamento.",
     },
   ] as const;
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
   return (
     <section id="faq" data-theme="light" className="relative scroll-mt-[120px] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
@@ -269,15 +270,38 @@ function FaqSection() {
 
         <div className="mt-10 overflow-hidden rounded-[28px] border border-black/10 bg-black/[0.02]">
           <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
-            {faqs.map((it) => (
+            {faqs.map((it, idx) => (
               <div
                 key={it.title}
-                className="group rounded-2xl bg-white/70 p-5 ring-1 ring-black/10 transition hover:bg-white hover:ring-[#c2a46a]/22"
+                className="rounded-2xl bg-white/70 p-5 ring-1 ring-black/10 transition hover:bg-white hover:ring-[#c2a46a]/22"
               >
-                <div className="text-sm font-semibold text-black/90 transition-colors group-hover:text-black">
-                  {it.title}
-                </div>
-                <div className="mt-2 text-xs leading-relaxed text-black/60">{it.description}</div>
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex((current) => (current === idx ? null : idx))}
+                  aria-expanded={openIndex === idx}
+                  aria-controls={`faq-panel-${idx}`}
+                  className="flex w-full items-center justify-between gap-4 text-left"
+                >
+                  <span className="text-sm font-semibold text-black/90">{it.title}</span>
+                  <motion.span
+                    aria-hidden="true"
+                    animate={{ rotate: openIndex === idx ? 180 : 0 }}
+                    transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+                    className="inline-flex h-9 w-9 flex-none items-center justify-center rounded-xl border border-black/10 bg-white/80 text-black/60"
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                  </motion.span>
+                </button>
+
+                <motion.div
+                  id={`faq-panel-${idx}`}
+                  initial={false}
+                  animate={{ height: openIndex === idx ? "auto" : 0, opacity: openIndex === idx ? 1 : 0 }}
+                  transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-3 text-xs leading-relaxed text-black/60">{it.description}</div>
+                </motion.div>
               </div>
             ))}
           </div>

@@ -8,6 +8,7 @@ const navItems = [
   { label: "Modelos", href: "#modelos" },
   { label: "Feedback", href: "#estrutura" },
   { label: "Vídeos", href: "#depoimentos" },
+  { label: "Faq", href: "#faq" },
   { label: "Benefícios", href: "#beneficios" },
   { label: "Contato", href: "#contato" },
 ];
@@ -104,7 +105,7 @@ export default function Header() {
               onLight ? "text-black/60" : "text-white/70"
             )}
           >
-            {navItems.slice(0, 4).map((item) => (
+            {navItems.slice(0, 5).map((item) => (
               <a
                 key={item.href}
                 href={item.href}
