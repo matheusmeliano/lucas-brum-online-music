@@ -1,15 +1,11 @@
 import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-brand-deep/60 backdrop-blur-sm">
-      <div className="pointer-events-none absolute inset-0 opacity-90">
-        <div className="absolute -top-48 left-1/2 h-[520px] w-[980px] -translate-x-1/2 bg-[radial-gradient(closest-side,rgba(194,164,106,0.12),transparent_70%)]" />
-        <div className="absolute -bottom-56 left-1/2 h-[520px] w-[980px] -translate-x-1/2 bg-[radial-gradient(closest-side,rgba(194,164,106,0.08),transparent_72%)]" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl px-4 py-10">
-        <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
+    <footer className="bg-black">
+      <div className="mx-auto max-w-6xl px-4 py-14">
+        <div className="flex flex-col items-center gap-10 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
           <div>
             <div className="text-sm font-semibold text-white">Lucas Brum</div>
             <div className="mt-2 max-w-md text-sm text-white/65">
@@ -30,6 +26,24 @@ export default function Footer() {
             >
               Modelos
             </a>
+            <a
+              href="#estrutura"
+              className="text-white/80 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+            >
+              Feedback
+            </a>
+            <a
+              href="#depoimentos"
+              className="text-white/80 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+            >
+              Vídeos
+            </a>
+            <a
+              href="#faq"
+              className="text-white/80 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+            >
+              Faq
+            </a>
           </div>
 
           <div>
@@ -48,8 +62,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-2 border-t border-brand-border pt-6 text-center text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+        <div className="mt-12 h-px w-full bg-white/10" />
+
+        <div className="mt-6 flex flex-col items-center gap-4 text-center text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <div>© {new Date().getFullYear()} Lucas Brum Online Music USA</div>
+
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-white/60 sm:justify-start">
+            <Link
+              to="/politica-privacidade"
+              className="transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-accent"
+            >
+              Política de privacidade
+            </Link>
+            <span className="hidden text-white/20 sm:inline">•</span>
+            <Link
+              to="/termos-e-compromisso"
+              className="transition hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-accent"
+            >
+              Termos e compromisso
+            </Link>
+          </div>
+
           <div className="text-white/50">
             Desenvolvido pela{" "}
             <a
