@@ -261,7 +261,7 @@ function FaqSection() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Faq</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Dúvidas</h2>
             <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
               Dúvidas rápidas sobre os vídeos e como funciona o curso.
             </p>
