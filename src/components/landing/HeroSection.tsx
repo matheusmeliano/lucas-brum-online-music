@@ -112,7 +112,7 @@ export default function HeroSection() {
                 </a>
               </div>
 
-              <div className="mt-4 inline-flex items-center justify-center gap-2">
+              <div className="mt-6 inline-flex items-center justify-center gap-2">
                 <FlagBR className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
                 <FlagUS className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
               </div>
