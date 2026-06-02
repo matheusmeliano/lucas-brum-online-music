@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
+import FlagBR from "@/components/icons/FlagBR";
+import FlagUS from "@/components/icons/FlagUS";
 
 export default function HeroSection() {
   return (
@@ -90,23 +92,30 @@ export default function HeroSection() {
           </Reveal>
 
           <Reveal delay={0.08} className="relative z-20">
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 text-center sm:flex-row sm:items-center">
-              <motion.a
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                href="#modelos"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-              >
-                Ver modelos
-                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-              </motion.a>
+            <div className="mt-8 flex flex-col items-center justify-center text-center">
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center">
+                <motion.a
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  href="#modelos"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                >
+                  Ver modelos
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                </motion.a>
 
-              <a
-                href="#contato"
-                className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-              >
-                Começar agora
-              </a>
+                <a
+                  href="#contato"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                >
+                  Começar agora
+                </a>
+              </div>
+
+              <div className="mt-4 inline-flex items-center justify-center gap-2">
+                <FlagBR className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
+                <FlagUS className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
+              </div>
             </div>
           </Reveal>
         </div>
