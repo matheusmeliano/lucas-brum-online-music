@@ -127,11 +127,17 @@ function DiscographySection() {
   };
 
   return (
-    <section id="estrutura" className="relative scroll-mt-[120px] bg-black">
+    <section
+      id="estrutura"
+      data-theme="light"
+      className="relative scroll-mt-[120px] bg-white"
+    >
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Feedback</h2>
-          <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
+          <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
+            Feedback
+          </h2>
+          <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
             Dê play e veja como é o acompanhamento por dentro: correção clara, direção objetiva e próximo passo definido.
           </p>
         </Reveal>
@@ -139,10 +145,10 @@ function DiscographySection() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal delay={0.05}>
             <div>
-              <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              <h3 className="mt-5 text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
                 Ouça como é a evolução na prática.
               </h3>
-              <p className="mt-3 max-w-xl text-sm text-white/70 sm:text-base">
+              <p className="mt-3 max-w-xl text-sm text-black/60 sm:text-base">
                 Um trecho curto, direto e real para você sentir o nível de clareza e correção que eu entrego.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -161,34 +167,36 @@ function DiscographySection() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-6 backdrop-blur-md">
-              <div className="pointer-events-none absolute inset-0 opacity-70">
-                <div className="absolute -left-16 -top-16 h-48 w-48 rounded-full bg-brand-glow/12 blur-3xl" />
-                <div className="absolute -right-20 -bottom-20 h-56 w-56 rounded-full bg-brand-accent/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[28px] border border-black/10 bg-black/[0.02] p-6">
+              <div className="pointer-events-none absolute inset-0 opacity-80">
+                <div className="absolute -left-16 -top-16 h-48 w-48 rounded-full bg-brand-glow/14 blur-3xl" />
+                <div className="absolute -right-20 -bottom-20 h-56 w-56 rounded-full bg-brand-accent/12 blur-3xl" />
               </div>
 
               <div className="relative">
-                <div className="mt-2 text-lg font-semibold leading-tight text-white">Aluna Gezilene</div>
-                <div className="mt-2 text-sm text-white/65">Everett, Massachusetts - USA</div>
+                <div className="mt-2 text-lg font-semibold leading-tight text-black/90">
+                  Aluna Gezilene
+                </div>
+                <div className="mt-2 text-sm text-black/60">Everett, Massachusetts - USA</div>
 
                 <div className="mt-6 flex items-center justify-between gap-4">
                   <button
                     type="button"
                     onClick={togglePlay}
-                    className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-brand-border bg-white/5 text-white/85 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03] text-black/70 transition hover:bg-black/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                     aria-label={isPlaying ? "Pausar áudio" : "Reproduzir áudio"}
                   >
                     {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
                   </button>
 
                   <div className="flex-1">
-                    <div className="flex items-center justify-between text-[11px] text-white/55">
+                    <div className="flex items-center justify-between text-[11px] text-black/55">
                       <span>{formatTime(currentTime)}</span>
                       <span>{formatTime(duration)}</span>
                     </div>
 
                     <div className="relative mt-2">
-                      <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                      <div className="h-2 overflow-hidden rounded-full bg-black/10">
                         <div
                           className="h-full bg-[linear-gradient(90deg,rgba(194,164,106,0.20),rgba(194,164,106,0.95),rgba(255,179,71,0.85))]"
                           style={{ width: `${progress * 100}%` }}
