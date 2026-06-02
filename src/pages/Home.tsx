@@ -232,6 +232,61 @@ function DiscographySection() {
   );
 }
 
+function FaqSection() {
+  const faqs = [
+    {
+      title: "Esses vídeos são de alunas reais?",
+      description:
+        "Sim. São relatos de alunas contando a experiência no curso e o que mudou na prática durante o acompanhamento.",
+    },
+    {
+      title: "O que muda quando entra no acompanhamento?",
+      description:
+        "Você recebe direção clara do que estudar, correção objetiva e um próximo passo definido para evoluir com consistência.",
+    },
+    {
+      title: "Serve para qual nível no violão?",
+      description:
+        "Do básico ao avançado. O foco é identificar o ponto exato que trava sua evolução e ajustar o plano para o seu momento.",
+    },
+    {
+      title: "Como eu começo agora?",
+      description:
+        "Basta escolher um modelo e iniciar. Em seguida você recebe as orientações para enviar seu material e começar o acompanhamento.",
+    },
+  ] as const;
+  return (
+    <section id="faq" data-theme="light" className="relative scroll-mt-[120px] bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <Reveal>
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Faq</h2>
+            <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
+              Dúvidas rápidas sobre os vídeos e como funciona o curso.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="mt-10 overflow-hidden rounded-[28px] border border-black/10 bg-black/[0.02]">
+          <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
+            {faqs.map((it) => (
+              <div
+                key={it.title}
+                className="group rounded-2xl bg-white/70 p-5 ring-1 ring-black/10 transition hover:bg-white hover:ring-[#c2a46a]/22"
+              >
+                <div className="text-sm font-semibold text-black/90 transition-colors group-hover:text-black">
+                  {it.title}
+                </div>
+                <div className="mt-2 text-xs leading-relaxed text-black/60">{it.description}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -266,6 +321,7 @@ export default function Home() {
         <ModelsSection />
         <DiscographySection />
         <TestimonialsSection />
+        <FaqSection />
         <FinalCtaSection />
       </main>
       <Footer />
