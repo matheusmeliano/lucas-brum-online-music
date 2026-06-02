@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Pause, Play, Sparkles } from "lucide-react";
+import { Check, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import BackgroundGlow from "@/components/landing/BackgroundGlow";
 import BenefitsSection from "@/components/landing/BenefitsSection";
@@ -12,156 +12,117 @@ import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import Reveal from "@/components/landing/Reveal";
 
 function AboutSection() {
-  const highlights = [
-    { k: "Feedback que destrava", v: "Avaliação do que está errado e o que fazer na prática." },
-    { k: "Plano claro", v: "Sem perder tempo: o que estudar, como e quando." },
-    { k: "Acompanhamento", v: "Você não fica sozinho: direção constante no processo." },
+  const targets = [
+    {
+      title: "Evoluir com direção",
+      description: "Saber exatamente o que estudar e como praticar para ter progresso real.",
+    },
+    {
+      title: "Destravar o que te prende",
+      description: "Receber correção prática do que está errado e como ajustar.",
+    },
+    {
+      title: "Ter consistência semanal",
+      description: "Rotina simples, foco no essencial e acompanhamento para manter o ritmo.",
+    },
+    {
+      title: "Tocar com segurança",
+      description: "Clareza no próximo passo e confiança para executar no violão.",
+    },
   ];
-
-  const [active, setActive] = useState(0);
-  const [hovering, setHovering] = useState(false);
-
-  useEffect(() => {
-    if (hovering) return;
-    const id = window.setInterval(() => setActive((v) => (v + 1) % highlights.length), 3400);
-    return () => window.clearInterval(id);
-  }, [hovering, highlights.length]);
 
   return (
     <section id="como-funciona" className="relative bg-black scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[32px] bg-black p-6 shadow-[0_0_110px_rgba(194,164,106,0.14)] ring-1 ring-[#c2a46a]/28 backdrop-blur-md">
-              <div className="pointer-events-none absolute inset-0 opacity-70">
-                <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_12%_14%,rgba(194,164,106,0.18),transparent_58%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(194,164,106,0.08),transparent_46%,transparent_100%)]" />
-              </div>
-              <div className="relative">
-                <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">COMO FUNCIONA</div>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
-                  Direção + consistência.
-                </h2>
-                <div className="mt-4 space-y-3 text-sm leading-relaxed text-white/70">
-                  <p>
-                    Você recebe um caminho claro para evoluir: conteúdo objetivo, prática guiada e feedback para corrigir o que
-                    realmente trava sua evolução.
-                  </p>
-                  <p>Escolha o formato que combina com sua rotina: híbrido (flexível) ou individual (ao vivo, semanal).</p>
-                </div>
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
+                O acompanhamento é pra quem quer:
+              </h2>
 
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Objetivos definidos",
-                    "Acompanhamento",
-                    "Evolução semanal",
-                    "Clareza no estudo",
-                  ].map((t) => (
+              <div className="mt-6 overflow-hidden rounded-[28px] border border-brand-border bg-white/4 backdrop-blur-md">
+                <div className="grid gap-0">
+                  {targets.map((it) => (
                     <div
-                      key={t}
-                      className="rounded-2xl bg-black/35 px-4 py-3 text-xs font-medium text-white/75 ring-1 ring-[#c2a46a]/14"
+                      key={it.title}
+                      className="group flex gap-4 border-b border-brand-border px-5 py-4 last:border-b-0 hover:bg-white/5"
                     >
-                      {t}
+                      <div className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/18 text-emerald-300 ring-1 ring-emerald-400/25">
+                        <Check className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold text-white/90 transition-colors group-hover:text-white">
+                          {it.title}
+                        </div>
+                        <div className="mt-1 text-xs text-white/60">{it.description}</div>
+                      </div>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a
-                    href="#modelos"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                  >
-                    Ver modelos agora
-                    <span className="transition group-hover:translate-x-0.5" aria-hidden="true">
-                      →
-                    </span>
-                  </a>
-                  <a
-                    href="#estrutura"
-                    className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                  >
-                    Ouvir feedback real
-                  </a>
-                </div>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="#modelos"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                >
+                  Ver modelos agora
+                  <span className="transition group-hover:translate-x-0.5" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+                <a
+                  href="#estrutura"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                >
+                  Ouvir feedback real
+                </a>
               </div>
             </div>
 
-            <div
-              className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/4 p-6 shadow-[0_0_110px_rgba(194,164,106,0.10)] backdrop-blur-md"
-              onMouseEnter={() => setHovering(true)}
-              onMouseLeave={() => setHovering(false)}
-            >
-              <div className="pointer-events-none absolute inset-0 opacity-70">
-                <div className="absolute -left-24 -top-24 h-60 w-60 rounded-full bg-brand-glow/14 blur-3xl" />
-                <div className="absolute -right-28 -bottom-28 h-72 w-72 rounded-full bg-brand-accent/12 blur-3xl" />
+            <div className="relative mx-auto w-full max-w-md">
+              <div className="pointer-events-none absolute -inset-16 opacity-80">
+                <div className="absolute inset-0 bg-[radial-gradient(520px_circle_at_55%_55%,rgba(0,255,140,0.14),transparent_60%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(620px_circle_at_40%_30%,rgba(194,164,106,0.12),transparent_62%)]" />
               </div>
 
-              <div className="relative">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">O QUE VOCÊ GANHA</div>
-                    <div className="mt-2 text-sm text-white/70">Uma amostra do estilo de direção que você recebe.</div>
-                  </div>
-                  <div className="hidden h-12 w-12 items-center justify-center rounded-2xl bg-black/35 text-white/70 ring-1 ring-[#c2a46a]/16 sm:flex">
-                    <Sparkles className="h-5 w-5 text-brand-accent" />
-                  </div>
+              <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/3 p-6 backdrop-blur-md">
+                <div className="pointer-events-none absolute inset-0 opacity-60">
+                  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.10),rgba(0,0,0,0.65))]" />
                 </div>
 
-                <div className="mt-5 flex items-center gap-2">
-                  {highlights.map((it, idx) => (
-                    <button
-                      key={it.k}
-                      type="button"
-                      onClick={() => setActive(idx)}
-                      className={[
-                        "rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.16em] transition focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
-                        idx === active
-                          ? "bg-white/10 text-white ring-1 ring-[#c2a46a]/24"
-                          : "bg-black/25 text-white/60 hover:bg-white/8 hover:text-white",
-                      ].join(" ")}
-                    >
-                      {String(idx + 1).padStart(2, "0")}
-                    </button>
-                  ))}
-
-                  <div className="relative ml-1 h-2 flex-1 overflow-hidden rounded-full bg-white/10">
-                    <motion.div
-                      key={active}
-                      initial={{ width: "0%" }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 3.4, ease: "linear" }}
-                      className="h-full bg-gradient-to-r from-transparent via-brand-glow to-transparent opacity-95"
-                    />
-                  </div>
+                <div className="relative flex items-end justify-center">
+                  <img
+                    src="/imagens/foto-perfil-lucas-brum.png?v=4"
+                    alt=""
+                    className="w-[clamp(240px,58vw,380px)] opacity-70 grayscale brightness-[1.08] [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]"
+                    loading="lazy"
+                  />
                 </div>
 
                 <motion.div
-                  key={highlights[active]?.k}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="mt-6 rounded-3xl bg-black/35 p-5 ring-1 ring-[#c2a46a]/18"
+                  initial={{ opacity: 0.7, y: 0 }}
+                  animate={{ opacity: 1, y: [0, 6, 0] }}
+                  transition={{ duration: 2.8, repeat: Infinity, ease: [0.22, 1, 0.36, 1] }}
+                  className="pointer-events-none absolute right-4 top-4"
                 >
-                  <div className="text-base font-semibold text-white">{highlights[active]?.k}</div>
-                  <div className="mt-2 text-sm text-white/70">{highlights[active]?.v}</div>
-
-                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                    {highlights.map((it, idx) => (
-                      <button
-                        key={`${it.k}-${idx}`}
-                        type="button"
-                        onMouseEnter={() => setActive(idx)}
-                        onFocus={() => setActive(idx)}
-                        className={[
-                          "group rounded-2xl bg-black/25 px-4 py-3 text-left transition hover:bg-black/35 focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
-                          idx === active ? "ring-1 ring-[#c2a46a]/22" : "ring-1 ring-transparent",
-                        ].join(" ")}
-                      >
-                        <div className="text-xs font-semibold text-white/85">{it.k}</div>
-                        <div className="mt-1 text-xs text-white/55">{it.v}</div>
-                      </button>
-                    ))}
-                  </div>
+                  <svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M142 26C113 34 93 55 88 82C83 109 99 130 128 141"
+                      stroke="rgba(255,255,255,0.70)"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M124 139L142 142L139 124"
+                      stroke="rgba(0,255,140,0.90)"
+                      strokeWidth="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div className="absolute -bottom-2 right-8 h-14 w-14 rounded-full bg-emerald-500/25 blur-2xl" />
                 </motion.div>
               </div>
             </div>
@@ -174,7 +135,6 @@ function AboutSection() {
 
 function DiscographySection() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -185,7 +145,6 @@ function DiscographySection() {
 
     const handleLoaded = () => {
       setDuration(Number.isFinite(audio.duration) ? audio.duration : 0);
-      setIsReady(true);
     };
     const handleTime = () => setCurrentTime(audio.currentTime);
     const handlePlay = () => setIsPlaying(true);
