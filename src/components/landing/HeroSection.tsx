@@ -16,7 +16,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-12 pt-[120px] sm:pb-14 sm:pt-[140px]">
-        <div className="pointer-events-none absolute inset-x-0 top-[clamp(132px,20vw,202px)] z-0 flex justify-center overflow-hidden md:top-[clamp(104px,14vw,152px)]">
+        <div className="pointer-events-none absolute inset-x-0 top-[clamp(132px,20vw,202px)] z-[3] flex justify-center overflow-hidden md:top-[clamp(104px,14vw,152px)]">
           <motion.img
             initial={{ opacity: 0, y: -28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="pointer-events-none absolute inset-0 z-[6] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-[2] overflow-hidden">
           <motion.img
             src="/imagens/simbolo-musica-01.png"
             alt=""
@@ -73,7 +73,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="pointer-events-none absolute left-1/2 top-[clamp(206px,30vw,292px)] bottom-0 z-[5] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.58)_36%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
+        <div className="pointer-events-none absolute left-1/2 top-[clamp(206px,30vw,292px)] bottom-0 z-[4] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.58)_36%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
 
         <div className="relative z-10 isolate">
           <Reveal className="relative z-20">
