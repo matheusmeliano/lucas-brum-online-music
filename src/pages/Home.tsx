@@ -35,8 +35,8 @@ function AboutSection() {
     <section id="como-funciona" className="relative bg-black scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <div>
+          <div className="grid gap-10">
+            <div className="mx-auto w-full max-w-4xl">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
                 O acompanhamento é pra quem quer:
               </h2>
@@ -78,47 +78,6 @@ function AboutSection() {
                 >
                   Ouvir feedback real
                 </a>
-              </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-md">
-              <div className="relative overflow-hidden rounded-[32px] border border-brand-border bg-white/3 p-6 backdrop-blur-md">
-                <div className="pointer-events-none absolute inset-0 opacity-60">
-                  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.10),rgba(0,0,0,0.65))]" />
-                </div>
-
-                <div className="relative flex items-end justify-center">
-                  <img
-                    src="/imagens/foto-perfil-lucas-brum.png?v=4"
-                    alt=""
-                    className="w-[clamp(240px,58vw,380px)] opacity-70 grayscale brightness-[1.08] [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]"
-                    loading="lazy"
-                  />
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0.7, y: 0 }}
-                  animate={{ opacity: 1, y: [0, 6, 0] }}
-                  transition={{ duration: 2.8, repeat: Infinity, ease: [0.22, 1, 0.36, 1] }}
-                  className="pointer-events-none absolute right-4 top-4"
-                >
-                  <svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M142 26C113 34 93 55 88 82C83 109 99 130 128 141"
-                      stroke="rgba(255,255,255,0.70)"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M124 139L142 142L139 124"
-                      stroke="rgba(0,255,140,0.90)"
-                      strokeWidth="10"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <div className="absolute -bottom-2 right-8 h-14 w-14 rounded-full bg-emerald-500/25 blur-2xl" />
-                </motion.div>
               </div>
             </div>
           </div>
