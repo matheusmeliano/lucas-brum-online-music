@@ -1,26 +1,26 @@
-import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Play, X } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
+import { useEffect, useState } from "react";
 
-const testimonials = [
-  {
-    quote:
-      "Finalmente entendi o que estudar. O plano ficou claro e a evolução apareceu rápido.",
-    source: "Aluno",
-  },
-  {
-    quote:
-      "O feedback ao vivo corrigiu detalhes que eu repetia há anos. Mudou meu som.",
-    source: "Aluno",
-  },
-  {
-    quote:
-      "No híbrido consegui manter constância na rotina e ainda ter avaliação mensal.",
-    source: "Aluno",
-  },
+const videos = [
+  { src: "/video/aluna-01.mp4", title: "Aluna 01" },
+  { src: "/video/aluna-02.mp4", title: "Aluna 02" },
+  { src: "/video/aluna-03.mp4", title: "Aluna 03" },
 ] as const;
 
 export default function TestimonialsSection() {
+  const [activeVideo, setActiveVideo] = useState<(typeof videos)[number] | null>(null);
+
+  useEffect(() => {
+    if (!activeVideo) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActiveVideo(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [activeVideo]);
+
   return (
     <section id="depoimentos" className="relative scroll-mt-[120px]">
       <div className="pointer-events-none absolute inset-0">
@@ -40,34 +40,94 @@ export default function TestimonialsSection() {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          {testimonials.map((it, idx) => (
-            <Reveal key={it.quote} delay={0.06 + idx * 0.06}>
-              <motion.div
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {videos.map((it, idx) => (
+            <Reveal key={it.src} delay={0.06 + idx * 0.06}>
+              <motion.button
+                type="button"
+                onClick={() => setActiveVideo(it)}
                 whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.99 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className="relative h-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-6 backdrop-blur-md"
+                className="group w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-left backdrop-blur-md transition"
               >
-                <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
-                  <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-accent/10 blur-3xl" />
-                </div>
-                <div className="relative">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-border bg-white/6">
-                    <Quote className="h-5 w-5 text-brand-accent" />
+                <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-black/40">
+                  <div className="aspect-video">
+                    <video
+                      src={it.src}
+                      preload="metadata"
+                      muted
+                      playsInline
+                      className="h-full w-full object-cover opacity-70 transition group-hover:opacity-90"
+                    />
                   </div>
-                  <p className="mt-4 text-sm leading-relaxed text-white/85">{it.quote}</p>
-                  <div className="mt-6 flex items-center justify-between gap-4">
-                    <div className="text-xs font-medium tracking-wide text-white/55">{it.source}</div>
-                    <div className="h-2 w-24 overflow-hidden rounded-full bg-white/8">
-                      <div className="h-full w-2/3 rounded-full bg-brand-glow/80" />
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.45),transparent_55%)]" />
+                  <div className="pointer-events-none absolute inset-0 grid place-items-center">
+                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/12 bg-black/45 text-white/90 shadow-[0_20px_70px_rgba(0,0,0,0.55)] transition group-hover:scale-[1.03]">
+                      <Play className="h-6 w-6 translate-x-[1px]" />
                     </div>
                   </div>
                 </div>
-              </motion.div>
+
+                <div className="mt-4">
+                  <div className="text-sm font-semibold text-white/90">{it.title}</div>
+                  <div className="mt-1 text-xs text-white/60">Clique para assistir</div>
+                </div>
+              </motion.button>
             </Reveal>
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {activeVideo ? (
+          <motion.div
+            className="fixed inset-0 z-[80]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <button
+              type="button"
+              aria-label="Fechar vídeo"
+              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              onClick={() => setActiveVideo(null)}
+            />
+            <div className="relative mx-auto flex min-h-dvh max-w-5xl items-center justify-center px-4 py-10">
+              <motion.div
+                role="dialog"
+                aria-modal="true"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                className="w-full overflow-hidden rounded-[28px] border border-white/10 bg-black/60 shadow-[0_40px_120px_rgba(0,0,0,0.65)]"
+              >
+                <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
+                  <div className="text-sm font-semibold text-white/90">{activeVideo.title}</div>
+                  <button
+                    type="button"
+                    aria-label="Fechar"
+                    onClick={() => setActiveVideo(null)}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+                </div>
+                <div className="p-4">
+                  <video
+                    src={activeVideo.src}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="h-auto max-h-[72vh] w-full rounded-2xl bg-black"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </section>
   );
 }
