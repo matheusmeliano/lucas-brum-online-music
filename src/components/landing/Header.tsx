@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navItems = [
   { label: "Como funciona", href: "#como-funciona" },
@@ -15,6 +15,8 @@ const navItems = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [onLight, setOnLight] = useState(false);
+  const barRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -26,25 +28,60 @@ export default function Header() {
   }, [open]);
 
   useEffect(() => {
-    const update = () => setScrolled(window.scrollY > 8);
+    const update = () => {
+      setScrolled(window.scrollY > 8);
+
+      const bar = barRef.current;
+      if (!bar) return;
+
+      const rect = bar.getBoundingClientRect();
+      const x = window.innerWidth / 2;
+      const y = Math.min(window.innerHeight - 1, rect.bottom + 1);
+      const el = document.elementFromPoint(x, y) as HTMLElement | null;
+
+      let current: HTMLElement | null = el;
+      let theme: string | undefined;
+      while (current) {
+        const value = current.dataset?.theme;
+        if (value) {
+          theme = value;
+          break;
+        }
+        current = current.parentElement;
+      }
+
+      setOnLight(theme === "light");
+    };
     update();
     window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
         <div
+          ref={barRef}
           className={cn(
             "flex items-center justify-center gap-3 rounded-full border px-4 py-3 backdrop-blur-xl transition md:justify-between md:gap-4",
-            scrolled
-              ? "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.45)]"
-              : "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
+            onLight
+              ? "border-black/10 bg-white/80 shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
+              : scrolled
+                ? "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.45)]"
+                : "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
           )}
         >
           <a href="https://www.lucasbrumonlinemusic.com/" className="inline-flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/6">
+            <span
+              className={cn(
+                "inline-flex h-10 w-10 items-center justify-center rounded-2xl",
+                onLight ? "bg-black/5" : "bg-white/6"
+              )}
+            >
               <img
                 src="/imagens/logo-online-music-usa.png"
                 alt="Lucas Brum Online Music USA"
@@ -52,17 +89,30 @@ export default function Header() {
                 loading="eager"
               />
             </span>
-            <div className="hidden text-[13px] font-semibold tracking-tight text-white md:block">
+            <div
+              className={cn(
+                "hidden text-[13px] font-semibold tracking-tight md:block",
+                onLight ? "text-black/90" : "text-white"
+              )}
+            >
               Lucas Brum Online Music USA
             </div>
           </a>
 
-          <nav className="hidden items-center gap-7 text-[13px] text-white/70 md:flex">
+          <nav
+            className={cn(
+              "hidden items-center gap-7 text-[13px] md:flex",
+              onLight ? "text-black/60" : "text-white/70"
+            )}
+          >
             {navItems.slice(0, 4).map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                className={cn(
+                  "transition-colors focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
+                  onLight ? "hover:text-black" : "hover:text-white"
+                )}
               >
                 {item.label}
               </a>
@@ -85,7 +135,10 @@ export default function Header() {
               aria-label={open ? "Fechar menu" : "Abrir menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-white/85 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden"
+              className={cn(
+                "inline-flex h-10 w-10 items-center justify-center rounded-full bg-transparent transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden",
+                onLight ? "text-black/70" : "text-white/85"
+              )}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
