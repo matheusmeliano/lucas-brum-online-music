@@ -126,12 +126,14 @@ export default function BenefitsSection() {
     <section id="beneficios" data-theme="light" className="relative scroll-mt-[120px] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
-            Benefícios
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
-            Dois modelos diferentes, com o mesmo objetivo: direção e resultado.
-          </p>
+          <div className="text-center min-[1000px]:text-left">
+            <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
+              Benefícios
+            </h2>
+            <p className="mt-2 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-2xl">
+              Dois modelos diferentes, com o mesmo objetivo: direção e resultado.
+            </p>
+          </div>
         </Reveal>
 
         <div

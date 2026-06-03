@@ -37,12 +37,14 @@ function AboutSection() {
         <Reveal>
           <div className="grid gap-10">
             <div className="w-full">
-              <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
-                Indicado para quem busca
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
-                Clareza no estudo, correção objetiva e evolução consistente semana após semana.
-              </p>
+              <div className="text-center min-[1000px]:text-left">
+                <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
+                  Indicado para quem busca
+                </h2>
+                <p className="mt-2 max-w-none text-sm text-white/65 sm:text-base min-[1000px]:max-w-2xl">
+                  Clareza no estudo, correção objetiva e evolução consistente semana após semana.
+                </p>
+              </div>
 
               <div className="mt-6 overflow-hidden rounded-[28px] border border-brand-border bg-white/4 backdrop-blur-md">
                 <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
@@ -134,9 +136,9 @@ function DiscographySection() {
     >
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div className="text-center sm:text-left">
+          <div className="text-center min-[1000px]:text-left">
             <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Feedback</h2>
-            <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
+            <p className="mt-2 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-2xl">
               Dê play e veja como é o acompanhamento por dentro: correção clara, direção objetiva e próximo passo definido.
             </p>
           </div>
@@ -144,11 +146,11 @@ function DiscographySection() {
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal delay={0.05}>
-            <div className="text-center sm:text-left">
+            <div className="text-center min-[1000px]:text-left">
               <h3 className="mt-5 text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
                 Ouça como é a evolução na prática.
               </h3>
-              <p className="mt-3 max-w-xl text-sm text-black/60 sm:text-base">
+              <p className="mt-3 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-xl">
                 Um trecho curto, direto e real para você sentir o nível de clareza e correção que eu entrego.
               </p>
               <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:items-center">
@@ -260,9 +262,9 @@ function FaqSection() {
     <section id="faq" data-theme="light" className="relative scroll-mt-[120px] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div className="text-center sm:text-left">
+          <div className="text-center min-[1000px]:text-left">
             <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Dúvidas</h2>
-            <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
+            <p className="mt-2 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-2xl">
               Dúvidas rápidas sobre os vídeos e como funciona o curso.
             </p>
           </div>

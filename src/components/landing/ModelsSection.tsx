@@ -69,9 +69,9 @@ export default function ModelsSection() {
     <section id="modelos" className="relative bg-[#000000] scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div className="text-center sm:text-left">
+          <div className="text-center min-[1000px]:text-left">
             <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Modelos de aula</h2>
-            <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
+            <p className="mt-2 max-w-none text-sm text-white/65 sm:text-base min-[1000px]:max-w-2xl">
               Escolha entre flexibilidade com conteúdo gravado ou acompanhamento completo e personalizado ao vivo.
             </p>
           </div>
