@@ -60,7 +60,7 @@ export default function TestimonialsSection() {
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-            <div>
+            <div className="text-center lg:text-left">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Vídeos</h2>
               <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
                 Vídeos de alunas contando como foi a experiência no curso e a evolução que tiveram com direção e feedback.
