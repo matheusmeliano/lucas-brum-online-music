@@ -16,12 +16,22 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
-        featured ? "bg-[linear-gradient(135deg,rgba(194,164,106,0.16),rgba(255,255,255,0.03))]" : ""
+        featured
+          ? "border-[#c2a46a]/35 bg-[linear-gradient(135deg,rgba(194,164,106,0.24),rgba(255,255,255,0.03))] ring-1 ring-[#c2a46a]/22 shadow-[0_34px_90px_rgba(194,164,106,0.14)]"
+          : ""
       )}
     >
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      <div
+        className={cn(
+          "pointer-events-none absolute inset-0",
+          featured ? "opacity-100" : "opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        )}
+      >
         <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-accent/12 blur-3xl" />
         <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
+        {featured ? (
+          <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(255,179,71,0.14),transparent_60%)] opacity-80" />
+        ) : null}
       </div>
 
       <div className="relative">
