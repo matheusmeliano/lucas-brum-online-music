@@ -254,7 +254,7 @@ function FaqSection() {
     {
       title: "Como eu começo agora?",
       description:
-        "Basta escolher um modelo e iniciar. Em seguida você recebe as orientações para enviar seu material e começar o acompanhamento.",
+        "Escolha o modelo ideal para você e clique em Começar para iniciar seu acompanhamento.",
     },
   ] as const;
   const [openIndex, setOpenIndex] = useState<number | null>(0);
