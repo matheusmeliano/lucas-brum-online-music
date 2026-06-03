@@ -137,47 +137,49 @@ export default function BenefitsSection() {
         </Reveal>
 
         <div
-          className="relative mt-10 px-12 min-[1000px]:px-0"
+          className="relative mt-10"
           onMouseEnter={stopAutoplay}
           onMouseLeave={startAutoplay}
         >
-          <div className="overflow-hidden">
-            <motion.div
-              animate={{ x: `-${slideIndex * stepPercent}%` }}
-              transition={
-                instant
-                  ? { duration: 0 }
-                  : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }
-              }
-              onAnimationStart={() => setIsAnimating(true)}
-              onAnimationComplete={() => {
-                if (slideIndex < visibleCount) {
-                  setInstant(true);
-                  setSlideIndex((current) => current + items.length);
-                  setIsAnimating(false);
-                  return;
+          <div className="px-16 min-[1000px]:px-0">
+            <div className="overflow-hidden">
+              <motion.div
+                animate={{ x: `-${slideIndex * stepPercent}%` }}
+                transition={
+                  instant
+                    ? { duration: 0 }
+                    : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }
                 }
+                onAnimationStart={() => setIsAnimating(true)}
+                onAnimationComplete={() => {
+                  if (slideIndex < visibleCount) {
+                    setInstant(true);
+                    setSlideIndex((current) => current + items.length);
+                    setIsAnimating(false);
+                    return;
+                  }
 
-                if (slideIndex >= items.length + visibleCount) {
-                  setInstant(true);
-                  setSlideIndex((current) => current - items.length);
+                  if (slideIndex >= items.length + visibleCount) {
+                    setInstant(true);
+                    setSlideIndex((current) => current - items.length);
+                    setIsAnimating(false);
+                    return;
+                  }
+
                   setIsAnimating(false);
-                  return;
-                }
-
-                setIsAnimating(false);
-              }}
-              className="flex"
-            >
-              {slides.map((item, idx) => (
-                <div
-                  key={`${item.title}-${idx}`}
-                  className="shrink-0 basis-full px-1 md:basis-1/3"
-                >
-                  <BenefitCard item={item} />
-                </div>
-              ))}
-            </motion.div>
+                }}
+                className="flex"
+              >
+                {slides.map((item, idx) => (
+                  <div
+                    key={`${item.title}-${idx}`}
+                    className="shrink-0 basis-full px-1 md:basis-1/3"
+                  >
+                    <BenefitCard item={item} />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
 
           <button
