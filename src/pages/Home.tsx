@@ -340,9 +340,9 @@ export default function Home() {
 
           <div className="relative">
             <img
-              src="/favicon.png"
+              src="/logo-loading.png"
               alt="Lucas Brum Online Music USA"
-              className="h-16 w-16 object-contain sm:h-20 sm:w-20"
+              className="h-16 w-auto object-contain sm:h-20"
               draggable={false}
             />
           </div>
