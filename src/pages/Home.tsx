@@ -134,24 +134,24 @@ function DiscographySection() {
     >
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
-            Feedback
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
-            Dê play e veja como é o acompanhamento por dentro: correção clara, direção objetiva e próximo passo definido.
-          </p>
+          <div className="text-center sm:text-left">
+            <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Feedback</h2>
+            <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
+              Dê play e veja como é o acompanhamento por dentro: correção clara, direção objetiva e próximo passo definido.
+            </p>
+          </div>
         </Reveal>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal delay={0.05}>
-            <div>
+            <div className="text-center sm:text-left">
               <h3 className="mt-5 text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">
                 Ouça como é a evolução na prática.
               </h3>
               <p className="mt-3 max-w-xl text-sm text-black/60 sm:text-base">
                 Um trecho curto, direto e real para você sentir o nível de clareza e correção que eu entrego.
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:items-center">
                 <button
                   type="button"
                   onClick={togglePlay}
