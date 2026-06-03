@@ -141,52 +141,43 @@ export default function BenefitsSection() {
           onMouseEnter={stopAutoplay}
           onMouseLeave={startAutoplay}
         >
-          <div className="px-16 min-[1000px]:px-0">
-            <div className="overflow-hidden">
-              <motion.div
-                animate={{ x: `-${slideIndex * stepPercent}%` }}
-                transition={
-                  instant
-                    ? { duration: 0 }
-                    : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }
-                }
-                onAnimationStart={() => setIsAnimating(true)}
-                onAnimationComplete={() => {
-                  if (slideIndex < visibleCount) {
-                    setInstant(true);
-                    setSlideIndex((current) => current + items.length);
-                    setIsAnimating(false);
-                    return;
-                  }
-
-                  if (slideIndex >= items.length + visibleCount) {
-                    setInstant(true);
-                    setSlideIndex((current) => current - items.length);
-                    setIsAnimating(false);
-                    return;
-                  }
-
+          <div className="overflow-hidden px-12 sm:px-14 min-[1000px]:px-0">
+            <motion.div
+              animate={{ x: `-${slideIndex * stepPercent}%` }}
+              transition={instant ? { duration: 0 } : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationComplete={() => {
+                if (slideIndex < visibleCount) {
+                  setInstant(true);
+                  setSlideIndex((current) => current + items.length);
                   setIsAnimating(false);
-                }}
-                className="flex"
-              >
-                {slides.map((item, idx) => (
-                  <div
-                    key={`${item.title}-${idx}`}
-                    className="shrink-0 basis-full px-1 md:basis-1/3"
-                  >
-                    <BenefitCard item={item} />
-                  </div>
-                ))}
-              </motion.div>
-            </div>
+                  return;
+                }
+
+                if (slideIndex >= items.length + visibleCount) {
+                  setInstant(true);
+                  setSlideIndex((current) => current - items.length);
+                  setIsAnimating(false);
+                  return;
+                }
+
+                setIsAnimating(false);
+              }}
+              className="flex"
+            >
+              {slides.map((item, idx) => (
+                <div key={`${item.title}-${idx}`} className="shrink-0 basis-full px-1 md:basis-1/3">
+                  <BenefitCard item={item} />
+                </div>
+              ))}
+            </motion.div>
           </div>
 
           <button
             type="button"
             aria-label="Voltar"
             onClick={goPrev}
-            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black/70 backdrop-blur-md transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40"
+            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black/70 backdrop-blur-md transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 min-[1000px]:-left-10"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -195,7 +186,7 @@ export default function BenefitsSection() {
             type="button"
             aria-label="Avançar"
             onClick={goNext}
-            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black/70 backdrop-blur-md transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40"
+            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black/70 backdrop-blur-md transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 min-[1000px]:-right-10"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
