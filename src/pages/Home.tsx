@@ -53,7 +53,7 @@ function AboutSection() {
                       key={it.title}
                       className="group flex gap-3 rounded-2xl bg-black/25 p-4 ring-1 ring-brand-border/80 transition hover:bg-white/5 hover:ring-[#c2a46a]/22"
                     >
-                      <div className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/18 text-emerald-300 ring-1 ring-emerald-400/25">
+                      <div className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-accent/12 text-brand-accent ring-1 ring-brand-accent/25">
                         <Check className="h-4 w-4" />
                       </div>
                       <div className="min-w-0">

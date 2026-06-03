@@ -42,8 +42,8 @@ function BenefitCard({ item }: { item: BenefitItem }) {
         <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-accent/12 blur-3xl" />
         <div className="absolute -left-20 -bottom-20 h-56 w-56 rounded-full bg-brand-glow/14 blur-3xl" />
       </div>
-      <div className="relative">
-        <div className="flex items-center gap-3">
+      <div className="relative text-center min-[1000px]:text-left">
+        <div className="flex items-center justify-center gap-3 min-[1000px]:justify-start">
           <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03]">
             <Icon className="h-5 w-5 text-brand-accent" />
           </div>

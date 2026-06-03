@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
                 whileHover={{ y: -4 }}
                 whileTap={{ scale: 0.99 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-left backdrop-blur-md transition"
+                className="group relative w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-center backdrop-blur-md transition min-[1000px]:text-left"
               >
                 <div className="pointer-events-none absolute inset-0 opacity-90">
                   <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-brand-glow/18 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
