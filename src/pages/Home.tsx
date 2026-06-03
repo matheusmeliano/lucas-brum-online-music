@@ -32,7 +32,7 @@ function AboutSection() {
   ];
 
   return (
-    <section id="como-funciona" className="relative bg-black scroll-mt-[120px]">
+    <section id="como-funciona" className="relative bg-[#000000] scroll-mt-[120px]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10">
