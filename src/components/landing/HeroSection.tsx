@@ -86,8 +86,7 @@ export default function HeroSection() {
               </h1>
 
               <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 drop-shadow-[0_10px_24px_rgba(0,0,0,0.85)] sm:text-lg">
-                Dois formatos para você ter clareza, estratégia e acompanhamento: o Híbrido (flexível e escalável) ou o
-                Individual (totalmente personalizado, ao vivo, semanal).
+                Aulas de violão online e ao vivo para brasileiros nos EUA. Agende sua aula experimental grátis.
               </p>
             </div>
           </Reveal>
