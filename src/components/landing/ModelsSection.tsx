@@ -27,11 +27,20 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
           featured ? "opacity-100" : "opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         )}
       >
-        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-accent/12 blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
         {featured ? (
-          <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(255,179,71,0.14),transparent_60%)] opacity-80" />
-        ) : null}
+          <>
+            <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_12%_18%,rgba(255,179,71,0.28),transparent_60%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_92%_82%,rgba(194,164,106,0.30),transparent_60%)]" />
+            <div className="absolute -left-20 -top-24 h-72 w-72 rounded-full bg-brand-glow/24 blur-3xl" />
+            <div className="absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-brand-accent/20 blur-3xl" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.55))]" />
+          </>
+        ) : (
+          <>
+            <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-accent/12 blur-3xl" />
+            <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
+          </>
+        )}
       </div>
 
       <div className="relative">
