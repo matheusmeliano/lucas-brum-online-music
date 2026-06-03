@@ -86,8 +86,8 @@ export default function HeroSection() {
               </h1>
 
               <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 drop-shadow-[0_10px_24px_rgba(0,0,0,0.85)] sm:text-lg">
-                Aulas de violão online e ao vivo, em português, para brasileiros nos EUA — horários flexíveis e aula
-                experimental gratuita.
+                Aulas de violão online e ao vivo para brasileiros nos EUA, com horários flexíveis, ensino em português e
+                aula experimental gratuita.
               </p>
             </div>
           </Reveal>
