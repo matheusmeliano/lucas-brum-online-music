@@ -85,7 +85,7 @@ export default function HeroSection() {
                 De Brasileiro para Brasileiro nos EUA.
               </h1>
 
-              <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 drop-shadow-[0_10px_24px_rgba(0,0,0,0.85)] sm:text-lg">
+              <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 drop-shadow-[0_10px_24px_rgba(0,0,0,0.85)] sm:text-lg min-[1000px]:overflow-hidden min-[1000px]:[display:-webkit-box] min-[1000px]:[-webkit-box-orient:vertical] min-[1000px]:[-webkit-line-clamp:2] xl:overflow-visible xl:[display:block] xl:[-webkit-line-clamp:unset] xl:[-webkit-box-orient:unset]">
                 Aulas de violão online e ao vivo para brasileiros nos EUA, com horários flexíveis, ensino em português e
                 aula experimental gratuita para você começar a tocar com confiança.
               </p>
