@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
               className="absolute inset-0 z-0 bg-black/70 backdrop-blur-sm"
               onClick={() => setActiveVideo(null)}
             />
-            <div className="relative z-10 mx-auto flex min-h-dvh max-w-5xl items-center justify-center px-4 py-10">
+            <div className="relative z-10 mx-auto flex min-h-dvh max-w-5xl items-center justify-center px-4 py-4 sm:py-10">
               <motion.div
                 role="dialog"
                 aria-modal="true"
@@ -142,8 +142,8 @@ export default function TestimonialsSection() {
                     <X className="h-5 w-5" />
                   </button>
                 </div>
-                <div className="p-4">
-                  <div className="aspect-video w-full overflow-hidden rounded-2xl bg-black">
+                <div className="p-3 sm:p-4">
+                  <div className="aspect-[9/16] w-full overflow-hidden rounded-2xl bg-black sm:aspect-video">
                     <iframe
                       src={activeVideo.embedUrl}
                       title={activeVideo.title}
