@@ -11,10 +11,11 @@ export default function HeroSection() {
       className="relative -mt-[50px] bg-[linear-gradient(to_bottom,#080807_0%,#100e0d_100%)]"
     >
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_40%,rgba(255,179,71,0.14),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_40%,rgba(255,179,71,0.22),transparent_58%),radial-gradient(980px_circle_at_20%_18%,rgba(194,164,106,0.14),transparent_62%),radial-gradient(920px_circle_at_85%_28%,rgba(255,179,71,0.12),transparent_64%)]" />
         <div className="absolute inset-x-0 bottom-0 h-44 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_92%)]" />
-        <div className="absolute left-[12%] top-[20%] h-44 w-44 rounded-full bg-brand-accent/10 blur-3xl animate-float-slow" />
-        <div className="absolute right-[10%] top-[28%] h-56 w-56 rounded-full bg-brand-glow/12 blur-3xl animate-float-slow" />
+        <div className="absolute left-[10%] top-[18%] h-56 w-56 rounded-full bg-brand-accent/16 blur-3xl animate-float-slow" />
+        <div className="absolute right-[8%] top-[22%] h-72 w-72 rounded-full bg-brand-glow/16 blur-3xl animate-float-slow" />
+        <div className="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-accent/10 blur-3xl animate-float-slow" />
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-12 pt-[120px] sm:pb-14 sm:pt-[140px]">
