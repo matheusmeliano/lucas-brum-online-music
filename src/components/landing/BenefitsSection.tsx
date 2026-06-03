@@ -37,7 +37,7 @@ function BenefitCard({ item }: { item: BenefitItem }) {
   const Icon = item.icon;
 
   return (
-    <div className="group relative h-full overflow-hidden rounded-3xl border border-black/10 bg-black/[0.03] p-6">
+    <div className="group relative h-full overflow-hidden rounded-3xl border border-black/10 bg-black/[0.03] p-7 sm:p-8">
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-accent/12 blur-3xl" />
         <div className="absolute -left-20 -bottom-20 h-56 w-56 rounded-full bg-brand-glow/14 blur-3xl" />
@@ -137,7 +137,7 @@ export default function BenefitsSection() {
         </Reveal>
 
         <div
-          className="relative mt-10"
+          className="relative mt-10 px-12 min-[1000px]:px-0"
           onMouseEnter={stopAutoplay}
           onMouseLeave={startAutoplay}
         >
