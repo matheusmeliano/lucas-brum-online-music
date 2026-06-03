@@ -8,6 +8,13 @@ export default function FinalCtaSection() {
       <div className="mx-auto max-w-6xl px-4 pt-10 sm:pt-14">
         <Reveal>
           <div className="relative overflow-hidden rounded-[36px] border border-transparent bg-[#000000] px-6 py-10 ring-1 ring-[#c2a46a]/22 sm:px-10">
+            <div className="pointer-events-none absolute inset-0 opacity-100">
+              <div className="absolute inset-0 bg-[radial-gradient(1100px_circle_at_12%_18%,rgba(255,179,71,0.28),transparent_60%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(1100px_circle_at_92%_82%,rgba(194,164,106,0.30),transparent_60%)]" />
+              <div className="absolute -left-20 -top-24 h-80 w-80 rounded-full bg-brand-glow/24 blur-3xl" />
+              <div className="absolute -right-24 -bottom-24 h-96 w-96 rounded-full bg-brand-accent/20 blur-3xl" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.55))]" />
+            </div>
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div className="text-center lg:text-left">
