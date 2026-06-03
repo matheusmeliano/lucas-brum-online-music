@@ -342,7 +342,7 @@ export default function Home() {
             <img
               src="/logo-loading.png"
               alt="Lucas Brum Online Music USA"
-              className="h-24 w-auto max-h-[30vh] object-contain sm:h-28 min-[1000px]:h-32"
+              className="h-32 w-auto max-h-[36vh] object-contain sm:h-28 min-[1000px]:h-32"
               draggable={false}
             />
           </div>
