@@ -73,8 +73,13 @@ export default function TestimonialsSection() {
                 whileHover={{ y: -4 }}
                 whileTap={{ scale: 0.99 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className="group w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-left backdrop-blur-md transition"
+                className="group relative w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-left backdrop-blur-md transition"
               >
+                <div className="pointer-events-none absolute inset-0 opacity-90">
+                  <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-brand-glow/18 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="absolute -right-24 -bottom-24 h-96 w-96 rounded-full bg-brand-accent/14 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(255,179,71,0.16),transparent_60%)] opacity-80" />
+                </div>
                 <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-black/40">
                   <div className="aspect-video">
                     <img
