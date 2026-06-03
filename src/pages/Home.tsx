@@ -260,7 +260,7 @@ function FaqSection() {
     <section id="faq" data-theme="light" className="relative scroll-mt-[120px] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <div>
+          <div className="text-center sm:text-left">
             <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Dúvidas</h2>
             <p className="mt-2 max-w-2xl text-sm text-black/60 sm:text-base">
               Dúvidas rápidas sobre os vídeos e como funciona o curso.
