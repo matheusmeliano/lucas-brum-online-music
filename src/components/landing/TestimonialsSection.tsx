@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-6">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {videos.map((it, idx) => (
             <Reveal key={it.id} delay={0.06 + idx * 0.06}>
               <motion.button
