@@ -20,9 +20,8 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
       )}
     >
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="absolute -left-28 -top-28 h-72 w-72 rounded-full bg-brand-accent/16 blur-3xl" />
-        <div className="absolute -bottom-28 -right-28 h-72 w-72 rounded-full bg-brand-glow/16 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(255,179,71,0.14),transparent_60%)] opacity-80" />
+        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-accent/12 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-brand-glow/12 blur-3xl" />
       </div>
 
       <div className="relative">
@@ -49,7 +48,6 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
 export default function ModelsSection() {
   return (
     <section id="modelos" className="relative bg-[#000000] scroll-mt-[120px]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_0%,rgba(194,164,106,0.10),transparent_55%)]" />
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="text-center sm:text-left">
