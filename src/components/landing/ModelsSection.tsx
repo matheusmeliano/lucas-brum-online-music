@@ -51,10 +51,12 @@ export default function ModelsSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_0%,rgba(194,164,106,0.10),transparent_55%)]" />
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Modelos de aula</h2>
-          <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
-            Escolha entre flexibilidade com conteúdo gravado ou acompanhamento completo e personalizado ao vivo.
-          </p>
+          <div className="text-center sm:text-left">
+            <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Modelos de aula</h2>
+            <p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">
+              Escolha entre flexibilidade com conteúdo gravado ou acompanhamento completo e personalizado ao vivo.
+            </p>
+          </div>
         </Reveal>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
