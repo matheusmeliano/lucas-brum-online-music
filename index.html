@@ -27,6 +27,8 @@
           radial-gradient(1100px circle at 50% 42%, rgba(255, 179, 71, 0.2), transparent 60%),
           radial-gradient(920px circle at 20% 18%, rgba(194, 164, 106, 0.18), transparent 62%),
           radial-gradient(820px circle at 85% 26%, rgba(255, 179, 71, 0.14), transparent 64%);
+        opacity: 1;
+        transition: opacity 360ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       #app-loading::after {
         content: '';
@@ -36,6 +38,7 @@
         background-size: 200% 200%;
         animation: appGradientShift 10s ease-in-out infinite;
         opacity: 0.9;
+        transition: opacity 360ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       #app-loading .glow {
         position: absolute;
@@ -48,6 +51,8 @@
         background: rgba(194, 164, 106, 0.16);
         filter: blur(48px);
         animation: appFloat 6.2s ease-in-out infinite;
+        opacity: 1;
+        transition: opacity 360ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       #app-loading img {
         position: relative;
@@ -55,10 +60,23 @@
         width: auto;
         max-height: 36vh;
         object-fit: contain;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition:
+          opacity 360ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       #app-loading.fade-out {
+        opacity: 1;
+      }
+      #app-loading.fade-out::before,
+      #app-loading.fade-out::after,
+      #app-loading.fade-out .glow {
         opacity: 0;
-        transition: opacity 420ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      #app-loading.fade-out img {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
       }
       @media (min-width: 640px) {
         #app-loading img {
