@@ -33,7 +33,7 @@ function AboutSection() {
 
   return (
     <section id="como-funciona" className="relative bg-[#000000] scroll-mt-[120px]">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 pb-0 pt-16 sm:pb-0 sm:pt-20">
         <Reveal>
           <div className="grid gap-10">
             <div className="w-full">
