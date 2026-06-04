@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
 import FlagBR from "@/components/icons/FlagBR";
 import FlagUS from "@/components/icons/FlagUS";
@@ -86,26 +85,14 @@ export default function HeroSection() {
               </h1>
 
               <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 drop-shadow-[0_10px_24px_rgba(0,0,0,0.85)] sm:text-lg">
-                Aulas de violão online e ao vivo para brasileiros nos EUA, com horários flexíveis, ensino em português e
-                aula experimental gratuita.
+                Aulas de violão online e ao vivo para brasileiros nos EUA, com horários flexíveis em português e aula
+                experimental gratuita.
               </p>
             </div>
           </Reveal>
 
           <Reveal delay={0.08} className="relative z-20">
             <div className="mt-8 flex flex-col items-center justify-center text-center">
-              <div className="flex w-full max-w-md flex-col items-center justify-center gap-3">
-                <motion.a
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  href="#modelos"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                >
-                  Ver modelos
-                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-                </motion.a>
-              </div>
-
               <div className="mt-6 inline-flex items-center justify-center gap-2">
                 <FlagBR className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
                 <FlagUS className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />

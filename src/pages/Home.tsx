@@ -37,16 +37,7 @@ function AboutSection() {
         <Reveal>
           <div className="grid gap-10">
             <div className="w-full">
-              <div className="text-center min-[1000px]:text-left">
-                <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
-                  Indicado para quem busca
-                </h2>
-                <p className="mt-2 max-w-none text-sm text-white/65 sm:text-base min-[1000px]:max-w-2xl">
-                  Clareza no estudo, correção objetiva e evolução consistente semana após semana.
-                </p>
-              </div>
-
-              <div className="mt-6 overflow-hidden rounded-[28px] border border-brand-border bg-white/4 backdrop-blur-md">
+              <div className="overflow-hidden rounded-[28px] border border-brand-border bg-white/4 backdrop-blur-md">
                 <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
                   {targets.map((it) => (
                     <div
