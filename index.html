@@ -21,11 +21,13 @@
         background: #000;
         z-index: 9999;
         overflow: hidden;
+        isolation: isolate;
       }
       #app-loading::before {
         content: '';
         position: absolute;
         inset: 0;
+        z-index: 0;
         background:
           radial-gradient(1100px circle at 50% 42%, rgba(255, 179, 71, 0.2), transparent 60%),
           radial-gradient(920px circle at 20% 18%, rgba(194, 164, 106, 0.18), transparent 62%),
@@ -37,6 +39,7 @@
         content: '';
         position: absolute;
         inset: 0;
+        z-index: 0;
         background: linear-gradient(120deg, rgba(0, 0, 0, 0.35), rgba(14, 14, 18, 0.42), rgba(0, 0, 0, 0.35));
         background-size: 200% 200%;
         animation: appGradientShift 10s ease-in-out infinite;
@@ -47,6 +50,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        z-index: 1;
         width: 520px;
         height: 520px;
         transform: translate(-50%, -50%);
@@ -59,6 +63,7 @@
       }
       #app-loading img {
         position: relative;
+        z-index: 2;
         height: 176px;
         width: auto;
         max-height: 44vh;
