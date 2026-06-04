@@ -128,7 +128,7 @@ export default function HeroSection() {
         <div className="pointer-events-none absolute left-1/2 top-[clamp(206px,30vw,292px)] bottom-0 z-[4] w-screen -translate-x-1/2 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.58)_36%,rgba(0,0,0,0.90)_68%,rgba(0,0,0,0.96)_100%)]" />
 
         <div className="relative z-10 isolate">
-          <Reveal className="relative z-20">
+          <Reveal immediate className="relative z-20">
             <div className="flex flex-col items-center text-center">
               <h1 className="mt-[clamp(240px,40vw,320px)] text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.85)] sm:text-6xl">
                 De Brasileiro para Brasileiro nos EUA.
@@ -141,7 +141,7 @@ export default function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.08} className="relative z-20">
+          <Reveal immediate className="relative z-20">
             <div className="flex flex-col items-center justify-center text-center">
               <div className="mt-5 inline-flex items-center justify-center gap-2 sm:mt-6">
                 <FlagBR className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
