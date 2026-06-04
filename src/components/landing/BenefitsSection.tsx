@@ -11,7 +11,7 @@ const items = [
   },
   {
     title: "Consistência",
-    desc: "Formato semanal (gravado ou ao vivo) para manter ritmo e evolução contínua.",
+    desc: "Formato semanal para manter ritmo e evolução contínua.",
     icon: Timer,
   },
   {
