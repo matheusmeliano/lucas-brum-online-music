@@ -14,8 +14,16 @@ createRoot(document.getElementById('root')!).render(
 
 const appLoading = document.getElementById("app-loading");
 if (appLoading) {
-  requestAnimationFrame(() => {
-    appLoading.classList.add("fade-out");
-    window.setTimeout(() => appLoading.remove(), 520);
-  });
+  const anyWindow = window as unknown as { __appLoadingStart?: number };
+  const start = typeof anyWindow.__appLoadingStart === "number" ? anyWindow.__appLoadingStart : performance.now();
+  const minMs = 2000;
+  const elapsed = performance.now() - start;
+  const wait = Math.max(0, minMs - elapsed);
+
+  window.setTimeout(() => {
+    requestAnimationFrame(() => {
+      appLoading.classList.add("fade-out");
+      window.setTimeout(() => appLoading.remove(), 520);
+    });
+  }, wait);
 }
