@@ -94,23 +94,16 @@ export default function HeroSection() {
 
           <Reveal delay={0.08} className="relative z-20">
             <div className="mt-8 flex flex-col items-center justify-center text-center">
-              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center">
+              <div className="flex w-full max-w-md flex-col items-center justify-center gap-3">
                 <motion.a
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   href="#modelos"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-glow px-6 py-3 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                 >
                   Ver modelos
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                 </motion.a>
-
-                <a
-                  href="#contato"
-                  className="inline-flex items-center justify-center rounded-full border border-brand-border bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur-md transition hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
-                >
-                  Começar agora
-                </a>
               </div>
 
               <div className="mt-6 inline-flex items-center justify-center gap-2">
