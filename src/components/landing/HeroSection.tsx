@@ -92,8 +92,8 @@ export default function HeroSection() {
           </Reveal>
 
           <Reveal delay={0.08} className="relative z-20">
-            <div className="mt-8 flex flex-col items-center justify-center text-center">
-              <div className="mt-6 inline-flex items-center justify-center gap-2">
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="inline-flex items-center justify-center gap-2">
                 <FlagBR className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
                 <FlagUS className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
               </div>
