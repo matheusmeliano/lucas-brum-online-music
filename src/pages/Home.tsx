@@ -44,15 +44,15 @@ function AboutSection() {
                       key={it.title}
                       className="group flex flex-col items-center gap-3 rounded-2xl bg-black/25 p-4 text-center ring-1 ring-brand-border/80 transition hover:bg-white/5 hover:ring-[#c2a46a]/22"
                     >
-                      <div className="mt-0 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-accent/12 text-brand-accent ring-1 ring-brand-accent/25">
-                        <Check className="h-4 w-4" />
-                      </div>
-                      <div className="min-w-0">
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-accent/12 text-brand-accent ring-1 ring-brand-accent/25">
+                          <Check className="h-4 w-4" />
+                        </div>
                         <div className="text-sm font-semibold text-white/90 transition-colors group-hover:text-white">
                           {it.title}
                         </div>
-                        <div className="mt-1 text-xs text-white/60">{it.description}</div>
                       </div>
+                      <div className="text-xs text-white/60">{it.description}</div>
                     </div>
                   ))}
                 </div>
