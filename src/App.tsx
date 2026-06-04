@@ -3,10 +3,12 @@ import Home from "@/pages/Home";
 import Obrigado from "@/pages/Obrigado";
 import PoliticaPrivacidade from "@/pages/PoliticaPrivacidade";
 import TermosCompromisso from "@/pages/TermosCompromisso";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/obrigado" element={<Obrigado />} />

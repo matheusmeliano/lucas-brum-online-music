@@ -42,9 +42,9 @@ function AboutSection() {
                   {targets.map((it) => (
                     <div
                       key={it.title}
-                      className="group flex gap-3 rounded-2xl bg-black/25 p-4 ring-1 ring-brand-border/80 transition hover:bg-white/5 hover:ring-[#c2a46a]/22"
+                      className="group flex flex-col items-center gap-3 rounded-2xl bg-black/25 p-4 text-center ring-1 ring-brand-border/80 transition hover:bg-white/5 hover:ring-[#c2a46a]/22 sm:flex-row sm:items-start sm:text-left"
                     >
-                      <div className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-accent/12 text-brand-accent ring-1 ring-brand-accent/25">
+                      <div className="mt-0 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-accent/12 text-brand-accent ring-1 ring-brand-accent/25 sm:mt-0.5">
                         <Check className="h-4 w-4" />
                       </div>
                       <div className="min-w-0">
