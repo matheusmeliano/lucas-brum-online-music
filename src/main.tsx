@@ -11,3 +11,11 @@ createRoot(document.getElementById('root')!).render(
     </I18nProvider>
   </StrictMode>
 )
+
+const appLoading = document.getElementById("app-loading");
+if (appLoading) {
+  requestAnimationFrame(() => {
+    appLoading.classList.add("fade-out");
+    window.setTimeout(() => appLoading.remove(), 520);
+  });
+}

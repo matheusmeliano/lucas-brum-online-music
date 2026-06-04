@@ -215,7 +215,7 @@ function DiscographySection() {
                   </div>
                 </div>
 
-                <audio ref={audioRef} className="hidden" src="/audio/feedback-aluna-3.mp3" preload="metadata" />
+                <audio ref={audioRef} className="hidden" src="/audio/feedback-aluna-3.mp3" preload="none" />
               </div>
             </div>
           </Reveal>
@@ -305,41 +305,11 @@ function FaqSection() {
 }
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const t = window.setTimeout(() => setLoading(false), 680);
-    return () => window.clearTimeout(t);
-  }, []);
-
   return (
     <div className="relative min-h-screen overflow-x-hidden isolate">
       <BackgroundGlow />
       <div className="relative z-10">
         <Header />
-        {loading ? (
-          <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            transition={{ delay: 0.45, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="pointer-events-none fixed inset-0 z-[70] grid place-items-center bg-[#000000]"
-          >
-            <div className="pointer-events-none absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(1100px_circle_at_50%_42%,rgba(255,179,71,0.20),transparent_60%),radial-gradient(920px_circle_at_20%_18%,rgba(194,164,106,0.18),transparent_62%),radial-gradient(820px_circle_at_85%_26%,rgba(255,179,71,0.14),transparent_64%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(0,0,0,0.35),rgba(14,14,18,0.42),rgba(0,0,0,0.35))] bg-[length:200%_200%] animate-gradient-shift" />
-              <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-glow/16 blur-3xl animate-float-slow" />
-            </div>
-
-            <div className="relative">
-              <img
-                src="/logo-loading.png"
-                alt="Lucas Brum Online Music USA"
-                className="h-32 w-auto max-h-[36vh] object-contain sm:h-28 min-[1000px]:h-32"
-                draggable={false}
-              />
-            </div>
-          </motion.div>
-        ) : null}
         <main className="pt-[88px] sm:pt-[96px]">
           <HeroSection />
           <AboutSection />

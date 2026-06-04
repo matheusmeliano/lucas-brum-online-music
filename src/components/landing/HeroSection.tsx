@@ -1,9 +1,29 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Reveal from "@/components/landing/Reveal";
 import FlagBR from "@/components/icons/FlagBR";
 import FlagUS from "@/components/icons/FlagUS";
 
 export default function HeroSection() {
+  const reduceMotion = useReducedMotion();
+  const [animateDecor, setAnimateDecor] = useState(true);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 640px)");
+    const update = () => setAnimateDecor(mq.matches);
+    update();
+
+    if (mq.addEventListener) mq.addEventListener("change", update);
+    else mq.addListener(update);
+
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener("change", update);
+      else mq.removeListener(update);
+    };
+  }, []);
+
+  const shouldAnimate = animateDecor && !reduceMotion;
+
   return (
     <section
       id="topo"
@@ -35,43 +55,73 @@ export default function HeroSection() {
             src="/imagens/simbolo-musica-01.png"
             alt=""
             className="absolute left-3 top-[clamp(180px,28vw,320px)] h-10 w-10 opacity-35 [filter:brightness(0)_invert(1)] sm:left-8 sm:h-12 sm:w-12"
-            animate={{ y: [0, -14, 0], rotate: [0, -6, 0] }}
-            transition={{ duration: 7.4, repeat: Infinity, ease: [0.22, 1, 0.36, 1] }}
+            animate={shouldAnimate ? { y: [0, -14, 0], rotate: [0, -6, 0] } : undefined}
+            transition={
+              shouldAnimate ? { duration: 7.4, repeat: Infinity, ease: [0.22, 1, 0.36, 1] } : undefined
+            }
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             src="/imagens/simbolo-musica-02.png"
             alt=""
             className="absolute right-4 top-[clamp(210px,32vw,360px)] h-8 w-8 opacity-30 [filter:brightness(0)_invert(1)] sm:right-10 sm:h-10 sm:w-10"
-            animate={{ y: [0, 12, 0], rotate: [0, 7, 0] }}
-            transition={{ duration: 6.6, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            animate={shouldAnimate ? { y: [0, 12, 0], rotate: [0, 7, 0] } : undefined}
+            transition={
+              shouldAnimate
+                ? { duration: 6.6, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.2 }
+                : undefined
+            }
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             src="/imagens/simbolo-musica-01.png"
             alt=""
             className="absolute left-8 top-[clamp(430px,62vw,560px)] h-7 w-7 opacity-25 [filter:brightness(0)_invert(1)] sm:left-24 sm:h-9 sm:w-9"
-            animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
-            transition={{ duration: 8.2, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
+            animate={shouldAnimate ? { y: [0, -10, 0], rotate: [0, 5, 0] } : undefined}
+            transition={
+              shouldAnimate
+                ? { duration: 8.2, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.35 }
+                : undefined
+            }
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             src="/imagens/simbolo-musica-02.png"
             alt=""
             className="absolute right-10 top-[clamp(460px,66vw,600px)] hidden h-9 w-9 opacity-30 [filter:brightness(0)_invert(1)] sm:block"
-            animate={{ y: [0, 16, 0], rotate: [0, -8, 0] }}
-            transition={{ duration: 7.8, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            animate={shouldAnimate ? { y: [0, 16, 0], rotate: [0, -8, 0] } : undefined}
+            transition={
+              shouldAnimate ? { duration: 7.8, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.1 } : undefined
+            }
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             src="/imagens/simbolo-musica-01.png"
             alt=""
             className="absolute left-1/2 top-[clamp(170px,24vw,260px)] hidden h-8 w-8 -translate-x-[170px] opacity-22 [filter:brightness(0)_invert(1)] md:block"
-            animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
-            transition={{ duration: 9.2, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+            animate={shouldAnimate ? { y: [0, -12, 0], rotate: [0, 8, 0] } : undefined}
+            transition={
+              shouldAnimate ? { duration: 9.2, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.4 } : undefined
+            }
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             src="/imagens/simbolo-musica-02.png"
             alt=""
             className="absolute left-1/2 top-[clamp(520px,76vw,700px)] hidden h-10 w-10 translate-x-[150px] opacity-24 [filter:brightness(0)_invert(1)] md:block"
-            animate={{ y: [0, 10, 0], rotate: [0, -6, 0] }}
-            transition={{ duration: 8.6, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
+            animate={shouldAnimate ? { y: [0, 10, 0], rotate: [0, -6, 0] } : undefined}
+            transition={
+              shouldAnimate
+                ? { duration: 8.6, repeat: Infinity, ease: [0.22, 1, 0.36, 1], delay: 0.18 }
+                : undefined
+            }
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

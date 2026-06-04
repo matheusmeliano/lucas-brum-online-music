@@ -3,11 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" as="image" href="/logo-loading.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucas Brum Online Music USA</title>
+    <style>
+      #app-loading {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: #000;
+        z-index: 9999;
+        overflow: hidden;
+      }
+      #app-loading::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(1100px circle at 50% 42%, rgba(255, 179, 71, 0.2), transparent 60%),
+          radial-gradient(920px circle at 20% 18%, rgba(194, 164, 106, 0.18), transparent 62%),
+          radial-gradient(820px circle at 85% 26%, rgba(255, 179, 71, 0.14), transparent 64%);
+      }
+      #app-loading::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(0, 0, 0, 0.35), rgba(14, 14, 18, 0.42), rgba(0, 0, 0, 0.35));
+        background-size: 200% 200%;
+        animation: appGradientShift 10s ease-in-out infinite;
+        opacity: 0.9;
+      }
+      #app-loading .glow {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 520px;
+        height: 520px;
+        transform: translate(-50%, -50%);
+        border-radius: 9999px;
+        background: rgba(194, 164, 106, 0.16);
+        filter: blur(48px);
+        animation: appFloat 6.2s ease-in-out infinite;
+      }
+      #app-loading img {
+        position: relative;
+        height: 128px;
+        width: auto;
+        max-height: 36vh;
+        object-fit: contain;
+      }
+      #app-loading.fade-out {
+        opacity: 0;
+        transition: opacity 420ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      @media (min-width: 640px) {
+        #app-loading img {
+          height: 112px;
+        }
+      }
+      @media (min-width: 1000px) {
+        #app-loading img {
+          height: 128px;
+        }
+      }
+      @keyframes appGradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes appFloat {
+        0%,
+        100% {
+          transform: translate(-50%, -52%);
+        }
+        50% {
+          transform: translate(-50%, -48%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #app-loading::after,
+        #app-loading .glow {
+          animation: none;
+        }
+      }
+    </style>
     <script type="module">
       if (import.meta.hot?.on) {
         import.meta.hot.on('vite:error', (error) => {
@@ -21,6 +110,10 @@
     </script>
   </head>
   <body>
+    <div id="app-loading" role="status" aria-label="Carregando">
+      <div class="glow"></div>
+      <img src="/logo-loading.png" alt="Lucas Brum Online Music USA" draggable="false" />
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
