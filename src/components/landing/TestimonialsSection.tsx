@@ -20,7 +20,7 @@ const videos = [
   { url: "https://youtube.com/shorts/QHIZv_FmHVo?feature=share", title: "Gezilene" },
   { url: "https://youtube.com/shorts/xdGI7i_Cw7U?feature=share", title: "Marina" },
   { url: "https://youtube.com/shorts/doiw0CmSQuw?feature=share", title: "Idália - Mãe da Mia" },
-  { url: "https://youtube.com/shorts/XZXwdDZkRVU?feature=share", title: "Depoimento" },
+  { url: "https://youtube.com/shorts/XZXwdDZkRVU?feature=share", title: "Escola Lucas Brum" },
 ]
   .map((it) => {
     const id = getYouTubeId(it.url);
