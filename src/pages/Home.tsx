@@ -230,7 +230,7 @@ function FaqSection() {
     {
       title: "Esses vídeos são de alunas reais?",
       description:
-        "Sim. São relatos de alunas contando a experiência no curso e o que mudou na prática durante o acompanhamento.",
+        "Sim. São relatos de alunas contando a experiência nas aulas e o que mudou na prática durante o acompanhamento.",
     },
     {
       title: "O que muda quando entra no acompanhamento?",
