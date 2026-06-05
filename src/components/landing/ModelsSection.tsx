@@ -7,18 +7,20 @@ type ModelCardProps = {
   subtitle: string;
   bullets: string[];
   featured?: boolean;
+  disabled?: boolean;
 };
 
-function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
+function ModelCard({ title, subtitle, bullets, featured, disabled }: ModelCardProps) {
   return (
     <motion.div
-      whileHover={{ y: -4, scale: 1.01 }}
+      whileHover={disabled ? undefined : { y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
         featured
           ? "border-[#c2a46a]/35 bg-[linear-gradient(135deg,rgba(194,164,106,0.24),rgba(255,255,255,0.03))] ring-1 ring-[#c2a46a]/22 shadow-[0_34px_90px_rgba(194,164,106,0.14)]"
-          : ""
+          : "",
+        disabled ? "cursor-not-allowed grayscale opacity-55" : ""
       )}
     >
       <div
@@ -43,7 +45,14 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
         )}
       </div>
 
+      {disabled ? <div className="pointer-events-none absolute inset-0 bg-black/40" /> : null}
+
       <div className="relative">
+        {disabled ? (
+          <div className="mb-3 inline-flex rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[11px] font-semibold text-white/75">
+            Indisponível
+          </div>
+        ) : null}
         <h3 className="text-2xl font-semibold tracking-tight text-brand-text">{title}</h3>
         <p className="mt-3 text-sm leading-relaxed text-white/70">{subtitle}</p>
 
@@ -91,13 +100,14 @@ export default function ModelsSection() {
           <Reveal delay={0.1}>
             <ModelCard
               title="Modelo Híbrido"
-              subtitle="Formato escalável, ideal para quem quer flexibilidade com feedback ao vivo."
+              subtitle="Formato escalável, ideal para quem quer flexibilidade."
               bullets={[
                 "Aula introdutória",
                 "4 aulas gravadas (1 por semana)",
                 "1 aula online ao vivo mensal (avaliação/feedback)",
                 "Formato escalável (ideal para quem quer flexibilidade)",
               ]}
+              disabled
             />
           </Reveal>
         </div>
