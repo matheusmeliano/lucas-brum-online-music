@@ -22,7 +22,7 @@ export default function FinalCtaSection() {
                   Pronto para evoluir com direção?
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm text-white/65 sm:text-base">
-                  Me diga seu objetivo e qual modelo você quer (Híbrido ou Individual). Eu te respondo com os próximos passos.
+                  Crescimento consistente por meio de orientação personalizada, ajustes contínuos e foco nos resultados desejados.
                 </p>
               </div>
 
