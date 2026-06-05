@@ -72,7 +72,7 @@ export default function ModelsSection() {
           <div className="text-center min-[1000px]:text-left">
             <h2 className="text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">Modelos de aula</h2>
             <p className="mt-2 max-w-none text-sm text-white/65 sm:text-base min-[1000px]:max-w-2xl">
-              Escolha entre flexibilidade com conteúdo gravado ou acompanhamento completo e personalizado ao vivo.
+              Encontre o formato ideal para evoluir com consistência e alcançar seus resultados.
             </p>
           </div>
         </Reveal>
