@@ -15,7 +15,7 @@ export default function Footer() {
             />
             <div className="text-sm font-semibold text-white">Professor Lucas Brum</div>
             <div className="mt-2 max-w-md text-sm text-white/65">
-              Aulas de violão com direção, estratégia e acompanhamento. Modelo Híbrido ou Individual.
+              A escola de violão dos brasileiros nos EUA.
             </div>
           </div>
 
