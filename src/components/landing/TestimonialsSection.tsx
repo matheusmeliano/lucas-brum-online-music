@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 function getYouTubeId(url: string) {
   const shorts = url.match(/youtube\.com\/shorts\/([^?/#]+)/i);
@@ -45,6 +45,7 @@ export default function TestimonialsSection() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const [instant, setInstant] = useState(false);
+  const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!activeVideo) return;
@@ -78,6 +79,30 @@ export default function TestimonialsSection() {
     return [...head, ...videos, ...tail];
   }, [visibleCount]);
 
+  const stopAutoplay = () => {
+    if (intervalRef.current) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    intervalRef.current = window.setInterval(() => {
+      setSlideIndex((current) => current + 1);
+    }, 4200);
+  };
+
+  useEffect(() => {
+    if (activeVideo) {
+      stopAutoplay();
+      return;
+    }
+
+    startAutoplay();
+    return () => stopAutoplay();
+  }, [activeVideo]);
+
   useEffect(() => {
     if (!instant) return;
     const id = window.requestAnimationFrame(() => setInstant(false));
@@ -86,11 +111,13 @@ export default function TestimonialsSection() {
 
   const goPrev = () => {
     if (isAnimating) return;
+    startAutoplay();
     setSlideIndex((current) => current - 1);
   };
 
   const goNext = () => {
     if (isAnimating) return;
+    startAutoplay();
     setSlideIndex((current) => current + 1);
   };
 
@@ -108,7 +135,7 @@ export default function TestimonialsSection() {
           </div>
         </Reveal>
 
-        <div className="relative mt-10">
+        <div className="relative mt-10" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
           <div className="overflow-hidden px-12 sm:px-14 min-[1000px]:px-0">
             <motion.div
               animate={{ x: `-${slideIndex * stepPercent}%` }}
