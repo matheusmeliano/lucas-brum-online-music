@@ -7,6 +7,12 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-col items-center gap-10 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
           <div>
+            <img
+              src="/imagens/logo-online-music-usa.png"
+              alt="Lucas Brum Online Music USA"
+              className="mx-auto mb-3 h-10 w-auto object-contain sm:mx-0"
+              loading="eager"
+            />
             <div className="text-sm font-semibold text-white">Professor Lucas Brum</div>
             <div className="mt-2 max-w-md text-sm text-white/65">
               Aulas de violão com direção, estratégia e acompanhamento. Modelo Híbrido ou Individual.
