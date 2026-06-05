@@ -19,8 +19,8 @@ export default function TermosCompromisso() {
             <div>
               <div className="font-semibold text-black/90">Sobre o acompanhamento</div>
               <p className="mt-2">
-                O acompanhamento é orientado a direção de estudo, correção e evolução no violão, de acordo com o modelo
-                escolhido (Híbrido ou Individual).
+                O acompanhamento é orientado a direção de estudo, correção e evolução no violão, de acordo com o formato
+                contratado.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export default function TermosCompromisso() {
               <div className="font-semibold text-black/90">Comunicação</div>
               <p className="mt-2">
                 A comunicação acontece pelos canais informados na contratação. Prazos e formato de retorno podem variar
-                conforme o modelo escolhido e a demanda.
+                conforme a demanda e a disponibilidade.
               </p>
             </div>
 
