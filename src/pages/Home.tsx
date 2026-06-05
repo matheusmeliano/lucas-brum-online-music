@@ -245,7 +245,7 @@ function FaqSection() {
     {
       title: "Como eu começo agora?",
       description:
-        "Escolha o modelo ideal para você e clique em Começar para iniciar seu acompanhamento.",
+        "Clique em Começar para iniciar sua jornada de aprendizado.",
     },
   ] as const;
   const [openIndex, setOpenIndex] = useState<number | null>(0);
