@@ -15,7 +15,7 @@ export default function Footer() {
             />
             <div className="text-sm font-semibold text-white">Professor Lucas Brum</div>
             <div className="mt-2 max-w-md text-sm text-white/65">
-              A escola de violão dos brasileiros nos EUA.
+              O suporte certo para acelerar a evolução e evitar erros no caminho.
             </div>
           </div>
 
