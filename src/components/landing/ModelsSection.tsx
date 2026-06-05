@@ -16,7 +16,7 @@ function ModelCard({ title, subtitle, bullets, featured, disabled }: ModelCardPr
       whileHover={disabled ? undefined : { y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md",
+        "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-brand-border bg-white/4 p-7 backdrop-blur-md min-[1000px]:justify-center",
         featured
           ? "border-[#c2a46a]/35 bg-[linear-gradient(135deg,rgba(194,164,106,0.24),rgba(255,255,255,0.03))] ring-1 ring-[#c2a46a]/22 shadow-[0_34px_90px_rgba(194,164,106,0.14)]"
           : "",
