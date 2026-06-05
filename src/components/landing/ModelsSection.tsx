@@ -44,10 +44,7 @@ function ModelCard({ title, subtitle, bullets, featured }: ModelCardProps) {
       </div>
 
       <div className="relative">
-        <div className="text-[11px] font-semibold tracking-[0.18em] text-white/55">
-          {featured ? "RECOMENDADO" : "OUTRA OPÇÃO"}
-        </div>
-        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-brand-text">{title}</h3>
+        <h3 className="text-2xl font-semibold tracking-tight text-brand-text">{title}</h3>
         <p className="mt-3 text-sm leading-relaxed text-white/70">{subtitle}</p>
 
         <div className="mt-6 space-y-3">
