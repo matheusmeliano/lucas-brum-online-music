@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Play, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function getYouTubeId(url: string) {
   const shorts = url.match(/youtube\.com\/shorts\/([^?/#]+)/i);
@@ -20,6 +20,7 @@ const videos = [
   { url: "https://youtube.com/shorts/QHIZv_FmHVo?feature=share", title: "Gezilene" },
   { url: "https://youtube.com/shorts/xdGI7i_Cw7U?feature=share", title: "Marina" },
   { url: "https://youtube.com/shorts/doiw0CmSQuw?feature=share", title: "Idália - Mãe da Mia" },
+  { url: "https://youtube.com/shorts/XZXwdDZkRVU?feature=share", title: "Depoimento" },
 ]
   .map((it) => {
     const id = getYouTubeId(it.url);
@@ -40,6 +41,10 @@ const videos = [
 
 export default function TestimonialsSection() {
   const [activeVideo, setActiveVideo] = useState<(typeof videos)[number] | null>(null);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [instant, setInstant] = useState(false);
 
   useEffect(() => {
     if (!activeVideo) return;
@@ -49,6 +54,45 @@ export default function TestimonialsSection() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [activeVideo]);
+
+  const stepPercent = 100 / visibleCount;
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 1000px)");
+
+    const apply = () => {
+      const nextVisibleCount = mql.matches ? 3 : 1;
+      setVisibleCount(nextVisibleCount);
+      setInstant(true);
+      setSlideIndex(nextVisibleCount);
+    };
+
+    apply();
+    mql.addEventListener("change", apply);
+    return () => mql.removeEventListener("change", apply);
+  }, []);
+
+  const slides = useMemo(() => {
+    const head = videos.slice(Math.max(0, videos.length - visibleCount));
+    const tail = videos.slice(0, visibleCount);
+    return [...head, ...videos, ...tail];
+  }, [visibleCount]);
+
+  useEffect(() => {
+    if (!instant) return;
+    const id = window.requestAnimationFrame(() => setInstant(false));
+    return () => window.cancelAnimationFrame(id);
+  }, [instant]);
+
+  const goPrev = () => {
+    if (isAnimating) return;
+    setSlideIndex((current) => current - 1);
+  };
+
+  const goNext = () => {
+    if (isAnimating) return;
+    setSlideIndex((current) => current + 1);
+  };
 
   return (
     <section id="depoimentos" className="relative scroll-mt-[120px] bg-[#000000]">
@@ -64,46 +108,90 @@ export default function TestimonialsSection() {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 min-[1000px]:grid-cols-3">
-          {videos.map((it, idx) => (
-            <Reveal key={it.id} delay={0.06 + idx * 0.06}>
-              <motion.button
-                type="button"
-                onClick={() => setActiveVideo(it)}
-                whileHover={{ y: -4 }}
-                whileTap={{ scale: 0.99 }}
-                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-center backdrop-blur-md transition min-[1000px]:text-left"
-              >
-                <div className="pointer-events-none absolute inset-0 opacity-90">
-                  <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-brand-glow/18 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="absolute -right-24 -bottom-24 h-96 w-96 rounded-full bg-brand-accent/14 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(255,179,71,0.16),transparent_60%)] opacity-80" />
-                </div>
-                <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-black/40">
-                  <div className="aspect-video">
-                    <img
-                      src={it.thumbUrl}
-                      alt={it.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover opacity-75 transition group-hover:opacity-95"
-                    />
-                  </div>
-                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.45),transparent_55%)]" />
-                  <div className="pointer-events-none absolute inset-0 grid place-items-center">
-                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/12 bg-black/45 text-white/90 shadow-[0_20px_70px_rgba(0,0,0,0.55)] transition group-hover:scale-[1.03]">
-                      <Play className="h-6 w-6 translate-x-[1px]" />
-                    </div>
-                  </div>
-                </div>
+        <div className="relative mt-10">
+          <div className="overflow-hidden px-12 sm:px-14 min-[1000px]:px-0">
+            <motion.div
+              animate={{ x: `-${slideIndex * stepPercent}%` }}
+              transition={instant ? { duration: 0 } : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationComplete={() => {
+                if (slideIndex < visibleCount) {
+                  setInstant(true);
+                  setSlideIndex((current) => current + videos.length);
+                  setIsAnimating(false);
+                  return;
+                }
 
-                <div className="mt-4">
-                  <div className="text-sm font-semibold text-white/90">{it.title}</div>
-                  <div className="mt-1 text-xs text-white/60">Clique para assistir</div>
+                if (slideIndex >= videos.length + visibleCount) {
+                  setInstant(true);
+                  setSlideIndex((current) => current - videos.length);
+                  setIsAnimating(false);
+                  return;
+                }
+
+                setIsAnimating(false);
+              }}
+              className="flex"
+            >
+              {slides.map((it, idx) => (
+                <div key={`${it.id}-${idx}`} className="shrink-0 basis-full px-1 min-[1000px]:basis-1/3">
+                  <motion.button
+                    type="button"
+                    onClick={() => setActiveVideo(it)}
+                    whileHover={{ y: -4 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                    className="group relative w-full overflow-hidden rounded-3xl border border-brand-border bg-white/4 p-4 text-center backdrop-blur-md transition min-[1000px]:text-left"
+                  >
+                    <div className="pointer-events-none absolute inset-0 opacity-90">
+                      <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-brand-glow/18 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="absolute -right-24 -bottom-24 h-96 w-96 rounded-full bg-brand-accent/14 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(255,179,71,0.16),transparent_60%)] opacity-80" />
+                    </div>
+                    <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-black/40">
+                      <div className="aspect-video">
+                        <img
+                          src={it.thumbUrl}
+                          alt={it.title}
+                          loading="lazy"
+                          className="h-full w-full object-cover opacity-75 transition group-hover:opacity-95"
+                        />
+                      </div>
+                      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.45),transparent_55%)]" />
+                      <div className="pointer-events-none absolute inset-0 grid place-items-center">
+                        <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/12 bg-black/45 text-white/90 shadow-[0_20px_70px_rgba(0,0,0,0.55)] transition group-hover:scale-[1.03]">
+                          <Play className="h-6 w-6 translate-x-[1px]" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4">
+                      <div className="text-sm font-semibold text-white/90">{it.title}</div>
+                      <div className="mt-1 text-xs text-white/60">Clique para assistir</div>
+                    </div>
+                  </motion.button>
                 </div>
-              </motion.button>
-            </Reveal>
-          ))}
+              ))}
+            </motion.div>
+          </div>
+
+          <button
+            type="button"
+            aria-label="Voltar"
+            onClick={goPrev}
+            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/40 text-white/80 backdrop-blur-md transition hover:bg-black/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 min-[1000px]:-left-10"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
+          <button
+            type="button"
+            aria-label="Avançar"
+            onClick={goNext}
+            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/40 text-white/80 backdrop-blur-md transition hover:bg-black/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 min-[1000px]:-right-10"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
       </div>
 
