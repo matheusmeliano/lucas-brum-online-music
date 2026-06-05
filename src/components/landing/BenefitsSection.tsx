@@ -131,7 +131,7 @@ export default function BenefitsSection() {
               Benefícios
             </h2>
             <p className="mt-2 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-2xl">
-              Dois modelos diferentes, com o mesmo objetivo: direção e resultado.
+              Mais do que aprender, evoluir com propósito, técnica e resultados.
             </p>
           </div>
         </Reveal>
