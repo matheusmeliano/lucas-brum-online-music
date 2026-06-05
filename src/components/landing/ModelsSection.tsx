@@ -50,7 +50,7 @@ function ModelCard({ title, subtitle, bullets, featured, disabled }: ModelCardPr
       <div className="relative">
         {disabled ? (
           <div className="mb-3 inline-flex rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[11px] font-semibold text-white/75">
-            Indisponível
+            Em breve
           </div>
         ) : null}
         <h3 className="text-2xl font-semibold tracking-tight text-brand-text">{title}</h3>
