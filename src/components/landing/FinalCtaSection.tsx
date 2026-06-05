@@ -34,7 +34,7 @@ export default function FinalCtaSection() {
                     rel="noreferrer"
                     className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-glow px-6 py-4 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                   >
-                    Falar comigo agora
+                    Começar
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                   </a>
                 </motion.div>
