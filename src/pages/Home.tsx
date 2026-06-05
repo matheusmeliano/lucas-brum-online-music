@@ -130,7 +130,7 @@ function DiscographySection() {
           <div className="text-center min-[1000px]:text-left">
             <h2 className="text-2xl font-semibold tracking-tight text-black/90 sm:text-3xl">Feedback</h2>
             <p className="mt-2 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-2xl">
-              Dê play e veja como é o acompanhamento por dentro: correção clara, direção objetiva e próximo passo definido.
+              Dê play e ouça o feedback real de uma das nossas alunas.
             </p>
           </div>
         </Reveal>
@@ -142,7 +142,7 @@ function DiscographySection() {
                 Ouça como é a evolução na prática.
               </h3>
               <p className="mt-3 max-w-none text-sm text-black/60 sm:text-base min-[1000px]:max-w-xl">
-                Um trecho curto, direto e real para você sentir o nível de clareza e correção que eu entrego.
+                Um trecho curto, direto e real para você perceber como a técnica, a clareza e a correção são trabalhadas durante o processo de aprendizado.
               </p>
               <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:items-center">
                 <button
