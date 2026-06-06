@@ -101,7 +101,7 @@ export default function TermosCompromisso() {
             <div>
               <div className="font-semibold text-black/90">7. Propriedade intelectual</div>
               <p className="mt-2">
-                Todos os conteúdos disponibilizados pelo Lucas Brum Online Music, incluindo vídeos, aulas, apostilas,
+                Todos os conteúdos disponibilizados pelo Lucas Brum Online Music USA, incluindo vídeos, aulas, apostilas,
                 exercícios, materiais didáticos, métodos de ensino, textos, imagens, logotipos, marcas e demais
                 materiais, são protegidos pelas leis de direitos autorais e propriedade intelectual.
               </p>
