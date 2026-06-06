@@ -119,8 +119,13 @@ export default function PoliticaPrivacidade() {
                 <li>Informações sobre o tratamento de seus dados.</li>
               </ul>
               <p className="mt-3">
-                Solicitações relacionadas à privacidade e proteção de dados poderão ser encaminhadas para o e-mail:
-                atendimento.usa.music@gmail.com
+                Solicitações relacionadas à privacidade e proteção de dados poderão ser encaminhadas para o e-mail:{" "}
+                <a
+                  href="mailto:atendimento.usa.music@gmail.com"
+                  className="break-all font-medium text-black/80 underline underline-offset-2"
+                >
+                  atendimento.usa.music@gmail.com
+                </a>
               </p>
             </div>
 
