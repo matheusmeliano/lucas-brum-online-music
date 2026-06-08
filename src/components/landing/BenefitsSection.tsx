@@ -166,7 +166,7 @@ export default function BenefitsSection() {
               className="flex"
             >
               {slides.map((item, idx) => (
-                <div key={`${item.title}-${idx}`} className="shrink-0 basis-full px-1 md:basis-1/3">
+                <div key={`${item.title}-${idx}`} className="shrink-0 basis-full px-1 min-[1000px]:basis-1/3">
                   <BenefitCard item={item} />
                 </div>
               ))}
