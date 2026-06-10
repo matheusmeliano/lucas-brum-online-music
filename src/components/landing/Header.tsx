@@ -69,10 +69,10 @@ export default function Header() {
           className={cn(
             "flex items-center justify-center gap-3 rounded-full border px-4 py-3 backdrop-blur-xl transition md:justify-between md:gap-4",
             onLight
-              ? "border-black/10 bg-white/80 shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
+              ? "border-black/10 bg-white shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
               : scrolled
-                ? "border-black/10 bg-white/88 shadow-[0_18px_70px_rgba(0,0,0,0.16)]"
-                : "border-black/10 bg-white/82 shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
+                ? "border-black/10 bg-white shadow-[0_18px_70px_rgba(0,0,0,0.16)]"
+                : "border-black/10 bg-white shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
           )}
         >
           <a href="https://www.lucasbrumonlinemusic.com/" className="inline-flex items-center gap-3">
@@ -139,8 +139,8 @@ export default function Header() {
             className={cn(
               "rounded-[28px] border p-3 backdrop-blur-xl",
               onLight
-                ? "border-black/10 bg-white/85 shadow-[0_24px_80px_rgba(0,0,0,0.14)]"
-                : "border-black/10 bg-white/90 shadow-[0_24px_80px_rgba(0,0,0,0.16)]"
+                ? "border-black/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.14)]"
+                : "border-black/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.16)]"
             )}
           >
             {navItems
