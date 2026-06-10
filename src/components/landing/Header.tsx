@@ -71,16 +71,13 @@ export default function Header() {
             onLight
               ? "border-black/10 bg-white/80 shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
               : scrolled
-                ? "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.45)]"
-                : "border-transparent bg-transparent shadow-[0_18px_70px_rgba(0,0,0,0.38)]"
+                ? "border-black/10 bg-white/88 shadow-[0_18px_70px_rgba(0,0,0,0.16)]"
+                : "border-black/10 bg-white/82 shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
           )}
         >
           <a href="https://www.lucasbrumonlinemusic.com/" className="inline-flex items-center gap-3">
             <span
-              className={cn(
-                "inline-flex h-10 w-10 items-center justify-center rounded-2xl",
-                onLight ? "bg-black/5" : "bg-white/6"
-              )}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-black/5"
             >
               <img
                 src="/imagens/logo-online-music-usa.png"
@@ -90,29 +87,18 @@ export default function Header() {
               />
             </span>
             <div
-              className={cn(
-                "hidden text-[13px] font-semibold tracking-tight md:block",
-                onLight ? "text-black/90" : "text-white"
-              )}
+              className="hidden text-[13px] font-semibold tracking-tight text-black/90 md:block"
             >
               Lucas Brum Online Music USA
             </div>
           </a>
 
-          <nav
-            className={cn(
-              "hidden items-center gap-7 text-[13px] md:flex",
-              onLight ? "text-black/60" : "text-white/70"
-            )}
-          >
+          <nav className="hidden items-center gap-7 text-[13px] text-black/60 md:flex">
             {navItems.slice(0, 5).map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "transition-colors focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
-                  onLight ? "hover:text-black" : "hover:text-white"
-                )}
+                className="transition-colors focus:outline-none focus:ring-2 focus:ring-brand-glow/40 hover:text-black"
               >
                 {item.label}
               </a>
@@ -135,10 +121,7 @@ export default function Header() {
               aria-label={open ? "Fechar menu" : "Abrir menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className={cn(
-                "inline-flex h-10 w-10 items-center justify-center rounded-full bg-transparent transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden",
-                onLight ? "text-black/70" : "text-white/85"
-              )}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-black/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow/40 md:hidden"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -157,7 +140,7 @@ export default function Header() {
               "rounded-[28px] border p-3 backdrop-blur-xl",
               onLight
                 ? "border-black/10 bg-white/85 shadow-[0_24px_80px_rgba(0,0,0,0.14)]"
-                : "border-transparent bg-transparent shadow-[0_24px_80px_rgba(0,0,0,0.5)]"
+                : "border-black/10 bg-white/90 shadow-[0_24px_80px_rgba(0,0,0,0.16)]"
             )}
           >
             {navItems
@@ -171,7 +154,7 @@ export default function Header() {
                     "block rounded-2xl px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
                     onLight
                       ? "text-black/80 hover:bg-black/5"
-                      : "text-white/85 hover:bg-white/10"
+                      : "text-black/80 hover:bg-black/5"
                   )}
                 >
                   {item.label}
