@@ -45,6 +45,8 @@ export default function TestimonialsSection() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const [instant, setInstant] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -73,6 +75,21 @@ export default function TestimonialsSection() {
     return () => mql.removeEventListener("change", apply);
   }, []);
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   const slides = useMemo(() => {
     const head = videos.slice(Math.max(0, videos.length - visibleCount));
     const tail = videos.slice(0, visibleCount);
@@ -87,6 +104,7 @@ export default function TestimonialsSection() {
   };
 
   const startAutoplay = () => {
+    if (!isInView) return;
     stopAutoplay();
     intervalRef.current = window.setInterval(() => {
       setSlideIndex((current) => current + 1);
@@ -94,14 +112,14 @@ export default function TestimonialsSection() {
   };
 
   useEffect(() => {
-    if (activeVideo) {
+    if (activeVideo || !isInView) {
       stopAutoplay();
       return;
     }
 
     startAutoplay();
     return () => stopAutoplay();
-  }, [activeVideo]);
+  }, [activeVideo, isInView]);
 
   useEffect(() => {
     if (!instant) return;
@@ -122,7 +140,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="depoimentos" className="relative scroll-mt-[120px] bg-[#000000]">
+    <section ref={sectionRef} id="depoimentos" className="relative scroll-mt-[120px] bg-[#000000]">
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">

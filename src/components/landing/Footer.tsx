@@ -11,7 +11,7 @@ export default function Footer() {
               src="/imagens/logo-online-music-usa.png"
               alt="Lucas Brum Online Music USA"
               className="mx-auto mb-3 h-10 w-auto object-contain sm:mx-0"
-              loading="eager"
+              loading="lazy"
             />
             <div className="text-sm font-semibold text-white">Professor Lucas Brum</div>
             <div className="mt-2 max-w-md text-sm text-white/65">

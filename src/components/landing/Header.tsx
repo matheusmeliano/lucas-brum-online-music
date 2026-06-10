@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { label: "Como funciona", href: "#como-funciona" },
@@ -15,9 +15,6 @@ const navItems = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [onLight, setOnLight] = useState(false);
-  const barRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -28,52 +25,11 @@ export default function Header() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  useEffect(() => {
-    const update = () => {
-      setScrolled(window.scrollY > 8);
-
-      const bar = barRef.current;
-      if (!bar) return;
-
-      const rect = bar.getBoundingClientRect();
-      const probeY = window.scrollY + rect.bottom + 1;
-      const themed = document.querySelectorAll<HTMLElement>("[data-theme]");
-
-      let nextOnLight = false;
-      for (const el of themed) {
-        const elRect = el.getBoundingClientRect();
-        const top = window.scrollY + elRect.top;
-        const bottom = window.scrollY + elRect.bottom;
-        if (probeY >= top && probeY < bottom) {
-          nextOnLight = el.dataset.theme === "light";
-          break;
-        }
-      }
-
-      setOnLight((current) => (current === nextOnLight ? current : nextOnLight));
-    };
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    return () => {
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, []);
-
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
         <div
-          ref={barRef}
-          className={cn(
-            "flex items-center justify-center gap-3 rounded-full border px-4 py-3 backdrop-blur-xl transition md:justify-between md:gap-4",
-            onLight
-              ? "border-black/10 bg-white shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
-              : scrolled
-                ? "border-black/10 bg-white shadow-[0_18px_70px_rgba(0,0,0,0.16)]"
-                : "border-black/10 bg-white shadow-[0_18px_70px_rgba(0,0,0,0.14)]"
-          )}
+          className="flex items-center justify-center gap-3 rounded-full border border-black/10 bg-white px-4 py-3 shadow-[0_18px_70px_rgba(0,0,0,0.14)] backdrop-blur-xl transition md:justify-between md:gap-4"
         >
           <a href="https://www.lucasbrumonlinemusic.com/" className="inline-flex items-center gap-3">
             <span
@@ -138,9 +94,7 @@ export default function Header() {
           <div
             className={cn(
               "rounded-[28px] border p-3 backdrop-blur-xl",
-              onLight
-                ? "border-black/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.14)]"
-                : "border-black/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.16)]"
+              "border-black/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.14)]"
             )}
           >
             {navItems
@@ -150,12 +104,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={cn(
-                    "block rounded-2xl px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-brand-glow/40",
-                    onLight
-                      ? "text-black/80 hover:bg-black/5"
-                      : "text-black/80 hover:bg-black/5"
-                  )}
+                  className="block rounded-2xl px-4 py-3 text-sm font-medium text-black/80 transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
                 >
                   {item.label}
                 </a>

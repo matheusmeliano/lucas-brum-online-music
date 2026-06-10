@@ -60,6 +60,8 @@ export default function BenefitsSection() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const [instant, setInstant] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const intervalRef = useRef<number | null>(null);
 
   const stepPercent = 100 / visibleCount;
@@ -79,6 +81,21 @@ export default function BenefitsSection() {
     return () => mql.removeEventListener("change", apply);
   }, []);
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   const slides = useMemo(() => {
     const head = items.slice(Math.max(0, items.length - visibleCount));
     const tail = items.slice(0, visibleCount);
@@ -93,6 +110,7 @@ export default function BenefitsSection() {
   };
 
   const startAutoplay = () => {
+    if (!isInView) return;
     stopAutoplay();
     intervalRef.current = window.setInterval(() => {
       setSlideIndex((current) => current + 1);
@@ -100,9 +118,14 @@ export default function BenefitsSection() {
   };
 
   useEffect(() => {
+    if (!isInView) {
+      stopAutoplay();
+      return;
+    }
+
     startAutoplay();
     return () => stopAutoplay();
-  }, []);
+  }, [isInView]);
 
   useEffect(() => {
     if (!instant) return;
@@ -123,7 +146,7 @@ export default function BenefitsSection() {
   };
 
   return (
-    <section id="beneficios" data-theme="light" className="relative scroll-mt-[120px] bg-white">
+    <section ref={sectionRef} id="beneficios" data-theme="light" className="relative scroll-mt-[120px] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <Reveal>
           <div className="text-center min-[1000px]:text-left">
