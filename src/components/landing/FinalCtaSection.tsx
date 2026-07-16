@@ -29,7 +29,7 @@ export default function FinalCtaSection() {
               <div className="flex flex-col gap-3">
                 <motion.div whileTap={{ scale: 0.98 }}>
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-glow px-6 py-4 text-sm font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40"
