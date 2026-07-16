@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import Reveal from "@/components/landing/Reveal";
 import FlagBR from "@/components/icons/FlagBR";
@@ -147,6 +148,17 @@ export default function HeroSection() {
                 <FlagBR className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
                 <FlagUS className="h-5 w-auto rounded-md ring-1 ring-brand-border/80" />
               </div>
+              <motion.a
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.98 }}
+                href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
+                target="_blank"
+                rel="noreferrer"
+                className="group mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-4 py-2 text-[13px] font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 sm:mt-6"
+              >
+                Começar
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+              </motion.a>
             </div>
           </Reveal>
         </div>
