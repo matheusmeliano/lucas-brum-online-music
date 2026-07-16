@@ -154,10 +154,10 @@ export default function HeroSection() {
                 href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
                 target="_blank"
                 rel="noreferrer"
-                className="group mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-4 py-2 text-[13px] font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 sm:mt-6"
+                className="group mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-glow px-4 py-2 text-[13px] font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 sm:mt-6 md:px-5 md:py-2.5 md:text-[14px]"
               >
                 Começar
-                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5 md:h-[18px] md:w-[18px]" />
               </motion.a>
             </div>
           </Reveal>
