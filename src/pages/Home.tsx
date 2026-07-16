@@ -8,6 +8,7 @@ import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import HeroSection from "@/components/landing/HeroSection";
 import ModelsSection from "@/components/landing/ModelsSection";
+import PresentationVideoModal from "@/components/landing/PresentationVideoModal";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import Reveal from "@/components/landing/Reveal";
 
@@ -308,6 +309,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-x-hidden isolate">
       <BackgroundGlow />
+      <PresentationVideoModal />
       <div className="relative z-10">
         <Header />
         <main className="pt-[88px] sm:pt-[96px]">
