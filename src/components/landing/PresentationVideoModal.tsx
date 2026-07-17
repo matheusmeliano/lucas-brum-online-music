@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 
@@ -73,23 +73,13 @@ export default function PresentationVideoModal() {
             <motion.div
               role="dialog"
               aria-modal="true"
-              aria-labelledby="presentation-video-title"
               initial={{ opacity: 0, scale: 0.98, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98, y: 12 }}
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
               className="w-full overflow-hidden rounded-[28px] border border-white/10 bg-black/70 shadow-[0_40px_120px_rgba(0,0,0,0.65)]"
             >
-              <div className="flex items-start justify-between gap-4 border-b border-white/10 px-4 py-4 sm:px-5">
-                <div>
-                  <div id="presentation-video-title" className="text-base font-semibold text-white/95 sm:text-lg">
-                    Vídeo de apresentação
-                  </div>
-                  <div className="mt-1 text-sm text-white/60">
-                    Conheça rapidamente a proposta antes de seguir na página.
-                  </div>
-                </div>
-
+              <div className="flex justify-end border-b border-white/10 px-4 py-4 sm:px-5">
                 <button
                   type="button"
                   aria-label="Fechar"
@@ -112,14 +102,17 @@ export default function PresentationVideoModal() {
                 </div>
 
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <label className="inline-flex cursor-pointer items-center gap-3 text-sm text-white/78">
+                  <label className="group inline-flex cursor-pointer items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-3.5 py-3 text-sm text-white/82 transition hover:border-brand-glow/25 hover:bg-white/[0.07]">
                     <input
                       type="checkbox"
                       checked={doNotShowAgain}
                       onChange={(event) => setDoNotShowAgain(event.target.checked)}
-                      className="h-4 w-4 rounded border-white/20 bg-transparent text-brand-glow focus:ring-2 focus:ring-brand-glow/40"
+                      className="peer sr-only"
                     />
-                    Não mostrar novamente
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-md border border-white/20 bg-black/30 text-black transition peer-focus-visible:ring-2 peer-focus-visible:ring-brand-glow/40 peer-checked:border-brand-glow peer-checked:bg-brand-glow">
+                      <Check className="h-3.5 w-3.5 opacity-0 transition peer-checked:opacity-100" />
+                    </span>
+                    <span className="leading-none text-white/86">Não mostrar novamente</span>
                   </label>
 
                   <button
