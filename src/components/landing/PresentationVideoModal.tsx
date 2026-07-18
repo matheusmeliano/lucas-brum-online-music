@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "lucas-brum:presentation-video:hidden";
 const PRESENTATION_VIDEO_EMBED_URL =
-  "https://www.youtube-nocookie.com/embed/aCBO8uFwGNA?autoplay=1&playsinline=1&rel=0&modestbranding=1";
+  "https://www.youtube-nocookie.com/embed/Ffosr77sjcs?autoplay=1&playsinline=1&rel=0&modestbranding=1";
 
 export default function PresentationVideoModal() {
   const [open, setOpen] = useState(false);
