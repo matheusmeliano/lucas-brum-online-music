@@ -16,12 +16,12 @@ export default function HeroSection() {
 
   return (
     <section id="topo" className="relative -mt-[50px] overflow-hidden bg-[#050505]">
-      <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_22%_18%,rgba(255,179,71,0.13),transparent_52%),radial-gradient(1000px_circle_at_78%_22%,rgba(255,179,71,0.11),transparent_48%),linear-gradient(to_bottom,#050505_0%,#0a0807_44%,#090807_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_22%_18%,rgba(255,179,71,0.13),transparent_52%),radial-gradient(1000px_circle_at_78%_22%,rgba(255,179,71,0.11),transparent_48%),linear-gradient(to_bottom,#050505_0%,#0a0807_44%,#000000_100%)]" />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-4 pb-10 pt-[118px] sm:pb-14 sm:pt-[138px] lg:px-6 xl:px-8">
         <div className="pointer-events-none absolute inset-x-0 top-[126px] bottom-0">
           <div className="absolute inset-0 bg-[radial-gradient(720px_circle_at_28%_24%,rgba(255,179,71,0.15),transparent_38%),radial-gradient(760px_circle_at_74%_40%,rgba(255,179,71,0.20),transparent_40%)]" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(to_top,rgba(255,179,71,0.06),transparent)]" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(to_top,rgba(0,0,0,0.94),rgba(0,0,0,0.72)_44%,transparent)]" />
           <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-12 bg-[linear-gradient(to_bottom,transparent,rgba(255,255,255,0.10),transparent)] lg:block" />
         </div>
 
