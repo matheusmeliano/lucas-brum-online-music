@@ -26,11 +26,11 @@ export default function HeroSection() {
 
         <div className="relative grid flex-1 items-center gap-12 py-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(380px,0.98fr)] lg:gap-10 lg:py-10">
             <Reveal immediate className="relative z-10 flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
-              <div className="relative inline-flex w-full max-w-[680px] items-center justify-center overflow-hidden rounded-[22px] border border-brand-glow/55 bg-[#090a0f] px-3 py-2.5 text-center shadow-[0_0_0_1px_rgba(255,179,71,0.12),0_14px_36px_rgba(0,0,0,0.3),0_0_28px_rgba(255,179,71,0.12)] sm:px-4 sm:py-3 lg:max-w-[560px] lg:rounded-[20px] lg:px-3.5 lg:py-2.5 lg:justify-start lg:text-left">
+              <div className="relative inline-flex w-full max-w-[680px] items-center justify-center overflow-hidden rounded-[22px] border border-brand-glow/55 bg-[#090a0f] px-3 py-2.5 text-center shadow-[0_0_0_1px_rgba(255,179,71,0.12),0_14px_36px_rgba(0,0,0,0.3),0_0_28px_rgba(255,179,71,0.12)] sm:px-4 sm:py-3 lg:max-w-[620px] lg:rounded-[20px] lg:px-3.5 lg:py-2.5 lg:justify-start lg:text-left xl:max-w-[660px]">
                 <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(180deg,rgba(178,34,52,0.52)_0_14px,rgba(255,255,255,0.2)_14px_28px),linear-gradient(90deg,rgba(7,10,20,0.08),rgba(7,10,20,0.34)_58%,rgba(7,10,20,0.62)_100%)] opacity-95" />
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-[39%] bg-[linear-gradient(135deg,rgba(28,53,122,0.98),rgba(10,18,46,0.96)),radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.28)_0_2px,transparent_2.6px),radial-gradient(circle_at_34%_26%,rgba(255,255,255,0.22)_0_2px,transparent_2.6px),radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.24)_0_2px,transparent_2.6px),radial-gradient(circle_at_23%_44%,rgba(255,255,255,0.22)_0_2px,transparent_2.6px),radial-gradient(circle_at_40%_52%,rgba(255,255,255,0.2)_0_2px,transparent_2.6px),radial-gradient(circle_at_58%_42%,rgba(255,255,255,0.22)_0_2px,transparent_2.6px),radial-gradient(circle_at_20%_68%,rgba(255,255,255,0.24)_0_2px,transparent_2.6px),radial-gradient(circle_at_38%_76%,rgba(255,255,255,0.18)_0_2px,transparent_2.6px),radial-gradient(circle_at_56%_66%,rgba(255,255,255,0.22)_0_2px,transparent_2.6px)] opacity-100" />
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,179,71,0.16),transparent_30%,transparent_72%,rgba(255,179,71,0.12)_100%)]" />
-                <div className="relative flex w-full flex-col items-center gap-2.5 sm:flex-row sm:gap-3.5 lg:gap-3">
+                <div className="relative flex w-full flex-col items-center gap-2.5 sm:flex-row sm:gap-3.5 lg:flex-nowrap lg:gap-3">
                   <div className="flex shrink-0 items-center gap-2.5 sm:gap-3">
                     <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-glow/65 bg-black/45 text-brand-glow shadow-[0_0_0_3px_rgba(255,179,71,0.08),0_0_22px_rgba(255,179,71,0.14)] sm:h-[56px] sm:w-[56px] lg:h-[48px] lg:w-[48px]">
                       <Users className="h-5 w-5 sm:h-7 sm:w-7 lg:h-6 lg:w-6" />
@@ -39,7 +39,7 @@ export default function HeroSection() {
                   </div>
 
                   <div className="relative flex-1 text-center sm:text-left">
-                    <p className="text-[0.96rem] font-semibold leading-tight text-white sm:text-[1.2rem] lg:text-[1.12rem] xl:text-[1.22rem]">
+                    <p className="text-[0.96rem] font-semibold leading-tight text-white sm:text-[1.2rem] lg:whitespace-nowrap lg:text-[0.92rem] xl:text-[1rem] 2xl:text-[1.06rem]">
                       Para brasileiros que vivem nos{" "}
                       <span className="text-brand-glow drop-shadow-[0_0_18px_rgba(255,179,71,0.18)]">
                         Estados Unidos
