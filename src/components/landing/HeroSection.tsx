@@ -49,7 +49,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <h1 className="mt-6 max-w-[11ch] text-balance font-serif text-[2.8rem] leading-[0.96] tracking-[-0.04em] text-white sm:text-[3.7rem] lg:text-[4.9rem] xl:text-[5.3rem]">
+              <h1 className="mt-6 max-w-[13ch] font-serif text-[2.8rem] leading-[0.96] tracking-[-0.04em] text-white sm:max-w-[12.5ch] sm:text-[3.5rem] lg:max-w-[11.2ch] lg:text-[4.15rem] xl:text-[4.55rem]">
                 Aprenda violão ao vivo, com as músicas que você ama.
               </h1>
 
