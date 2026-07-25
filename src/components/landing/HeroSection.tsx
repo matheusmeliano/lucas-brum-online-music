@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, CheckCircle2, MessageCircleMore, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircleMore, ShieldCheck, Users } from "lucide-react";
 import Reveal from "@/components/landing/Reveal";
 import FlagBR from "@/components/icons/FlagBR";
 import FlagUS from "@/components/icons/FlagUS";
@@ -26,11 +26,25 @@ export default function HeroSection() {
 
         <div className="relative grid flex-1 items-center gap-12 py-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(380px,0.98fr)] lg:gap-10 lg:py-10">
             <Reveal immediate className="relative z-10 flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-glow/30 bg-brand-glow/[0.08] px-3 py-1.5 text-[12px] font-medium text-brand-glow sm:px-4 sm:text-[13px]">
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-glow/15 text-brand-glow">
-                  <ShieldCheck className="h-3.5 w-3.5" />
-                </span>
-                Para brasileiros que vivem nos Estados Unidos
+              <div className="relative inline-flex w-full max-w-[860px] items-center justify-center overflow-hidden rounded-[30px] border border-brand-glow/65 bg-[linear-gradient(115deg,rgba(8,10,18,0.96)_0%,rgba(24,26,40,0.86)_18%,rgba(124,17,10,0.34)_42%,rgba(254,255,255,0.08)_54%,rgba(144,23,14,0.38)_68%,rgba(10,11,14,0.96)_100%)] px-3 py-3 text-center shadow-[0_0_0_1px_rgba(255,179,71,0.15),0_18px_45px_rgba(0,0,0,0.35),0_0_38px_rgba(255,179,71,0.16)] sm:px-5 sm:py-4 lg:justify-start lg:text-left">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(400px_circle_at_20%_50%,rgba(255,255,255,0.12),transparent_45%),repeating-linear-gradient(-12deg,transparent_0_44px,rgba(255,255,255,0.075)_44px_58px,transparent_58px_102px),linear-gradient(135deg,rgba(255,179,71,0.18),transparent_36%)] opacity-90" />
+                <div className="relative flex w-full flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:gap-5">
+                  <div className="flex shrink-0 items-center gap-3 sm:gap-4">
+                    <span className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-brand-glow/70 bg-black/42 text-brand-glow shadow-[0_0_0_4px_rgba(255,179,71,0.08),0_0_28px_rgba(255,179,71,0.18)] sm:h-[72px] sm:w-[72px]">
+                      <Users className="h-7 w-7 sm:h-9 sm:w-9" />
+                    </span>
+                    <span className="hidden h-14 w-px bg-[linear-gradient(to_bottom,transparent,rgba(255,179,71,0.9),transparent)] sm:block" />
+                  </div>
+
+                  <div className="relative flex-1 text-center sm:text-left">
+                    <p className="text-[1rem] font-semibold leading-tight text-white sm:text-[1.45rem] lg:text-[1.85rem]">
+                      Para brasileiros que vivem nos{" "}
+                      <span className="text-brand-glow drop-shadow-[0_0_18px_rgba(255,179,71,0.18)]">
+                        Estados Unidos
+                      </span>
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <h1 className="mt-6 max-w-[11ch] text-balance font-serif text-[2.8rem] leading-[0.96] tracking-[-0.04em] text-white sm:text-[3.7rem] lg:text-[4.9rem] xl:text-[5.3rem]">
