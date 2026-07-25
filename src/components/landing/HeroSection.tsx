@@ -26,18 +26,20 @@ export default function HeroSection() {
 
         <div className="relative grid flex-1 items-center gap-12 py-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(380px,0.98fr)] lg:gap-10 lg:py-10">
             <Reveal immediate className="relative z-10 flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
-              <div className="relative inline-flex w-full max-w-[860px] items-center justify-center overflow-hidden rounded-[30px] border border-brand-glow/65 bg-[linear-gradient(115deg,rgba(8,10,18,0.96)_0%,rgba(24,26,40,0.86)_18%,rgba(124,17,10,0.34)_42%,rgba(254,255,255,0.08)_54%,rgba(144,23,14,0.38)_68%,rgba(10,11,14,0.96)_100%)] px-3 py-3 text-center shadow-[0_0_0_1px_rgba(255,179,71,0.15),0_18px_45px_rgba(0,0,0,0.35),0_0_38px_rgba(255,179,71,0.16)] sm:px-5 sm:py-4 lg:justify-start lg:text-left">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(400px_circle_at_20%_50%,rgba(255,255,255,0.12),transparent_45%),repeating-linear-gradient(-12deg,transparent_0_44px,rgba(255,255,255,0.075)_44px_58px,transparent_58px_102px),linear-gradient(135deg,rgba(255,179,71,0.18),transparent_36%)] opacity-90" />
-                <div className="relative flex w-full flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:gap-5">
-                  <div className="flex shrink-0 items-center gap-3 sm:gap-4">
-                    <span className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-brand-glow/70 bg-black/42 text-brand-glow shadow-[0_0_0_4px_rgba(255,179,71,0.08),0_0_28px_rgba(255,179,71,0.18)] sm:h-[72px] sm:w-[72px]">
-                      <Users className="h-7 w-7 sm:h-9 sm:w-9" />
+              <div className="relative inline-flex w-full max-w-[720px] items-center justify-center overflow-hidden rounded-[24px] border border-brand-glow/55 bg-[#090a0f] px-3 py-2.5 text-center shadow-[0_0_0_1px_rgba(255,179,71,0.12),0_14px_36px_rgba(0,0,0,0.3),0_0_28px_rgba(255,179,71,0.12)] sm:px-4 sm:py-3 lg:justify-start lg:text-left">
+                <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(180deg,rgba(178,34,52,0.34)_0_14px,rgba(255,255,255,0.11)_14px_28px),linear-gradient(90deg,rgba(7,10,20,0.2),rgba(7,10,20,0.58)_62%,rgba(7,10,20,0.82)_100%)] opacity-90" />
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-[34%] bg-[linear-gradient(135deg,rgba(22,43,96,0.96),rgba(10,18,42,0.92)),radial-gradient(circle_at_20%_22%,rgba(255,255,255,0.18)_0_2px,transparent_2.5px),radial-gradient(circle_at_44%_38%,rgba(255,255,255,0.14)_0_2px,transparent_2.5px),radial-gradient(circle_at_28%_62%,rgba(255,255,255,0.16)_0_2px,transparent_2.5px),radial-gradient(circle_at_58%_72%,rgba(255,255,255,0.12)_0_2px,transparent_2.5px)] opacity-95" />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,179,71,0.16),transparent_30%,transparent_72%,rgba(255,179,71,0.12)_100%)]" />
+                <div className="relative flex w-full flex-col items-center gap-2.5 sm:flex-row sm:gap-3.5 lg:gap-4">
+                  <div className="flex shrink-0 items-center gap-2.5 sm:gap-3">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-glow/65 bg-black/45 text-brand-glow shadow-[0_0_0_3px_rgba(255,179,71,0.08),0_0_22px_rgba(255,179,71,0.14)] sm:h-[56px] sm:w-[56px]">
+                      <Users className="h-5 w-5 sm:h-7 sm:w-7" />
                     </span>
-                    <span className="hidden h-14 w-px bg-[linear-gradient(to_bottom,transparent,rgba(255,179,71,0.9),transparent)] sm:block" />
+                    <span className="hidden h-10 w-px bg-[linear-gradient(to_bottom,transparent,rgba(255,179,71,0.88),transparent)] sm:block" />
                   </div>
 
                   <div className="relative flex-1 text-center sm:text-left">
-                    <p className="text-[1rem] font-semibold leading-tight text-white sm:text-[1.45rem] lg:text-[1.85rem]">
+                    <p className="text-[0.96rem] font-semibold leading-tight text-white sm:text-[1.2rem] lg:text-[1.45rem]">
                       Para brasileiros que vivem nos{" "}
                       <span className="text-brand-glow drop-shadow-[0_0_18px_rgba(255,179,71,0.18)]">
                         Estados Unidos
