@@ -68,7 +68,7 @@ export default function HeroSection() {
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                 </motion.a>
 
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/50 sm:text-[13px]">
+                <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/50 sm:text-[13px]">
                   <span>Pelo WhatsApp</span>
                   <span className="hidden h-1 w-1 rounded-full bg-white/25 sm:block" />
                   <span>Sem compromisso</span>
