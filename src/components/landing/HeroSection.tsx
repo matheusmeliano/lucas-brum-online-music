@@ -154,7 +154,7 @@ export default function HeroSection() {
         <div className="relative z-10">
           <div className="flex flex-col items-center gap-4 py-4 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
             <div className="flex items-center gap-3 text-sm text-white/62">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-glow/20 bg-brand-glow/10 text-brand-glow">
+              <span className="hidden h-10 w-10 items-center justify-center rounded-2xl border border-brand-glow/20 bg-brand-glow/10 text-brand-glow lg:inline-flex">
                 <ShieldCheck className="h-5 w-5" />
               </span>
               <span>+20 anos ensinando música para crianças, jovens e adultos</span>
