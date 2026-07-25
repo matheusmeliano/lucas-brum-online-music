@@ -136,7 +136,7 @@ export default function HeroSection() {
             </Reveal>
           </div>
 
-        <div className="relative z-10 border-t border-white/10">
+        <div className="relative z-10">
           <div className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center gap-3 text-sm text-white/62">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-glow/20 bg-brand-glow/10 text-brand-glow">
