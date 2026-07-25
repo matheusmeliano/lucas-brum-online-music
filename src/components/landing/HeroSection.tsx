@@ -25,7 +25,7 @@ export default function HeroSection() {
         </div>
 
         <div className="relative grid flex-1 items-center gap-12 py-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(380px,0.98fr)] lg:gap-10 lg:py-10">
-            <Reveal immediate className="relative z-10 flex flex-col justify-center">
+            <Reveal immediate className="relative z-10 flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
               <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-glow/30 bg-brand-glow/[0.08] px-3 py-1.5 text-[12px] font-medium text-brand-glow sm:px-4 sm:text-[13px]">
                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-glow/15 text-brand-glow">
                   <ShieldCheck className="h-3.5 w-3.5" />
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
               <div className="mt-7 space-y-3.5">
                 {highlights.map((item) => (
-                  <div key={item} className="flex items-start gap-3 text-left">
+                  <div key={item} className="flex items-start justify-center gap-3 text-left lg:justify-start">
                     <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand-glow/30 bg-brand-glow/10 text-brand-glow">
                       <CheckCircle2 className="h-4 w-4" />
                     </span>
@@ -53,7 +53,7 @@ export default function HeroSection() {
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-col items-start gap-3">
+              <div className="mt-8 flex flex-col items-center gap-3 lg:items-start">
                 <motion.a
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.985 }}
@@ -67,7 +67,7 @@ export default function HeroSection() {
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                 </motion.a>
 
-                <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/50 sm:text-[13px]">
+                <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-white/50 sm:text-[13px] lg:justify-start">
                   <span>Pelo WhatsApp</span>
                   <span className="hidden h-1 w-1 rounded-full bg-white/25 sm:block" />
                   <span>Sem compromisso</span>
@@ -136,7 +136,7 @@ export default function HeroSection() {
           </div>
 
         <div className="relative z-10">
-          <div className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col items-center gap-4 py-4 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
             <div className="flex items-center gap-3 text-sm text-white/62">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-glow/20 bg-brand-glow/10 text-brand-glow">
                 <ShieldCheck className="h-5 w-5" />
@@ -144,7 +144,7 @@ export default function HeroSection() {
               <span>+20 anos ensinando música para crianças, jovens e adultos</span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <FlagBR className="h-6 w-auto rounded-md ring-1 ring-brand-border/80" />
               <FlagUS className="h-6 w-auto rounded-md ring-1 ring-brand-border/80" />
             </div>
