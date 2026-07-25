@@ -60,10 +60,10 @@ export default function HeroSection() {
                   href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
                   target="_blank"
                   rel="noreferrer"
-                  className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-[20px] bg-brand-glow px-6 py-4 text-[15px] font-semibold text-black/90 shadow-[0_14px_36px_rgba(255,179,71,0.24)] transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 sm:px-7"
+                  className="group inline-flex min-h-14 items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] bg-brand-glow px-5 py-4 text-[13px] font-semibold text-black/90 shadow-[0_14px_36px_rgba(255,179,71,0.24)] transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 sm:gap-3 sm:px-7 sm:text-[15px]"
                 >
                   <MessageCircleMore className="h-5 w-5" />
-                  Quero fazer minha aula gratuita
+                  Agendar aula experimental
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                 </motion.a>
 
