@@ -73,7 +73,7 @@ export default function HeroSection() {
                 <motion.a
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.985 }}
-                  href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
+                  href="https://wa.me/5565981175345"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex min-h-14 items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] bg-brand-glow px-5 py-4 text-[13px] font-semibold text-black/90 shadow-[0_14px_36px_rgba(255,179,71,0.24)] transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 sm:gap-3 sm:px-7 sm:text-[15px]"

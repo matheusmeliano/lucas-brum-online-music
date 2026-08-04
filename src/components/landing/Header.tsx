@@ -65,7 +65,7 @@ export default function Header() {
             <motion.a
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
-              href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
+              href="https://wa.me/5565981175345"
               target="_blank"
               rel="noreferrer"
               className="group hidden items-center justify-center gap-2 rounded-full bg-brand-glow px-4 py-2 text-[13px] font-semibold text-black/90 transition hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-glow/40 md:inline-flex"
@@ -112,7 +112,7 @@ export default function Header() {
                 </a>
               ))}
             <a
-              href="https://www.autobot.business/atendimento?slug=lucas-brum-online-music-usa"
+              href="https://wa.me/5565981175345"
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
